@@ -4,8 +4,6 @@
 - To use this library: import utils
 '''
 
-from cmath import exp
-from itertools import count
 import os
 import subprocess
 import json
@@ -59,23 +57,23 @@ def generate_output(file_path):
         
         for filename in files:
             
-            print("Before running ", release_id, " on file ", filename, "\n")
+            print("Before running version ", release_id, " on file ", filename)
             
             # build command for version 0.5
             base_command = "docker run --rm -v " + file_path + "\\" + filename + ":/input cwe_checker:0."
             
             if release_id == "0.5":
                 modified_command = base_command + "5 /input"
-                print("Command: ", modified_command, "\n")
+                print("Command: ", modified_command)
             elif release_id == "0.4":
                 modified_command = base_command + "4 /input"
-                print("Command: ", modified_command, "\n")
+                print("Command: ", modified_command)
     
             # store output to count vulnerabilities
-            print("Going to run modified command \n")
+            print("Running command on ", filename, " using version ", release_id, "\n")
             output = subprocess.run(modified_command, shell=True, capture_output=True)
             
-            print("After running ", release_id, " on file ", filename, "\n")
+            print("After running command on ", filename, " using version ", release_id, "\n")
             print()
             print(str(output), "\n")
             print()
@@ -98,47 +96,47 @@ def generate_output(file_path):
             f.write(release_id)
             f.write("\n\n")
             
+            f.write("OSJ: ")
             f.write(str(OSJ))
-            f.write("\n")
+            f.write("\n BUOV: ")
             f.write(str(BUOV))
-            f.write("\n")
+            f.write("\n ECFS: ")
             f.write(str(ECFS))
-            f.write("\n")
+            f.write("\n IFWA: ")
             f.write(str(IFWA))
-            f.write("\n")
+            f.write("\n IE: ")
             f.write(str(IE))
-            f.write("\n")
+            f.write("\n CJ: ")
             f.write(str(CJ))
-            f.write("\n")
+            f.write("\n IEP: ")
             f.write(str(IEP))
-            f.write("\n")
+            f.write("\n TOU: ")
             f.write(str(TOU))
-            f.write("\n")
+            f.write("\n DF: ")
             f.write(str(DF))
-            f.write("\n")
+            f.write("\n UAF: ")
             f.write(str(UAF))
-            f.write("\n")
+            f.write("\n USP: ")
             f.write(str(USP))
-            f.write("\n")
+            f.write("\n SPT: ")
             f.write(str(SPT))
-            f.write("\n")
+            f.write("\n NPD: ")
             f.write(str(NPD))
-            f.write("\n")
+            f.write("\n UMSK: ")
             f.write(str(UMSK))
-            f.write("\n")
+            f.write("\n PDF: ")
             f.write(str(PDF))
-            f.write("\n")
+            f.write("\n EXP: ")
             f.write(str(EXP))
-            f.write("\n")
+            f.write("\n OOB: ")
             f.write(str(OOB))
             
             f.write("\n\n")
             
-            f.close()
-            
-            print("Found %d vulnerabilities in %s using release %s" \
-            % (num_vulnerabilities, filename, release_id), "\n\n")
+            # print("Found %d vulnerabilities in %s using release %s" \
+            # % (num_vulnerabilities, filename, release_id), "\n\n")
         
+    f.close()
     store_data(statistics)
 
 
