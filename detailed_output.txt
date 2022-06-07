@@ -1,0 +1,41 @@
+
+        OSJ = count_scanner(output, "OS Command Injection")
+        BUOV = count_scanner(output, "Buffer Overflow")
+        ECFS = count_scanner(output, "Use of Externally-Controlled Format String")
+        IFWA = count_scanner(output, "Integer Overflow or Wraparound")
+        IE = count_scanner(output, "Information Exposure Through Debug Information")
+        CJ = count_scanner(output, "Creation of chroot Jail Without Changing Working Directory")
+        IEP = count_scanner(output, "Insufficient Entropy in PRNG")
+        TOU = count_scanner(output, "Time-of-check Time-of-use (TOCTOU) Race Condition")
+        DF = count_scanner(output, "Double Free")
+        UAF = count_scanner(output, "Use After Free")
+        USP = count_scanner(output, "Untrusted Search Path")
+        SPT = count_scanner(output, "Use of sizeof() on a Pointer Type")
+        NPD = count_scanner(output, "NULL Pointer Dereference")
+        UMSK = count_scanner(output, "Use of umask() with chmod-style Argument")
+        PDF = count_scanner(output,"Use of Potentially Dangerous Function")
+        EXP = count_scanner(output,"Exposed IOCTL with Insufficient Access Control")
+        OOB = count_scanner(output, "may be out of bounds"))"
+        
+        
+
+3proxy version 0.5
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+70
+
