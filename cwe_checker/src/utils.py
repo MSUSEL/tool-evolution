@@ -158,7 +158,7 @@ def count_vulnerabilities(release_id, output):
         
         total = OOB + IOW + IE + CCJ + UE + IEP + TOCK + DF + UAF + USP + UUV + UOSO + NPD + CSA + PDF + EXP
     
-        return total
+    return total
     
 
 def count_scanner(output, vulnerability):
