@@ -36,14 +36,14 @@ def generate_output(file_path):
             
             print("Before running version ", release_id, " on file ", filename)
             
-            # build command for version 0.5
-            base_command = "docker run --rm -v " + file_path + "\\" + filename + ":/input cwe_checker:0."
+            # build commands
+            base_command = "docker run --rm -v " + file_path + "\\" + filename
             
             if release_id == "0.5":
-                modified_command = base_command + "5 /input"
+                modified_command = base_command + ":/input cwe_checker:0.5 /input"
                 print("Command: ", modified_command)
             elif release_id == "0.4":
-                modified_command = base_command + "4 /input"
+                modified_command = base_command + ":/tmp/input cwe_checker:0.4 cwe_checker /tmp/input"
                 print("Command: ", modified_command)
     
             # store output to count vulnerabilities
@@ -62,7 +62,7 @@ def generate_output(file_path):
                 # print("Total number of vulnerabilities:", num_vulnerabilities, "\n")
             except:
                 print("Exception Detected. \n")
-                num_vulnerabilities  = UNABLE_TO_COUNT
+                num_vulnerabilities = UNABLE_TO_COUNT
             
             # store number of vulnerabilities in statistics dictionary
             statistics[filename][release_id] = num_vulnerabilities
@@ -120,7 +120,8 @@ def count_vulnerabilities(release_id, output):
         print("OOB: ", OOB)
         
         total = OSJ + BUOV + ECFS + IFWA + IE + CJ + IEP + TOU + DF + UAF + USP + SPT + NPD + UMSK + PDF + EXP + OOB
-        
+        return total
+    
     elif release_id == "0.4":
         print("Using version 0.4 \n")
         OOB = count_scanner(output, "Out-of-bounds read")
@@ -148,7 +149,7 @@ def count_vulnerabilities(release_id, output):
         UOSO = count_scanner(output, "Use of sizeof() on a Pointer Type")
         print("UOSO: ", UOSO)
         NPD = count_scanner(output, "NULL Pointer Dereference")
-        print("NPD: ". NPD)
+        print("NPD: ", NPD)
         CSA = count_scanner(output, "Use of umask() with chmod-style Argument")
         print("CSA: ", CSA)
         PDF = count_scanner(output,"Use of Potentially Dangerous Function")
@@ -158,7 +159,7 @@ def count_vulnerabilities(release_id, output):
         
         total = OOB + IOW + IE + CCJ + UE + IEP + TOCK + DF + UAF + USP + UUV + UOSO + NPD + CSA + PDF + EXP
     
-    return total
+        return total
     
 
 def count_scanner(output, vulnerability):
