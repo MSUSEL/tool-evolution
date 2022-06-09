@@ -8,11 +8,9 @@ against other static analysis tools.
 import utils
 
 # Directory with all binaries
-file_path = r"C:\Users\clema\REU_2022\benchmarks\binary"
-# file_path = r"C:\Users\clema\REU_2022\benchmarks\binaryTest"
+# file_path = r"C:\Users\clema\REU_2022\benchmarks\binary"
+file_path = r"C:\Users\clema\REU_2022\benchmarks\binaryTest"
 
 # Initialize and generate program output
 utils.initialize(file_path)
 utils.generate_output(file_path)
-
-# docker run --rm -v C:\Users\clema\REU_2022\benchmarks\binaryTest\3proxy:/tmp/input cwe_checker:0.4 cwe_checker /tmp/input

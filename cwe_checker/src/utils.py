@@ -11,7 +11,7 @@ import time
 from collections import Counter
 
 statistics = {}
-releases = ["0.4"]  
+releases = ["latest"]  
 # "0.2", "0.3", 
 # "0.4", "0.5", stable, latest
 UNABLE_TO_COUNT = -50
@@ -45,7 +45,13 @@ def generate_output(file_path):
             elif release_id == "0.4":
                 modified_command = base_command + ":/tmp/input cwe_checker:0.4 cwe_checker /tmp/input"
                 print("Command: ", modified_command)
-    
+            elif release_id == "stable":
+                modified_command = base_command + ":/input fkiecad/cwe_checker:stable /input"
+                print("Command: ", modified_command)
+            elif release_id == "latest":
+                modified_command = base_command + ":/input fkiecad/cwe_checker:latest /input"
+                print("Command: ", modified_command)
+                
             # store output to count vulnerabilities
             print("Running command on ", filename, " using version ", release_id, "... \n")
             output = subprocess.run(modified_command, shell=True, capture_output=True)
@@ -71,18 +77,13 @@ def generate_output(file_path):
             % (num_vulnerabilities, filename, release_id), "\n\n")
             
     store_data(statistics)
-
-
-def store_data(statistics):
-    with open(r'C:\Users\clema\REU_2022\tool-evolution\cwe_checker\output_statistics\cwe_checker_results' + str(int(time.time())) + '.json',
-        'w', encoding='utf-8') as output_file: json.dump(statistics, output_file, ensure_ascii=False, indent=4)
-
+    
 
 def count_vulnerabilities(release_id, output):
     
     total = 0
     
-    if release_id == "0.5":
+    if release_id == "0.5" or release_id == "stable":
         print("Using version 0.5 \n")
         OSJ = count_scanner(output, "OS Command Injection")
         print("OSJ: ", OSJ)
@@ -122,7 +123,7 @@ def count_vulnerabilities(release_id, output):
         total = OSJ + BUOV + ECFS + IFWA + IE + CJ + IEP + TOU + DF + UAF + USP + SPT + NPD + UMSK + PDF + EXP + OOB
         return total
     
-    elif release_id == "0.4":
+    elif release_id == "0.4" or release_id == "latest":
         print("Using version 0.4 \n")
         OOB = count_scanner(output, "Out-of-bounds read")
         print("OOB: ", OOB)
@@ -170,3 +171,8 @@ def count_scanner(output, vulnerability):
     v_count = output.count(vulnerability)
     
     return v_count
+
+
+def store_data(statistics):
+    with open(r'C:\Users\clema\REU_2022\tool-evolution\cwe_checker\output_statistics\cwe_checker_results' + str(int(time.time())) + '.json',
+        'w', encoding='utf-8') as output_file: json.dump(statistics, output_file, ensure_ascii=False, indent=4)
