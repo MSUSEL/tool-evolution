@@ -11,23 +11,19 @@ import time
 from collections import Counter
 
 statistics = {}
-releases = ["latest"]  
+releases = ["0.3"]  
 # "0.2", "0.3", 
 # "0.4", "0.5", stable, latest
 UNABLE_TO_COUNT = -50
 
-def initialize(file_path):
+
+def generate_output(file_path):
     
     # begin with empty dictionary of statistics
     files = os.listdir(file_path)
     for filename in files:
         statistics[filename] = {}
-
-
-def generate_output(file_path):
     
-    # establish path to files for reading
-    files = os.listdir(file_path)
     double_quotes = "\"\""
     
     for release_id in releases:
@@ -50,6 +46,9 @@ def generate_output(file_path):
                 print("Command: ", modified_command)
             elif release_id == "latest":
                 modified_command = base_command + ":/input fkiecad/cwe_checker:latest /input"
+                print("Command: ", modified_command)
+            elif release_id == "0.3":
+                modified_command = "bap " + file_path + " --pass=cwe-checker --cwe-checker-config=src/config.json"
                 print("Command: ", modified_command)
                 
             # store output to count vulnerabilities
