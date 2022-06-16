@@ -122,10 +122,12 @@ def count_vulnerabilities(release_id, output):
         total = OSJ + BUOV + ECFS + IFWA + IE + CJ + IEP + TOU + DF + UAF + USP + SPT + NPD + UMSK + PDF + EXP + OOB
         return total
     
-    elif release_id == "0.4" or release_id == "latest":
+    elif release_id == "0.4" or release_id == "latest" or release_id == "0.3" or release_id == "0.2":
         print("Using version 0.4 \n")
         OOB = count_scanner(output, "Out-of-bounds read")
         print("OOB: ", OOB)
+        OOBW = count_scanner(output, "Out-of-bounds Write")
+        print("OOBW: ", OOBW)
         IOW = count_scanner(output, "Integer Overflow or Wraparound")
         print("IOW: ", IOW)
         IE = count_scanner(output, "Information Exposure Through Debug Information")
