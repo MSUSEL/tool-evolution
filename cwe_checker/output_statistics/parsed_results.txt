@@ -1,0 +1,4623 @@
+**************************************************** 
+KEY: 0 = latest, 1 = stable, 2 = 0.4, 3 = 0.5 
+**************************************************** 
+
+3proxy: 
+0     51
+1     70
+2    969
+3     70
+Name: 3proxy, dtype: int64
+
+ab: 
+0     9
+1     9
+2    44
+3     9
+Name: ab, dtype: int64
+
+ag: 
+0     152
+1      69
+2    2206
+3      69
+Name: ag, dtype: int64
+
+airdecap-ng: 
+0     53
+1     96
+2    174
+3     96
+Name: airdecap-ng, dtype: int64
+
+airolib-ng: 
+0    40
+1    41
+2    93
+3    41
+Name: airolib-ng, dtype: int64
+
+apt-cache: 
+0    108
+1     86
+2    331
+3     86
+Name: apt-cache, dtype: int64
+
+apt-ftparchive: 
+0     401
+1     433
+2    1084
+3     433
+Name: apt-ftparchive, dtype: int64
+
+apt-mark: 
+0     35
+1     40
+2    102
+3     40
+Name: apt-mark, dtype: int64
+
+ar: 
+0       0
+1       0
+2    2500
+3       0
+Name: ar, dtype: int64
+
+aria_chk: 
+0    0
+1    0
+2    0
+3    0
+Name: aria_chk, dtype: int64
+
+aria_dump_log: 
+0     923
+1     807
+2    3299
+3     807
+Name: aria_dump_log, dtype: int64
+
+aria_ftdump: 
+0     948
+1     824
+2    3350
+3     824
+Name: aria_ftdump, dtype: int64
+
+aria_pack: 
+0     962
+1     819
+2    3402
+3     819
+Name: aria_pack, dtype: int64
+
+aria_read_log: 
+0    1035
+1     869
+2    3987
+3     869
+Name: aria_read_log, dtype: int64
+
+arj: 
+0    280
+1    310
+2    437
+3    310
+Name: arj, dtype: int64
+
+aspell: 
+0    330
+1    246
+2    605
+3    246
+Name: aspell, dtype: int64
+
+atk6-alive6: 
+0    0
+1    0
+2    0
+3    0
+Name: atk6-alive6, dtype: int64
+
+atk6-dnsdict6: 
+0    0
+1    0
+2    0
+3    0
+Name: atk6-dnsdict6, dtype: int64
+
+atk6-fake_router26: 
+0    103
+1    104
+2     95
+3    104
+Name: atk6-fake_router26, dtype: int64
+
+atk6-firewall6: 
+0    78
+1    95
+2    87
+3    95
+Name: atk6-firewall6, dtype: int64
+
+atk6-fragmentation6: 
+0     0
+1     0
+2    22
+3     0
+Name: atk6-fragmentation6, dtype: int64
+
+atk6-fragrouter6: 
+0    99
+1    84
+2    76
+3    84
+Name: atk6-fragrouter6, dtype: int64
+
+atk6-fuzz_dhcps6: 
+0     93
+1    111
+2     92
+3    111
+Name: atk6-fuzz_dhcps6, dtype: int64
+
+atk6-fuzz_ip6: 
+0    116
+1    115
+2     84
+3    115
+Name: atk6-fuzz_ip6, dtype: int64
+
+atk6-implementation6: 
+0     89
+1    119
+2     81
+3    119
+Name: atk6-implementation6, dtype: int64
+
+atk6-thcping6: 
+0    0
+1    0
+2    0
+3    0
+Name: atk6-thcping6, dtype: int64
+
+atk6-trace6: 
+0     76
+1     82
+2    118
+3     82
+Name: atk6-trace6, dtype: int64
+
+atril: 
+0    0
+1    0
+2    0
+3    0
+Name: atril, dtype: int64
+
+atril-previewer: 
+0     1
+1     1
+2    21
+3     1
+Name: atril-previewer, dtype: int64
+
+axel: 
+0     38
+1     43
+2    164
+3     43
+Name: axel, dtype: int64
+
+b2sum: 
+0    29
+1    24
+2    32
+3    24
+Name: b2sum, dtype: int64
+
+basenc: 
+0    16
+1    18
+2    19
+3    18
+Name: basenc, dtype: int64
+
+bash: 
+0       0
+1    1599
+2    2025
+3    1599
+Name: bash, dtype: int64
+
+bccmd: 
+0    40
+1    42
+2    63
+3    42
+Name: bccmd, dtype: int64
+
+bitmap: 
+0     32
+1     32
+2    467
+3     32
+Name: bitmap, dtype: int64
+
+bluemoon: 
+0     7
+1    51
+2    17
+3    51
+Name: bluemoon, dtype: int64
+
+bluetoothctl: 
+0     46
+1    106
+2    261
+3    106
+Name: bluetoothctl, dtype: int64
+
+bootctl: 
+0    39
+1    41
+2    66
+3    41
+Name: bootctl, dtype: int64
+
+broadwayd: 
+0    11
+1    11
+2    73
+3    11
+Name: broadwayd, dtype: int64
+
+btattach: 
+0    11
+1    65
+2    19
+3    65
+Name: btattach, dtype: int64
+
+btmgmt: 
+0     89
+1    152
+2    188
+3    152
+Name: btmgmt, dtype: int64
+
+btmon: 
+0     63
+1    185
+2    333
+3    185
+Name: btmon, dtype: int64
+
+btrfs: 
+0     412
+1       0
+2    1572
+3       0
+Name: btrfs, dtype: int64
+
+btrfs-debug-tree: 
+0    178
+1      0
+2    806
+3      0
+Name: btrfs-debug-tree, dtype: int64
+
+btrfs-find-root: 
+0    172
+1      0
+2    791
+3      0
+Name: btrfs-find-root, dtype: int64
+
+btrfs-image: 
+0    189
+1    271
+2    881
+3    271
+Name: btrfs-image, dtype: int64
+
+btrfs-map-logical: 
+0    171
+1      0
+2    790
+3      0
+Name: btrfs-map-logical, dtype: int64
+
+btrfs-select-super: 
+0    172
+1      0
+2    786
+3      0
+Name: btrfs-select-super, dtype: int64
+
+btrfs-zero-log: 
+0    172
+1      0
+2    786
+3      0
+Name: btrfs-zero-log, dtype: int64
+
+btrfstune: 
+0    154
+1      0
+2    787
+3      0
+Name: btrfstune, dtype: int64
+
+bulk_extractor: 
+0    1236
+1    2336
+2    4333
+3    2336
+Name: bulk_extractor, dtype: int64
+
+bully: 
+0    183
+1    185
+2    408
+3    185
+Name: bully, dtype: int64
+
+busctl: 
+0     0
+1     0
+2    43
+3     0
+Name: busctl, dtype: int64
+
+busybox: 
+0    0
+1    0
+2    0
+3    0
+Name: busybox, dtype: int64
+
+bwrap: 
+0    34
+1    32
+2    42
+3    32
+Name: bwrap, dtype: int64
+
+cadaver: 
+0     90
+1    102
+2    139
+3    102
+Name: cadaver, dtype: int64
+
+cgpt: 
+0    37
+1    26
+2    72
+3    26
+Name: cgpt, dtype: int64
+
+chage: 
+0    36
+1    29
+2    79
+3    29
+Name: chage, dtype: int64
+
+chcon: 
+0     36
+1     29
+2    175
+3     29
+Name: chcon, dtype: int64
+
+cherrytree: 
+0    246
+1      0
+2      0
+3      0
+Name: cherrytree, dtype: int64
+
+chfn: 
+0    36
+1    31
+2    61
+3    31
+Name: chfn, dtype: int64
+
+chgrp: 
+0     38
+1     32
+2    193
+3     32
+Name: chgrp, dtype: int64
+
+chmod: 
+0     39
+1     30
+2    195
+3     30
+Name: chmod, dtype: int64
+
+choom: 
+0    22
+1    18
+2    34
+3    18
+Name: choom, dtype: int64
+
+chown: 
+0     40
+1     33
+2    194
+3     33
+Name: chown, dtype: int64
+
+chsh: 
+0    30
+1    25
+2    65
+3    25
+Name: chsh, dtype: int64
+
+cifsdd: 
+0    12
+1    16
+2    38
+3    16
+Name: cifsdd, dtype: int64
+
+ciptool: 
+0    56
+1    55
+2    77
+3    55
+Name: ciptool, dtype: int64
+
+citrix: 
+0    109
+1    111
+2    343
+3    111
+Name: citrix, dtype: int64
+
+cjpeg: 
+0     5
+1     3
+2    27
+3     3
+Name: cjpeg, dtype: int64
+
+closed_source_web_server_fuzz: 
+0    112
+1    119
+2    358
+3    119
+Name: closed_source_web_server_fuzz, dtype: int64
+
+cluster: 
+0      0
+1      0
+2    477
+3      0
+Name: cluster, dtype: int64
+
+colormgr: 
+0    0
+1    0
+2    0
+3    0
+Name: colormgr, dtype: int64
+
+column: 
+0    50
+1    49
+2    61
+3    49
+Name: column, dtype: int64
+
+corkscrew: 
+0      5
+1     15
+2    414
+3     15
+Name: corkscrew, dtype: int64
+
+cp: 
+0    137
+1    101
+2    703
+3    101
+Name: cp, dtype: int64
+
+cpio: 
+0    166
+1    151
+2    412
+3    151
+Name: cpio, dtype: int64
+
+crunch: 
+0    165
+1    111
+2    163
+3    111
+Name: crunch, dtype: int64
+
+csplit: 
+0    128
+1    124
+2    472
+3    124
+Name: csplit, dtype: int64
+
+curl: 
+0     91
+1     61
+2    325
+3     61
+Name: curl, dtype: int64
+
+curlftpfs: 
+0    28
+1    30
+2    32
+3    30
+Name: curlftpfs, dtype: int64
+
+cutycapt: 
+0     2
+1     2
+2    28
+3     2
+Name: cutycapt, dtype: int64
+
+cvtsudoers: 
+0    130
+1    176
+2    450
+3    176
+Name: cvtsudoers, dtype: int64
+
+dash: 
+0     63
+1     53
+2    131
+3     53
+Name: dash, dtype: int64
+
+date: 
+0    76
+1    72
+2    98
+3    72
+Name: date, dtype: int64
+
+dbd: 
+0     33
+1     33
+2    117
+3     33
+Name: dbd, dtype: int64
+
+dbus-daemon: 
+0     56
+1     20
+2    442
+3     20
+Name: dbus-daemon, dtype: int64
+
+dceoversmb: 
+0    115
+1    126
+2    366
+3    126
+Name: dceoversmb, dtype: int64
+
+dd: 
+0    63
+1    63
+2    96
+3    63
+Name: dd, dtype: int64
+
+desktop-file-install: 
+0     0
+1     0
+2    83
+3     0
+Name: desktop-file-install, dtype: int64
+
+desktop-file-validate: 
+0     0
+1     0
+2    82
+3     0
+Name: desktop-file-validate, dtype: int64
+
+df: 
+0     84
+1     71
+2    171
+3     71
+Name: df, dtype: int64
+
+diff: 
+0    242
+1    223
+2    883
+3    223
+Name: diff, dtype: int64
+
+diff3: 
+0     54
+1     53
+2    105
+3     53
+Name: diff3, dtype: int64
+
+dig: 
+0    135
+1    173
+2    405
+3    173
+Name: dig, dtype: int64
+
+dir: 
+0    122
+1    158
+2    233
+3    158
+Name: dir, dtype: int64
+
+dirb: 
+0    84
+1    81
+2    73
+3    81
+Name: dirb, dtype: int64
+
+dirmngr: 
+0    492
+1    527
+2    981
+3    527
+Name: dirmngr, dtype: int64
+
+dirmngr-client: 
+0     91
+1     93
+2    137
+3     93
+Name: dirmngr-client, dtype: int64
+
+dmesg: 
+0    27
+1    28
+2    28
+3    28
+Name: dmesg, dtype: int64
+
+dns2tcpc: 
+0    28
+1    32
+2    84
+3    32
+Name: dns2tcpc, dtype: int64
+
+dns2tcpd: 
+0     42
+1     40
+2    110
+3     40
+Name: dns2tcpd, dtype: int64
+
+dos2unix: 
+0     7
+1     5
+2    88
+3     5
+Name: dos2unix, dtype: int64
+
+do_post: 
+0    112
+1    122
+2    350
+3    122
+Name: do_post, dtype: int64
+
+dpkg: 
+0    176
+1    178
+2    601
+3    178
+Name: dpkg, dtype: int64
+
+dpkg-deb: 
+0     90
+1     95
+2    211
+3     95
+Name: dpkg-deb, dtype: int64
+
+dpkg-divert: 
+0     88
+1     92
+2    251
+3     92
+Name: dpkg-divert, dtype: int64
+
+dpkg-query: 
+0    101
+1    109
+2    275
+3    109
+Name: dpkg-query, dtype: int64
+
+dpkg-split: 
+0     78
+1     82
+2    219
+3     82
+Name: dpkg-split, dtype: int64
+
+dpkg-statoverride: 
+0    28
+1    29
+2    63
+3    29
+Name: dpkg-statoverride, dtype: int64
+
+dpkg-trigger: 
+0    28
+1    33
+2    78
+3    33
+Name: dpkg-trigger, dtype: int64
+
+du: 
+0    173
+1    159
+2    677
+3    159
+Name: du, dtype: int64
+
+dumpcap: 
+0     33
+1     33
+2    196
+3     33
+Name: dumpcap, dtype: int64
+
+dumpkeys: 
+0    30
+1    31
+2    87
+3    31
+Name: dumpkeys, dtype: int64
+
+ed: 
+0    59
+1    47
+2    48
+3    47
+Name: ed, dtype: int64
+
+edgepaint: 
+0    364
+1    323
+2    412
+3    323
+Name: edgepaint, dtype: int64
+
+editcap: 
+0     8
+1     9
+2    41
+3     9
+Name: editcap, dtype: int64
+
+editres: 
+0    27
+1    22
+2    86
+3    22
+Name: editres, dtype: int64
+
+eject: 
+0    65
+1    54
+2    75
+3    54
+Name: eject, dtype: int64
+
+engrampa: 
+0      0
+1      1
+2    550
+3      1
+Name: engrampa, dtype: int64
+
+eqn: 
+0    0
+1    0
+2    0
+3    0
+Name: eqn, dtype: int64
+
+etterfilter: 
+0    31
+1    35
+2    64
+3    35
+Name: etterfilter, dtype: int64
+
+etterlog: 
+0    15
+1    13
+2    67
+3    13
+Name: etterlog, dtype: int64
+
+exiv2: 
+0    383
+1    373
+2    610
+3    373
+Name: exiv2, dtype: int64
+
+exo-desktop-item-edit: 
+0     2
+1     1
+2    36
+3     1
+Name: exo-desktop-item-edit, dtype: int64
+
+expr: 
+0    151
+1    161
+2    476
+3    161
+Name: expr, dtype: int64
+
+factor: 
+0     49
+1     54
+2    116
+3     54
+Name: factor, dtype: int64
+
+fastjar: 
+0    48
+1    58
+2    89
+3    58
+Name: fastjar, dtype: int64
+
+fidentify: 
+0    0
+1    0
+2    0
+3    0
+Name: fidentify, dtype: int64
+
+filan: 
+0    76
+1    73
+2    47
+3    73
+Name: filan, dtype: int64
+
+file: 
+0    64
+1    87
+2    27
+3    87
+Name: file, dtype: int64
+
+find: 
+0    0
+1    0
+2    0
+3    0
+Name: find, dtype: int64
+
+findmnt: 
+0    17
+1    19
+2    11
+3    19
+Name: findmnt, dtype: int64
+
+fish: 
+0    0
+1    0
+2    0
+3    0
+Name: fish, dtype: int64
+
+fiwalk: 
+0    0
+1    0
+2    0
+3    0
+Name: fiwalk, dtype: int64
+
+flac: 
+0     99
+1     96
+2    408
+3     96
+Name: flac, dtype: int64
+
+futility: 
+0    232
+1    187
+2    200
+3    187
+Name: futility, dtype: int64
+
+g-ir-compiler: 
+0    0
+1    0
+2    0
+3    0
+Name: g-ir-compiler, dtype: int64
+
+gatttool: 
+0    106
+1    212
+2    331
+3    212
+Name: gatttool, dtype: int64
+
+gawk: 
+0    0
+1    0
+2    0
+3    0
+Name: gawk, dtype: int64
+
+gdbus: 
+0     9
+1    12
+2    42
+3    12
+Name: gdbus, dtype: int64
+
+generic_chunked: 
+0    112
+1    114
+2    357
+3    114
+Name: generic_chunked, dtype: int64
+
+generic_listen_tcp: 
+0    108
+1    110
+2    347
+3    110
+Name: generic_listen_tcp, dtype: int64
+
+generic_send_tcp: 
+0    108
+1    110
+2    342
+3    110
+Name: generic_send_tcp, dtype: int64
+
+generic_send_udp: 
+0    108
+1    110
+2    340
+3    110
+Name: generic_send_udp, dtype: int64
+
+generic_web_server_fuzz: 
+0    112
+1    114
+2    358
+3    114
+Name: generic_web_server_fuzz, dtype: int64
+
+generic_web_server_fuzz2: 
+0    112
+1    114
+2    365
+3    114
+Name: generic_web_server_fuzz2, dtype: int64
+
+gio: 
+0    46
+1    47
+2     4
+3    47
+Name: gio, dtype: int64
+
+git: 
+0    0
+1    0
+2    0
+3    0
+Name: git, dtype: int64
+
+git-shell: 
+0    1336
+1    1938
+2       0
+3    1938
+Name: git-shell, dtype: int64
+
+gnome-keyring-daemon: 
+0    0
+1    0
+2    0
+3    0
+Name: gnome-keyring-daemon, dtype: int64
+
+gopherd: 
+0    108
+1    112
+2    345
+3    112
+Name: gopherd, dtype: int64
+
+gpasswd: 
+0     66
+1     66
+2    109
+3     66
+Name: gpasswd, dtype: int64
+
+gpg: 
+0    0
+1    0
+2    0
+3    0
+Name: gpg, dtype: int64
+
+gpg-agent: 
+0    342
+1    369
+2    593
+3    369
+Name: gpg-agent, dtype: int64
+
+gpg-connect-agent: 
+0    136
+1    136
+2    288
+3    136
+Name: gpg-connect-agent, dtype: int64
+
+gpg-wks-server: 
+0    177
+1    161
+2    454
+3    161
+Name: gpg-wks-server, dtype: int64
+
+gpgcompose: 
+0    0
+1    0
+2    0
+3    0
+Name: gpgcompose, dtype: int64
+
+gpgconf: 
+0     90
+1     95
+2    159
+3     95
+Name: gpgconf, dtype: int64
+
+gpgsm: 
+0    393
+1    370
+2    817
+3    370
+Name: gpgsm, dtype: int64
+
+gpgsplit: 
+0    67
+1    67
+2    82
+3    67
+Name: gpgsplit, dtype: int64
+
+gpgtar: 
+0    126
+1    126
+2    300
+3    126
+Name: gpgtar, dtype: int64
+
+gpgv: 
+0     341
+1     294
+2    1244
+3     294
+Name: gpgv, dtype: int64
+
+grep: 
+0    232
+1    186
+2    689
+3    186
+Name: grep, dtype: int64
+
+grepjar: 
+0    123
+1    124
+2    448
+3    124
+Name: grepjar, dtype: int64
+
+groff: 
+0    189
+1    186
+2    318
+3    186
+Name: groff, dtype: int64
+
+grops: 
+0    234
+1    218
+2    439
+3    218
+Name: grops, dtype: int64
+
+grotty: 
+0    152
+1    149
+2    321
+3    149
+Name: grotty, dtype: int64
+
+grub-editenv: 
+0     180
+1     121
+2    1074
+3     121
+Name: grub-editenv, dtype: int64
+
+grub-file: 
+0    0
+1    0
+2    0
+3    0
+Name: grub-file, dtype: int64
+
+grub-fstest: 
+0    0
+1    0
+2    0
+3    0
+Name: grub-fstest, dtype: int64
+
+grub-glue-efi: 
+0     180
+1     123
+2    1072
+3     123
+Name: grub-glue-efi, dtype: int64
+
+grub-menulst2cfg: 
+0    126
+1     94
+2    265
+3     94
+Name: grub-menulst2cfg, dtype: int64
+
+grub-mkfont: 
+0     189
+1     131
+2    1109
+3     131
+Name: grub-mkfont, dtype: int64
+
+grub-mkimage: 
+0     273
+1     189
+2    1478
+3     189
+Name: grub-mkimage, dtype: int64
+
+grub-mklayout: 
+0    0
+1    0
+2    0
+3    0
+Name: grub-mklayout, dtype: int64
+
+grub-mknetdir: 
+0     412
+1     246
+2    1575
+3     246
+Name: grub-mknetdir, dtype: int64
+
+grub-mkpasswd-pbkdf2: 
+0     183
+1     128
+2    1094
+3     128
+Name: grub-mkpasswd-pbkdf2, dtype: int64
+
+grub-mkrelpath: 
+0     181
+1     127
+2    1073
+3     127
+Name: grub-mkrelpath, dtype: int64
+
+grub-mkrescue: 
+0    0
+1    0
+2    0
+3    0
+Name: grub-mkrescue, dtype: int64
+
+grub-mkstandalone: 
+0     431
+1     273
+2    1684
+3     273
+Name: grub-mkstandalone, dtype: int64
+
+grub-mount: 
+0    0
+1    0
+2    0
+3    0
+Name: grub-mount, dtype: int64
+
+grub-render-label: 
+0    0
+1    0
+2    0
+3    0
+Name: grub-render-label, dtype: int64
+
+grub-script-check: 
+0     201
+1     127
+2    1131
+3     127
+Name: grub-script-check, dtype: int64
+
+grub-syslinux2cfg: 
+0    0
+1    0
+2    0
+3    0
+Name: grub-syslinux2cfg, dtype: int64
+
+gvmap: 
+0      0
+1      0
+2    477
+3      0
+Name: gvmap, dtype: int64
+
+gzip: 
+0     79
+1     71
+2    159
+3     71
+Name: gzip, dtype: int64
+
+halflife: 
+0    109
+1    111
+2    344
+3    111
+Name: halflife, dtype: int64
+
+hashcat: 
+0     308
+1     348
+2    2351
+3     348
+Name: hashcat, dtype: int64
+
+hashdeep: 
+0      0
+1      0
+2    584
+3      0
+Name: hashdeep, dtype: int64
+
+hciattach: 
+0    52
+1    54
+2    44
+3    54
+Name: hciattach, dtype: int64
+
+hciconfig: 
+0    58
+1    59
+2    69
+3    59
+Name: hciconfig, dtype: int64
+
+hcidump: 
+0      77
+1     107
+2    1003
+3     107
+Name: hcidump, dtype: int64
+
+hcitool: 
+0    58
+1    69
+2    61
+3    69
+Name: hcitool, dtype: int64
+
+heartbleeder: 
+0    0
+1    0
+2    0
+3    0
+Name: heartbleeder, dtype: int64
+
+hexdump: 
+0    29
+1    29
+2    69
+3    29
+Name: hexdump, dtype: int64
+
+hexeditor: 
+0    70
+1    82
+2    97
+3    82
+Name: hexeditor, dtype: int64
+
+host: 
+0     42
+1     72
+2    389
+3     72
+Name: host, dtype: int64
+
+hotpatcher: 
+0    27
+1    27
+2    78
+3    27
+Name: hotpatcher, dtype: int64
+
+ht: 
+0    0
+1    0
+2    0
+3    0
+Name: ht, dtype: int64
+
+htop: 
+0      39
+1      71
+2    2153
+3      71
+Name: htop, dtype: int64
+
+httptunnel-client: 
+0     13
+1     13
+2    242
+3     13
+Name: httptunnel-client, dtype: int64
+
+httptunnel-server: 
+0     12
+1     13
+2    279
+3     13
+Name: httptunnel-server, dtype: int64
+
+hydra: 
+0      0
+1      1
+2    110
+3      1
+Name: hydra, dtype: int64
+
+ico: 
+0     0
+1     0
+2    10
+3     0
+Name: ico, dtype: int64
+
+iconv: 
+0     49
+1     40
+2    341
+3     40
+Name: iconv, dtype: int64
+
+ike-scan: 
+0     93
+1     73
+2    135
+3     73
+Name: ike-scan, dtype: int64
+
+infocmp: 
+0    0
+1    0
+2    0
+3    0
+Name: infocmp, dtype: int64
+
+innochecksum: 
+0    0
+1    0
+2    0
+3    0
+Name: innochecksum, dtype: int64
+
+install: 
+0    129
+1     97
+2    503
+3     97
+Name: install, dtype: int64
+
+iostat: 
+0     35
+1     62
+2    108
+3     62
+Name: iostat, dtype: int64
+
+ip: 
+0    214
+1    205
+2    694
+3    205
+Name: ip, dtype: int64
+
+ipcs: 
+0    32
+1    21
+2    37
+3    21
+Name: ipcs, dtype: int64
+
+ivstools: 
+0     38
+1     40
+2    108
+3     40
+Name: ivstools, dtype: int64
+
+join: 
+0    17
+1    23
+2    41
+3    23
+Name: join, dtype: int64
+
+journalctl: 
+0    11
+1     6
+2    74
+3     6
+Name: journalctl, dtype: int64
+
+kbxutil: 
+0    143
+1    145
+2    368
+3    145
+Name: kbxutil, dtype: int64
+
+kismetdb_clean: 
+0    0
+1    0
+2    0
+3    0
+Name: kismetdb_clean, dtype: int64
+
+kismetdb_dump_devices: 
+0      0
+1     37
+2    768
+3     37
+Name: kismetdb_dump_devices, dtype: int64
+
+kismetdb_statistics: 
+0      0
+1     39
+2    781
+3     39
+Name: kismetdb_statistics, dtype: int64
+
+kismetdb_to_gpx: 
+0       0
+1      48
+2    1000
+3      48
+Name: kismetdb_to_gpx, dtype: int64
+
+kismetdb_to_kml: 
+0       0
+1      39
+2    1057
+3      39
+Name: kismetdb_to_kml, dtype: int64
+
+kismetdb_to_pcap: 
+0    0
+1    0
+2    0
+3    0
+Name: kismetdb_to_pcap, dtype: int64
+
+kismetdb_to_wiglecsv: 
+0       0
+1      48
+2    1434
+3      48
+Name: kismetdb_to_wiglecsv, dtype: int64
+
+kismet_cap_kismetdb: 
+0    0
+1    0
+2    0
+3    0
+Name: kismet_cap_kismetdb, dtype: int64
+
+kismet_cap_linux_bluetooth: 
+0     59
+1     45
+2    199
+3     45
+Name: kismet_cap_linux_bluetooth, dtype: int64
+
+kismet_cap_linux_wifi: 
+0    130
+1    133
+2    250
+3    133
+Name: kismet_cap_linux_wifi, dtype: int64
+
+kismet_cap_nrf_51822: 
+0     52
+1     45
+2    179
+3     45
+Name: kismet_cap_nrf_51822, dtype: int64
+
+kismet_cap_nrf_52840: 
+0     55
+1     39
+2    196
+3     39
+Name: kismet_cap_nrf_52840, dtype: int64
+
+kismet_cap_nrf_mousejack: 
+0     68
+1     50
+2    191
+3     50
+Name: kismet_cap_nrf_mousejack, dtype: int64
+
+kismet_cap_nxp_kw41z: 
+0     59
+1     41
+2    199
+3     41
+Name: kismet_cap_nxp_kw41z, dtype: int64
+
+kismet_cap_pcapfile: 
+0     51
+1     37
+2    184
+3     37
+Name: kismet_cap_pcapfile, dtype: int64
+
+kismet_cap_rz_killerbee: 
+0     60
+1     42
+2    183
+3     42
+Name: kismet_cap_rz_killerbee, dtype: int64
+
+kismet_cap_ti_cc_2531: 
+0     61
+1     43
+2    193
+3     43
+Name: kismet_cap_ti_cc_2531, dtype: int64
+
+kismet_cap_ti_cc_2540: 
+0     59
+1     43
+2    193
+3     43
+Name: kismet_cap_ti_cc_2540, dtype: int64
+
+kismet_cap_ubertooth_one: 
+0     55
+1     41
+2    181
+3     41
+Name: kismet_cap_ubertooth_one, dtype: int64
+
+kmod: 
+0    302
+1    285
+2    448
+3    285
+Name: kmod, dtype: int64
+
+l2ping: 
+0    26
+1    26
+2    28
+3    26
+Name: l2ping, dtype: int64
+
+l2test: 
+0    27
+1    27
+2    34
+3    27
+Name: l2test, dtype: int64
+
+ld: 
+0       0
+1       0
+2    2907
+3       0
+Name: ld, dtype: int64
+
+ldapcompare: 
+0    30
+1    43
+2    70
+3    43
+Name: ldapcompare, dtype: int64
+
+ldapdelete: 
+0    27
+1    68
+2    68
+3    68
+Name: ldapdelete, dtype: int64
+
+ldapexop: 
+0    33
+1    42
+2    69
+3    42
+Name: ldapexop, dtype: int64
+
+ldapmodify: 
+0    28
+1    42
+2    92
+3    42
+Name: ldapmodify, dtype: int64
+
+ldapmodrdn: 
+0    27
+1    41
+2    80
+3    41
+Name: ldapmodrdn, dtype: int64
+
+ldappasswd: 
+0    30
+1    44
+2    69
+3    44
+Name: ldappasswd, dtype: int64
+
+ldapsearch: 
+0    48
+1    86
+2    90
+3    86
+Name: ldapsearch, dtype: int64
+
+ldapwhoami: 
+0    26
+1    40
+2    67
+3    40
+Name: ldapwhoami, dtype: int64
+
+ldrdf: 
+0    29
+1    55
+2    46
+3    55
+Name: ldrdf, dtype: int64
+
+lefty: 
+0    271
+1    268
+2    490
+3    268
+Name: lefty, dtype: int64
+
+less: 
+0    128
+1    121
+2    288
+3    121
+Name: less, dtype: int64
+
+lexgrog: 
+0    19
+1    17
+2    41
+3    17
+Name: lexgrog, dtype: int64
+
+light-locker: 
+0     0
+1     1
+2    29
+3     1
+Name: light-locker, dtype: int64
+
+line_send_tcp: 
+0    108
+1    110
+2    342
+3    110
+Name: line_send_tcp, dtype: int64
+
+ln: 
+0    63
+1    51
+2    96
+3    51
+Name: ln, dtype: int64
+
+loadkeys: 
+0     63
+1     63
+2    156
+3     63
+Name: loadkeys, dtype: int64
+
+locale: 
+0    21
+1    25
+2    62
+3    25
+Name: locale, dtype: int64
+
+localedef: 
+0       0
+1     334
+2    1235
+3     334
+Name: localedef, dtype: int64
+
+logger: 
+0    35
+1    47
+2    37
+3    47
+Name: logger, dtype: int64
+
+login: 
+0    54
+1    47
+2    76
+3    47
+Name: login, dtype: int64
+
+loginctl: 
+0    0
+1    0
+2    0
+3    0
+Name: loginctl, dtype: int64
+
+logtop: 
+0      10
+1      19
+2    1017
+3      19
+Name: logtop, dtype: int64
+
+lowntfs-3g: 
+0     80
+1     77
+2    140
+3     77
+Name: lowntfs-3g, dtype: int64
+
+ls: 
+0    122
+1    158
+2    233
+3    158
+Name: ls, dtype: int64
+
+lsblk: 
+0    43
+1    48
+2    54
+3    48
+Name: lsblk, dtype: int64
+
+lsciphers: 
+0    385
+1    658
+2      0
+3    658
+Name: lsciphers, dtype: int64
+
+lscpu: 
+0     65
+1     66
+2    137
+3     66
+Name: lscpu, dtype: int64
+
+lsipc: 
+0    51
+1    38
+2    72
+3    38
+Name: lsipc, dtype: int64
+
+lslogins: 
+0    31
+1    46
+2    42
+3    46
+Name: lslogins, dtype: int64
+
+lsmem: 
+0    28
+1    28
+2    46
+3    28
+Name: lsmem, dtype: int64
+
+lsns: 
+0    24
+1    15
+2    37
+3    15
+Name: lsns, dtype: int64
+
+lsof: 
+0    257
+1    206
+2    281
+3    206
+Name: lsof, dtype: int64
+
+lspci: 
+0     7
+1     7
+2    96
+3     7
+Name: lspci, dtype: int64
+
+lstopo: 
+0     52
+1     44
+2    291
+3     44
+Name: lstopo, dtype: int64
+
+lstopo-no-graphics: 
+0     52
+1     44
+2    257
+3     44
+Name: lstopo-no-graphics, dtype: int64
+
+lsusb: 
+0     0
+1     0
+2    68
+3     0
+Name: lsusb, dtype: int64
+
+luit: 
+0     7
+1     9
+2    31
+3     9
+Name: luit, dtype: int64
+
+make: 
+0    0
+1    0
+2    0
+3    0
+Name: make, dtype: int64
+
+man: 
+0     66
+1     61
+2    108
+3     61
+Name: man, dtype: int64
+
+mandb: 
+0     60
+1     50
+2    100
+3     50
+Name: mandb, dtype: int64
+
+mariadb: 
+0       0
+1       0
+2    1522
+3       0
+Name: mariadb, dtype: int64
+
+mariadb-admin: 
+0     842
+1     753
+2    1718
+3     753
+Name: mariadb-admin, dtype: int64
+
+mariadb-binlog: 
+0    0
+1    0
+2    0
+3    0
+Name: mariadb-binlog, dtype: int64
+
+mariadb-check: 
+0     834
+1     737
+2    1699
+3     737
+Name: mariadb-check, dtype: int64
+
+mariadb-conv: 
+0     308
+1     286
+2    1377
+3     286
+Name: mariadb-conv, dtype: int64
+
+mariadb-dump: 
+0     873
+1     770
+2    1897
+3     770
+Name: mariadb-dump, dtype: int64
+
+mariadb-import: 
+0     745
+1     704
+2    1719
+3     704
+Name: mariadb-import, dtype: int64
+
+mariadb-plugin: 
+0     264
+1     252
+2    1090
+3     252
+Name: mariadb-plugin, dtype: int64
+
+mariadb-show: 
+0     834
+1     745
+2    1718
+3     745
+Name: mariadb-show, dtype: int64
+
+mariadb-slap: 
+0     868
+1     746
+2    1769
+3     746
+Name: mariadb-slap, dtype: int64
+
+mariadb-tzinfo-to-sql: 
+0     258
+1     247
+2    1080
+3     247
+Name: mariadb-tzinfo-to-sql, dtype: int64
+
+mariadb-upgrade: 
+0    0
+1    0
+2    0
+3    0
+Name: mariadb-upgrade, dtype: int64
+
+mariadb-waitpid: 
+0     253
+1     241
+2    1070
+3     241
+Name: mariadb-waitpid, dtype: int64
+
+mariadbd-safe-helper: 
+0     216
+1     215
+2    1004
+3     215
+Name: mariadbd-safe-helper, dtype: int64
+
+mate-calc: 
+0      0
+1      0
+2    202
+3      0
+Name: mate-calc, dtype: int64
+
+mate-calc-cmd: 
+0    0
+1    0
+2    0
+3    0
+Name: mate-calc-cmd, dtype: int64
+
+mawk: 
+0    100
+1     97
+2    208
+3     97
+Name: mawk, dtype: int64
+
+md5deep: 
+0      0
+1      0
+2    584
+3      0
+Name: md5deep, dtype: int64
+
+mdsearch: 
+0    0
+1    0
+2    0
+3    0
+Name: mdsearch, dtype: int64
+
+medusa: 
+0    141
+1    139
+2    131
+3    139
+Name: medusa, dtype: int64
+
+metaflac: 
+0     96
+1     95
+2    105
+3     95
+Name: metaflac, dtype: int64
+
+mingle: 
+0    0
+1    0
+2    0
+3    0
+Name: mingle, dtype: int64
+
+minicom: 
+0    191
+1    203
+2    267
+3    203
+Name: minicom, dtype: int64
+
+mkdir: 
+0     80
+1     52
+2    250
+3     52
+Name: mkdir, dtype: int64
+
+mkfifo: 
+0     45
+1     37
+2    177
+3     37
+Name: mkfifo, dtype: int64
+
+mkfs.btrfs: 
+0    178
+1    247
+2    870
+3    247
+Name: mkfs.btrfs, dtype: int64
+
+mknod: 
+0     54
+1     39
+2    201
+3     39
+Name: mknod, dtype: int64
+
+mksquashfs: 
+0    164
+1    156
+2    342
+3    156
+Name: mksquashfs, dtype: int64
+
+mm2gv: 
+0    189
+1    102
+2    179
+3    102
+Name: mm2gv, dtype: int64
+
+mmcli: 
+0    25
+1    27
+2    94
+3    27
+Name: mmcli, dtype: int64
+
+more: 
+0    21
+1    23
+2    47
+3    23
+Name: more, dtype: int64
+
+mount: 
+0    23
+1    23
+2    27
+3    23
+Name: mount, dtype: int64
+
+mousepad: 
+0      0
+1      0
+2    173
+3      0
+Name: mousepad, dtype: int64
+
+mpg123.bin: 
+0      0
+1      0
+2    115
+3      0
+Name: mpg123.bin, dtype: int64
+
+mpris-proxy: 
+0      6
+1     15
+2    120
+3     15
+Name: mpris-proxy, dtype: int64
+
+mpstat: 
+0     58
+1     69
+2    103
+3     69
+Name: mpstat, dtype: int64
+
+msrpcfuzz: 
+0    113
+1    124
+2    355
+3    124
+Name: msrpcfuzz, dtype: int64
+
+msrpcfuzz_udp: 
+0    113
+1    124
+2    350
+3    124
+Name: msrpcfuzz_udp, dtype: int64
+
+mt-gnu: 
+0    113
+1    105
+2    238
+3    105
+Name: mt-gnu, dtype: int64
+
+mv: 
+0    134
+1     94
+2    675
+3     94
+Name: mv, dtype: int64
+
+myisamchk: 
+0    0
+1    0
+2    0
+3    0
+Name: myisamchk, dtype: int64
+
+myisamlog: 
+0     479
+1     446
+2    1784
+3     446
+Name: myisamlog, dtype: int64
+
+myisampack: 
+0     524
+1     471
+2    1854
+3     471
+Name: myisampack, dtype: int64
+
+myisam_ftdump: 
+0     505
+1     463
+2    1808
+3     463
+Name: myisam_ftdump, dtype: int64
+
+my_print_defaults: 
+0     255
+1     242
+2    1071
+3     242
+Name: my_print_defaults, dtype: int64
+
+nano: 
+0    392
+1    319
+2    527
+3    319
+Name: nano, dtype: int64
+
+nasm: 
+0     317
+1    1159
+2     745
+3    1159
+Name: nasm, dtype: int64
+
+ncdu: 
+0      25
+1     138
+2    1607
+3     138
+Name: ncdu, dtype: int64
+
+ncrack: 
+0       5
+1      21
+2    1213
+3      21
+Name: ncrack, dtype: int64
+
+ndisasm: 
+0    57
+1    27
+2    27
+3    27
+Name: ndisasm, dtype: int64
+
+net: 
+0      0
+1      0
+2    538
+3      0
+Name: net, dtype: int64
+
+netkit-ftp: 
+0     58
+1     49
+2    141
+3     49
+Name: netkit-ftp, dtype: int64
+
+netstat: 
+0    130
+1    134
+2    137
+3    134
+Name: netstat, dtype: int64
+
+networkctl: 
+0     29
+1     15
+2    161
+3     15
+Name: networkctl, dtype: int64
+
+nl: 
+0    135
+1    131
+2    480
+3    131
+Name: nl, dtype: int64
+
+nm: 
+0       0
+1       0
+2    2480
+3       0
+Name: nm, dtype: int64
+
+nm-applet: 
+0     41
+1     33
+2    195
+3     33
+Name: nm-applet, dtype: int64
+
+nm-connection-editor: 
+0     30
+1     25
+2    244
+3     25
+Name: nm-connection-editor, dtype: int64
+
+nmap_centos5: 
+0    0
+1    0
+2    0
+3    0
+Name: nmap_centos5, dtype: int64
+
+nmblookup: 
+0     47
+1     42
+2    194
+3     42
+Name: nmblookup, dtype: int64
+
+nmcli: 
+0    346
+1    330
+2    759
+3    330
+Name: nmcli, dtype: int64
+
+nmtui: 
+0    127
+1    183
+2    342
+3    183
+Name: nmtui, dtype: int64
+
+nslookup: 
+0     43
+1     75
+2    442
+3     75
+Name: nslookup, dtype: int64
+
+nstat: 
+0    38
+1    34
+2    67
+3    34
+Name: nstat, dtype: int64
+
+nsupdate: 
+0     65
+1    102
+2     31
+3    102
+Name: nsupdate, dtype: int64
+
+ntfs-3g: 
+0    123
+1     89
+2    159
+3     89
+Name: ntfs-3g, dtype: int64
+
+ntfsdecrypt: 
+0    14
+1    12
+2    33
+3    12
+Name: ntfsdecrypt, dtype: int64
+
+ntfsinfo: 
+0     7
+1     5
+2    88
+3     5
+Name: ntfsinfo, dtype: int64
+
+ntfsrecover: 
+0    155
+1    145
+2    146
+3    145
+Name: ntfsrecover, dtype: int64
+
+ntfssecaudit: 
+0    24
+1     0
+2    50
+3     0
+Name: ntfssecaudit, dtype: int64
+
+ntfswipe: 
+0     21
+1     18
+2    102
+3     18
+Name: ntfswipe, dtype: int64
+
+ntlm2: 
+0    150
+1    176
+2    516
+3    176
+Name: ntlm2, dtype: int64
+
+ntlm_brute: 
+0    144
+1    172
+2    509
+3    172
+Name: ntlm_brute, dtype: int64
+
+ntpdc: 
+0     35
+1     24
+2    104
+3     24
+Name: ntpdc, dtype: int64
+
+ntpq: 
+0    103
+1     91
+2    182
+3     91
+Name: ntpq, dtype: int64
+
+numfmt: 
+0    0
+1    0
+2    0
+3    0
+Name: numfmt, dtype: int64
+
+obexctl: 
+0     27
+1     58
+2    169
+3     58
+Name: obexctl, dtype: int64
+
+objcopy: 
+0     276
+1     612
+2    2647
+3     612
+Name: objcopy, dtype: int64
+
+objdump: 
+0       0
+1       0
+2    3071
+3       0
+Name: objdump, dtype: int64
+
+od: 
+0     0
+1     1
+2    60
+3     1
+Name: od, dtype: int64
+
+onesixtyone: 
+0    10
+1     9
+2    18
+3     9
+Name: onesixtyone, dtype: int64
+
+openfortivpn: 
+0    102
+1     97
+2    170
+3     97
+Name: openfortivpn, dtype: int64
+
+openssl: 
+0    128
+1    112
+2    266
+3    112
+Name: openssl, dtype: int64
+
+ophcrack: 
+0      0
+1     13
+2    536
+3     13
+Name: ophcrack, dtype: int64
+
+ophcrack-cli: 
+0    294
+1    280
+2    527
+3    280
+Name: ophcrack-cli, dtype: int64
+
+out123: 
+0    50
+1    72
+2    49
+3    72
+Name: out123, dtype: int64
+
+pacat: 
+0    3
+1    3
+2    3
+3    3
+Name: pacat, dtype: int64
+
+packetforge-ng: 
+0    0
+1    0
+2    0
+3    0
+Name: packetforge-ng, dtype: int64
+
+packetq: 
+0    0
+1    0
+2    0
+3    0
+Name: packetq, dtype: int64
+
+pactl: 
+0     3
+1     3
+2    23
+3     3
+Name: pactl, dtype: int64
+
+parole: 
+0      0
+1      0
+2    251
+3      0
+Name: parole, dtype: int64
+
+partx: 
+0     87
+1     76
+2    128
+3     76
+Name: partx, dtype: int64
+
+passwd: 
+0    35
+1    26
+2    71
+3    26
+Name: passwd, dtype: int64
+
+patch: 
+0    179
+1    162
+2    308
+3    162
+Name: patch, dtype: int64
+
+pavucontrol: 
+0     20
+1     10
+2    319
+3     10
+Name: pavucontrol, dtype: int64
+
+perl: 
+0    0
+1    0
+2    0
+3    0
+Name: perl, dtype: int64
+
+perl5.32.1: 
+0    0
+1    0
+2    0
+3    0
+Name: perl5.32.1, dtype: int64
+
+perror: 
+0    0
+1    0
+2    0
+3    0
+Name: perror, dtype: int64
+
+photorec: 
+0    0
+1    0
+2    0
+3    0
+Name: photorec, dtype: int64
+
+pic: 
+0    103
+1     97
+2    233
+3     97
+Name: pic, dtype: int64
+
+pidstat: 
+0     44
+1     46
+2    106
+3     46
+Name: pidstat, dtype: int64
+
+pinentry-curses: 
+0    0
+1    0
+2    0
+3    0
+Name: pinentry-curses, dtype: int64
+
+pinentry-gnome3: 
+0    0
+1    0
+2    0
+3    0
+Name: pinentry-gnome3, dtype: int64
+
+ping: 
+0    19
+1    18
+2    21
+3    18
+Name: ping, dtype: int64
+
+pixiewps: 
+0    40
+1    34
+2    72
+3    34
+Name: pixiewps, dtype: int64
+
+pmspike: 
+0    110
+1    115
+2    344
+3    115
+Name: pmspike, dtype: int64
+
+post_fuzz: 
+0    112
+1    119
+2    358
+3    119
+Name: post_fuzz, dtype: int64
+
+post_spike: 
+0    112
+1    122
+2    351
+3    122
+Name: post_spike, dtype: int64
+
+pr: 
+0    0
+1    0
+2    0
+3    0
+Name: pr, dtype: int64
+
+preconv: 
+0     99
+1     97
+2    141
+3     97
+Name: preconv, dtype: int64
+
+printf: 
+0    0
+1    0
+2    0
+3    0
+Name: printf, dtype: int64
+
+procan: 
+0    69
+1    66
+2    46
+3    66
+Name: procan, dtype: int64
+
+profiles: 
+0    31
+1    30
+2    81
+3    30
+Name: profiles, dtype: int64
+
+proxytunnel: 
+0    61
+1    67
+2    67
+3    67
+Name: proxytunnel, dtype: int64
+
+ps: 
+0    110
+1    100
+2     57
+3    100
+Name: ps, dtype: int64
+
+pstat: 
+0    0
+1    0
+2    0
+3    0
+Name: pstat, dtype: int64
+
+pth-curl: 
+0     431
+1     388
+2    1248
+3     388
+Name: pth-curl, dtype: int64
+
+ptx: 
+0    169
+1    156
+2    558
+3    156
+Name: ptx, dtype: int64
+
+pulseaudio: 
+0      2
+1      2
+2    100
+3      2
+Name: pulseaudio, dtype: int64
+
+pv: 
+0     99
+1     10
+2    182
+3     10
+Name: pv, dtype: int64
+
+qt5ct: 
+0      0
+1      0
+2    104
+3      0
+Name: qt5ct, dtype: int64
+
+quake: 
+0    109
+1    111
+2    344
+3    111
+Name: quake, dtype: int64
+
+quakeserver: 
+0    109
+1    111
+2    348
+3    111
+Name: quakeserver, dtype: int64
+
+r2agent: 
+0    308
+1    254
+2    418
+3    254
+Name: r2agent, dtype: int64
+
+r2r: 
+0    335
+1    292
+2    513
+3    292
+Name: r2r, dtype: int64
+
+rabin2: 
+0    308
+1    254
+2    418
+3    254
+Name: rabin2, dtype: int64
+
+radare2: 
+0    310
+1    256
+2    425
+3    256
+Name: radare2, dtype: int64
+
+radiff2: 
+0    308
+1    254
+2    418
+3    254
+Name: radiff2, dtype: int64
+
+rafind2: 
+0    308
+1    254
+2    418
+3    254
+Name: rafind2, dtype: int64
+
+ragg2: 
+0    308
+1    254
+2    418
+3    254
+Name: ragg2, dtype: int64
+
+rahash2: 
+0    308
+1    254
+2    418
+3    254
+Name: rahash2, dtype: int64
+
+ranlib: 
+0       0
+1       0
+2    2500
+3       0
+Name: ranlib, dtype: int64
+
+rarun2: 
+0    308
+1    254
+2    418
+3    254
+Name: rarun2, dtype: int64
+
+rasign2: 
+0    308
+1    254
+2    418
+3    254
+Name: rasign2, dtype: int64
+
+rasm2: 
+0    308
+1    254
+2    418
+3    254
+Name: rasm2, dtype: int64
+
+rawshark: 
+0    0
+1    0
+2    0
+3    0
+Name: rawshark, dtype: int64
+
+rax2: 
+0    308
+1    254
+2    418
+3    254
+Name: rax2, dtype: int64
+
+rb: 
+0    14
+1    16
+2    55
+3    16
+Name: rb, dtype: int64
+
+rctest: 
+0    50
+1    50
+2    80
+3    50
+Name: rctest, dtype: int64
+
+rdesktop: 
+0     423
+1     477
+2    1062
+3     477
+Name: rdesktop, dtype: int64
+
+rdf2bin: 
+0     9
+1    56
+2    12
+3    56
+Name: rdf2bin, dtype: int64
+
+rdma: 
+0     60
+1     63
+2    161
+3     63
+Name: rdma, dtype: int64
+
+readelf: 
+0     50
+1     87
+2    736
+3     87
+Name: readelf, dtype: int64
+
+readlink: 
+0    25
+1    25
+2    93
+3    25
+Name: readlink, dtype: int64
+
+realpath: 
+0     31
+1     27
+2    105
+3     27
+Name: realpath, dtype: int64
+
+rearj: 
+0     52
+1     59
+2    196
+3     59
+Name: rearj, dtype: int64
+
+reaver: 
+0    318
+1    267
+2    531
+3    267
+Name: reaver, dtype: int64
+
+recordmydesktop: 
+0    125
+1    104
+2    247
+3    104
+Name: recordmydesktop, dtype: int64
+
+redir: 
+0      9
+1     21
+2    484
+3     21
+Name: redir, dtype: int64
+
+rendercheck: 
+0    19
+1    42
+2    69
+3    42
+Name: rendercheck, dtype: int64
+
+replace: 
+0     240
+1     228
+2    1079
+3     228
+Name: replace, dtype: int64
+
+resizepart: 
+0    44
+1    33
+2    48
+3    33
+Name: resizepart, dtype: int64
+
+resolvectl: 
+0    28
+1    24
+2    62
+3    24
+Name: resolvectl, dtype: int64
+
+resolveip: 
+0     252
+1     241
+2    1072
+3     241
+Name: resolveip, dtype: int64
+
+resolve_stack_dump: 
+0     252
+1     241
+2    1089
+3     241
+Name: resolve_stack_dump, dtype: int64
+
+rfcomm: 
+0    35
+1    36
+2    32
+3    36
+Name: rfcomm, dtype: int64
+
+ristretto: 
+0     10
+1      4
+2    215
+3      4
+Name: ristretto, dtype: int64
+
+rm: 
+0     48
+1     35
+2    193
+3     35
+Name: rm, dtype: int64
+
+rmdir: 
+0    28
+1    26
+2    61
+3    26
+Name: rmdir, dtype: int64
+
+rpcclient: 
+0    0
+1    0
+2    0
+3    0
+Name: rpcclient, dtype: int64
+
+rpcgen: 
+0    0
+1    0
+2    0
+3    0
+Name: rpcgen, dtype: int64
+
+rsync: 
+0    0
+1    0
+2    0
+3    0
+Name: rsync, dtype: int64
+
+rx: 
+0    14
+1    16
+2    55
+3    16
+Name: rx, dtype: int64
+
+rz: 
+0    14
+1    16
+2    55
+3    16
+Name: rz, dtype: int64
+
+sadf: 
+0    113
+1    215
+2    670
+3    215
+Name: sadf, dtype: int64
+
+samba-regedit: 
+0     23
+1     22
+2    198
+3     22
+Name: samba-regedit, dtype: int64
+
+sane-find-scanner: 
+0     83
+1    101
+2    149
+3    101
+Name: sane-find-scanner, dtype: int64
+
+sar.sysstat: 
+0    105
+1    137
+2    316
+3    137
+Name: sar.sysstat, dtype: int64
+
+sb: 
+0     8
+1    12
+2    38
+3    12
+Name: sb, dtype: int64
+
+sbd: 
+0     20
+1     20
+2    131
+3     20
+Name: sbd, dtype: int64
+
+scalpel: 
+0    54
+1    80
+2    90
+3    80
+Name: scalpel, dtype: int64
+
+scanimage: 
+0    0
+1    0
+2    8
+3    0
+Name: scanimage, dtype: int64
+
+scp: 
+0    120
+1    134
+2    140
+3    134
+Name: scp, dtype: int64
+
+screen: 
+0     476
+1     505
+2    1208
+3     505
+Name: screen, dtype: int64
+
+script: 
+0     19
+1     19
+2    104
+3     19
+Name: script, dtype: int64
+
+scriptlive: 
+0    18
+1    18
+2    57
+3    18
+Name: scriptlive, dtype: int64
+
+sdptool: 
+0     58
+1     63
+2    115
+3     63
+Name: sdptool, dtype: int64
+
+sed: 
+0     98
+1     66
+2    210
+3     66
+Name: sed, dtype: int64
+
+sendmsrpc: 
+0    110
+1    120
+2    360
+3    120
+Name: sendmsrpc, dtype: int64
+
+seq: 
+0    0
+1    0
+2    0
+3    0
+Name: seq, dtype: int64
+
+sftp: 
+0    187
+1    170
+2    214
+3    170
+Name: sftp, dtype: int64
+
+sha1deep: 
+0      0
+1      0
+2    584
+3      0
+Name: sha1deep, dtype: int64
+
+sha1sum: 
+0    20
+1    15
+2    30
+3    15
+Name: sha1sum, dtype: int64
+
+sha224sum: 
+0    21
+1    16
+2    20
+3    16
+Name: sha224sum, dtype: int64
+
+sha256deep: 
+0      0
+1      0
+2    584
+3      0
+Name: sha256deep, dtype: int64
+
+sha256sum: 
+0    21
+1    16
+2    20
+3    16
+Name: sha256sum, dtype: int64
+
+sha384sum: 
+0    21
+1    16
+2    20
+3    16
+Name: sha384sum, dtype: int64
+
+sha512sum: 
+0    21
+1    16
+2    20
+3    16
+Name: sha512sum, dtype: int64
+
+sharkd: 
+0    0
+1    0
+2    0
+3    0
+Name: sharkd, dtype: int64
+
+shred: 
+0    40
+1    45
+2    56
+3    45
+Name: shred, dtype: int64
+
+shuf: 
+0    21
+1    22
+2    95
+3    22
+Name: shuf, dtype: int64
+
+size: 
+0       0
+1       0
+2    2485
+3       0
+Name: size, dtype: int64
+
+skipfish: 
+0     920
+1     650
+2    1118
+3     650
+Name: skipfish, dtype: int64
+
+smbclient: 
+0    40
+1    46
+2    79
+3    46
+Name: smbclient, dtype: int64
+
+smbcontrol: 
+0    27
+1    21
+2    34
+3    21
+Name: smbcontrol, dtype: int64
+
+snmpnetstat: 
+0     37
+1    115
+2     39
+3    115
+Name: snmpnetstat, dtype: int64
+
+socat: 
+0    0
+1    0
+2    0
+3    0
+Name: socat, dtype: int64
+
+sort: 
+0     66
+1     70
+2    217
+3     70
+Name: sort, dtype: int64
+
+speech-dispatcher: 
+0    133
+1     61
+2    166
+3     61
+Name: speech-dispatcher, dtype: int64
+
+split: 
+0    26
+1    29
+2    34
+3    29
+Name: split, dtype: int64
+
+spooftooph: 
+0    103
+1    116
+2    140
+3    116
+Name: spooftooph, dtype: int64
+
+sqldiff: 
+0    0
+1    0
+2    0
+3    0
+Name: sqldiff, dtype: int64
+
+sqlite3: 
+0    0
+1    0
+2    0
+3    0
+Name: sqlite3, dtype: int64
+
+sqsh: 
+0      0
+1      0
+2    145
+3      0
+Name: sqsh, dtype: int64
+
+ss: 
+0    101
+1    110
+2    127
+3    110
+Name: ss, dtype: int64
+
+ssh: 
+0     802
+1     400
+2    1031
+3     400
+Name: ssh, dtype: int64
+
+ssh-add: 
+0    390
+1    206
+2    303
+3    206
+Name: ssh-add, dtype: int64
+
+ssh-agent: 
+0    350
+1    168
+2    250
+3    168
+Name: ssh-agent, dtype: int64
+
+ssh-keygen: 
+0    585
+1    256
+2    483
+3    256
+Name: ssh-keygen, dtype: int64
+
+ssh-keyscan: 
+0    455
+1    271
+2    465
+3    271
+Name: ssh-keyscan, dtype: int64
+
+sslsplit: 
+0    141
+1    127
+2    408
+3    127
+Name: sslsplit, dtype: int64
+
+ss_spike: 
+0    109
+1    119
+2    344
+3    119
+Name: ss_spike, dtype: int64
+
+stat: 
+0     89
+1     91
+2    137
+3     91
+Name: stat, dtype: int64
+
+statd_spike: 
+0    110
+1    115
+2    345
+3    115
+Name: statd_spike, dtype: int64
+
+stdbuf: 
+0    36
+1    34
+2    71
+3    34
+Name: stdbuf, dtype: int64
+
+strace: 
+0    0
+1    0
+2    0
+3    0
+Name: strace, dtype: int64
+
+strings: 
+0       0
+1       0
+2    2477
+3       0
+Name: strings, dtype: int64
+
+stty: 
+0    37
+1    46
+2    77
+3    46
+Name: stty, dtype: int64
+
+stunnel4: 
+0    0
+1    0
+2    0
+3    0
+Name: stunnel4, dtype: int64
+
+su: 
+0    37
+1    40
+2    78
+3    40
+Name: su, dtype: int64
+
+sudo: 
+0     42
+1     36
+2    180
+3     36
+Name: sudo, dtype: int64
+
+sudoreplay: 
+0      0
+1      0
+2    138
+3      0
+Name: sudoreplay, dtype: int64
+
+sunrpcfuzz: 
+0    109
+1    114
+2    352
+3    114
+Name: sunrpcfuzz, dtype: int64
+
+svn: 
+0     52
+1     50
+2    262
+3     50
+Name: svn, dtype: int64
+
+svnadmin: 
+0     2
+1     2
+2    11
+3     2
+Name: svnadmin, dtype: int64
+
+svnbench: 
+0     2
+1     4
+2    27
+3     4
+Name: svnbench, dtype: int64
+
+svnlook: 
+0     6
+1     4
+2    22
+3     4
+Name: svnlook, dtype: int64
+
+svnrdump: 
+0     3
+1     6
+2    40
+3     6
+Name: svnrdump, dtype: int64
+
+svnserve: 
+0    14
+1     9
+2    26
+3     9
+Name: svnserve, dtype: int64
+
+sx: 
+0     8
+1    12
+2    38
+3    12
+Name: sx, dtype: int64
+
+systemctl: 
+0     97
+1    135
+2    139
+3    135
+Name: systemctl, dtype: int64
+
+systemd-analyze: 
+0     338
+1     620
+2    2845
+3     620
+Name: systemd-analyze, dtype: int64
+
+systemd-hwdb: 
+0     91
+1     78
+2    125
+3     78
+Name: systemd-hwdb, dtype: int64
+
+systemd-mount: 
+0    5
+1    7
+2    1
+3    7
+Name: systemd-mount, dtype: int64
+
+systemd-run: 
+0    4
+1    5
+2    2
+3    5
+Name: systemd-run, dtype: int64
+
+systemd-sysusers: 
+0    36
+1    36
+2    55
+3    36
+Name: systemd-sysusers, dtype: int64
+
+systemd-tmpfiles: 
+0    17
+1     8
+2    21
+3     8
+Name: systemd-tmpfiles, dtype: int64
+
+sz: 
+0     8
+1    12
+2    38
+3    12
+Name: sz, dtype: int64
+
+tac: 
+0    131
+1    127
+2    473
+3    127
+Name: tac, dtype: int64
+
+tail: 
+0     29
+1     26
+2    115
+3     26
+Name: tail, dtype: int64
+
+tapestat: 
+0    31
+1    38
+2    30
+3    38
+Name: tapestat, dtype: int64
+
+tar: 
+0    447
+1    443
+2    905
+3    443
+Name: tar, dtype: int64
+
+tbl: 
+0      0
+1      0
+2    406
+3      0
+Name: tbl, dtype: int64
+
+tcpbridge: 
+0       0
+1       0
+2    2378
+3       0
+Name: tcpbridge, dtype: int64
+
+tcpcapinfo: 
+0       0
+1       0
+2    1106
+3       0
+Name: tcpcapinfo, dtype: int64
+
+tcpdump: 
+0    191
+1     24
+2    820
+3     24
+Name: tcpdump, dtype: int64
+
+tcpliveplay: 
+0       0
+1       0
+2    1180
+3       0
+Name: tcpliveplay, dtype: int64
+
+tcpprep: 
+0       0
+1       0
+2    1514
+3       0
+Name: tcpprep, dtype: int64
+
+tcpreplay: 
+0       0
+1       0
+2    1559
+3       0
+Name: tcpreplay, dtype: int64
+
+tcpreplay-edit: 
+0       0
+1       0
+2    2625
+3       0
+Name: tcpreplay-edit, dtype: int64
+
+tcprewrite: 
+0       0
+1       0
+2    2226
+3       0
+Name: tcprewrite, dtype: int64
+
+telnet.netkit: 
+0     83
+1    111
+2    106
+3    111
+Name: telnet.netkit, dtype: int64
+
+test: 
+0     33
+1     30
+2    103
+3     30
+Name: test, dtype: int64
+
+testdisk: 
+0     247
+1     179
+2    1392
+3     179
+Name: testdisk, dtype: int64
+
+text2pcap: 
+0    22
+1    26
+2    69
+3    26
+Name: text2pcap, dtype: int64
+
+thunar: 
+0    0
+1    0
+2    0
+3    0
+Name: thunar, dtype: int64
+
+tic: 
+0     0
+1     0
+2    34
+3     0
+Name: tic, dtype: int64
+
+tigerdeep: 
+0      0
+1      0
+2    584
+3      0
+Name: tigerdeep, dtype: int64
+
+tmux: 
+0       0
+1       0
+2    2102
+3       0
+Name: tmux, dtype: int64
+
+top: 
+0    0
+1    0
+2    0
+3    0
+Name: top, dtype: int64
+
+touch: 
+0    74
+1    70
+2    98
+3    70
+Name: touch, dtype: int64
+
+tpmc: 
+0    18
+1    32
+2    29
+3    32
+Name: tpmc, dtype: int64
+
+tr: 
+0    14
+1    21
+2    47
+3    21
+Name: tr, dtype: int64
+
+traceroute.db: 
+0    26
+1    43
+2    70
+3    43
+Name: traceroute.db, dtype: int64
+
+troff: 
+0      0
+1    243
+2    834
+3    243
+Name: troff, dtype: int64
+
+trust: 
+0     96
+1     66
+2    160
+3     66
+Name: trust, dtype: int64
+
+tshark: 
+0      0
+1      0
+2    414
+3      0
+Name: tshark, dtype: int64
+
+tsk_comparedir: 
+0    0
+1    0
+2    0
+3    0
+Name: tsk_comparedir, dtype: int64
+
+tsk_gettimes: 
+0    0
+1    0
+2    0
+3    0
+Name: tsk_gettimes, dtype: int64
+
+tsk_loaddb: 
+0    0
+1    0
+2    0
+3    0
+Name: tsk_loaddb, dtype: int64
+
+tsk_recover: 
+0    0
+1    0
+2    0
+3    0
+Name: tsk_recover, dtype: int64
+
+tsort: 
+0     12
+1     16
+2    171
+3     16
+Name: tsort, dtype: int64
+
+udevadm: 
+0    452
+1    364
+2    633
+3    364
+Name: udevadm, dtype: int64
+
+udisksctl: 
+0    12
+1    16
+2    11
+3    16
+Name: udisksctl, dtype: int64
+
+umax_pp: 
+0    121
+1    124
+2     76
+3    124
+Name: umax_pp, dtype: int64
+
+uniq: 
+0    17
+1    21
+2    30
+3    21
+Name: uniq, dtype: int64
+
+unix2dos: 
+0     7
+1     5
+2    88
+3     5
+Name: unix2dos, dtype: int64
+
+unrar-nonfree: 
+0     174
+1     266
+2    1479
+3     266
+Name: unrar-nonfree, dtype: int64
+
+unsquashfs: 
+0    49
+1    69
+2    98
+3    69
+Name: unsquashfs, dtype: int64
+
+unzip: 
+0    103
+1     97
+2    163
+3     97
+Name: unzip, dtype: int64
+
+unzipsfx: 
+0    67
+1    54
+2    87
+3    54
+Name: unzipsfx, dtype: int64
+
+update-alternatives: 
+0    115
+1     98
+2     50
+3     98
+Name: update-alternatives, dtype: int64
+
+update-mime-database: 
+0    20
+1    16
+2    51
+3    16
+Name: update-mime-database, dtype: int64
+
+upx-ucl: 
+0     213
+1     258
+2    2735
+3     258
+Name: upx-ucl, dtype: int64
+
+VBoxClient: 
+0    0
+1    0
+2    0
+3    0
+Name: VBoxClient, dtype: int64
+
+vdir: 
+0    122
+1    158
+2    233
+3    158
+Name: vdir, dtype: int64
+
+vim: 
+0    0
+1    0
+2    0
+3    0
+Name: vim, dtype: int64
+
+vim.basic: 
+0    0
+1    0
+2    0
+3    0
+Name: vim.basic, dtype: int64
+
+vim.tiny: 
+0       0
+1     162
+2    2224
+3     162
+Name: vim.tiny, dtype: int64
+
+voiphopper: 
+0    169
+1    189
+2    147
+3    189
+Name: voiphopper, dtype: int64
+
+vsyasm: 
+0       0
+1       0
+2    1005
+3       0
+Name: vsyasm, dtype: int64
+
+wash: 
+0    318
+1    267
+2    531
+3    267
+Name: wash, dtype: int64
+
+wdctl: 
+0    26
+1    26
+2    35
+3    26
+Name: wdctl, dtype: int64
+
+webfuzz: 
+0    108
+1    113
+2    340
+3    113
+Name: webfuzz, dtype: int64
+
+wg: 
+0     43
+1     18
+2    854
+3     18
+Name: wg, dtype: int64
+
+wget: 
+0     435
+1     426
+2    1079
+3     426
+Name: wget, dtype: int64
+
+whatis: 
+0    38
+1    30
+2    73
+3    30
+Name: whatis, dtype: int64
+
+whirlpooldeep: 
+0      0
+1      0
+2    584
+3      0
+Name: whirlpooldeep, dtype: int64
+
+who: 
+0    47
+1    41
+2    72
+3    41
+Name: who, dtype: int64
+
+whois: 
+0     96
+1     99
+2    106
+3     99
+Name: whois, dtype: int64
+
+winexe: 
+0    4
+1    4
+2    2
+3    4
+Name: winexe, dtype: int64
+
+wpa_passphrase: 
+0    57
+1    61
+2    74
+3    61
+Name: wpa_passphrase, dtype: int64
+
+x11perf: 
+0      0
+1      0
+2    108
+3      0
+Name: x11perf, dtype: int64
+
+x11_spike: 
+0    110
+1    120
+2    345
+3    120
+Name: x11_spike, dtype: int64
+
+x86_64-linux-gnu-ar: 
+0    44
+1    37
+2    80
+3    37
+Name: x86_64-linux-gnu-ar, dtype: int64
+
+x86_64-linux-gnu-as: 
+0    0
+1    0
+2    0
+3    0
+Name: x86_64-linux-gnu-as, dtype: int64
+
+x86_64-linux-gnu-c++filt: 
+0    0
+1    0
+2    0
+3    0
+Name: x86_64-linux-gnu-c++filt, dtype: int64
+
+x86_64-linux-gnu-cpp-10: 
+0     33
+1     93
+2    983
+3     93
+Name: x86_64-linux-gnu-cpp-10, dtype: int64
+
+x86_64-linux-gnu-g++-10: 
+0     32
+1     92
+2    986
+3     92
+Name: x86_64-linux-gnu-g++-10, dtype: int64
+
+x86_64-linux-gnu-gcc-10: 
+0     33
+1     98
+2    983
+3     98
+Name: x86_64-linux-gnu-gcc-10, dtype: int64
+
+x86_64-linux-gnu-gcov-dump-10: 
+0    0
+1    0
+2    0
+3    0
+Name: x86_64-linux-gnu-gcov-dump-10, dtype: int64
+
+x86_64-linux-gnu-gcov-tool-10: 
+0    0
+1    0
+2    0
+3    0
+Name: x86_64-linux-gnu-gcov-tool-10, dtype: int64
+
+x86_64-linux-gnu-gprof: 
+0    106
+1    321
+2    283
+3    321
+Name: x86_64-linux-gnu-gprof, dtype: int64
+
+x86_64-linux-gnu-ld.bfd: 
+0    605
+1    798
+2    952
+3    798
+Name: x86_64-linux-gnu-ld.bfd, dtype: int64
+
+x86_64-linux-gnu-ld.gold: 
+0    0
+1    0
+2    0
+3    0
+Name: x86_64-linux-gnu-ld.gold, dtype: int64
+
+x86_64-linux-gnu-objcopy: 
+0       0
+1      19
+2    1299
+3      19
+Name: x86_64-linux-gnu-objcopy, dtype: int64
+
+x86_64-linux-gnu-objdump: 
+0      22
+1      14
+2    1420
+3      14
+Name: x86_64-linux-gnu-objdump, dtype: int64
+
+x86_64-linux-gnu-ranlib: 
+0    44
+1    37
+2    80
+3    37
+Name: x86_64-linux-gnu-ranlib, dtype: int64
+
+x86_64-linux-gnu-readelf: 
+0      0
+1      0
+2    566
+3      0
+Name: x86_64-linux-gnu-readelf, dtype: int64
+
+x86_64-linux-gnu-strip: 
+0       0
+1      19
+2    1299
+3      19
+Name: x86_64-linux-gnu-strip, dtype: int64
+
+xargs: 
+0    0
+1    0
+2    0
+3    0
+Name: xargs, dtype: int64
+
+xauth: 
+0    62
+1    45
+2    76
+3    45
+Name: xauth, dtype: int64
+
+xclock: 
+0    0
+1    0
+2    0
+3    0
+Name: xclock, dtype: int64
+
+xdg-dbus-proxy: 
+0    21
+1    16
+2    52
+3    16
+Name: xdg-dbus-proxy, dtype: int64
+
+xditview: 
+0    15
+1    13
+2    53
+3    13
+Name: xditview, dtype: int64
+
+xdotool: 
+0    46
+1    27
+2    45
+3    27
+Name: xdotool, dtype: int64
+
+xedit: 
+0    0
+1    0
+2    0
+3    0
+Name: xedit, dtype: int64
+
+xfce4-about: 
+0    5
+1    5
+2    5
+3    5
+Name: xfce4-about, dtype: int64
+
+xfce4-accessibility-settings: 
+0    2
+1    2
+2    0
+3    2
+Name: xfce4-accessibility-settings, dtype: int64
+
+xfce4-appearance-settings: 
+0    2
+1    2
+2    0
+3    2
+Name: xfce4-appearance-settings, dtype: int64
+
+xfce4-appfinder: 
+0     26
+1     21
+2    124
+3     21
+Name: xfce4-appfinder, dtype: int64
+
+xfce4-clipman: 
+0     4
+1     2
+2    56
+3     2
+Name: xfce4-clipman, dtype: int64
+
+xfce4-clipman-history: 
+0     3
+1     2
+2    59
+3     2
+Name: xfce4-clipman-history, dtype: int64
+
+xfce4-clipman-settings: 
+0     3
+1     2
+2    11
+3     2
+Name: xfce4-clipman-settings, dtype: int64
+
+xfce4-color-settings: 
+0    11
+1    11
+2    28
+3    11
+Name: xfce4-color-settings, dtype: int64
+
+xfce4-display-settings: 
+0    0
+1    0
+2    0
+3    0
+Name: xfce4-display-settings, dtype: int64
+
+xfce4-keyboard-settings: 
+0     2
+1     2
+2    33
+3     2
+Name: xfce4-keyboard-settings, dtype: int64
+
+xfce4-mime-helper: 
+0     2
+1     1
+2    17
+3     1
+Name: xfce4-mime-helper, dtype: int64
+
+xfce4-mime-settings: 
+0     2
+1     2
+2    29
+3     2
+Name: xfce4-mime-settings, dtype: int64
+
+xfce4-mouse-settings: 
+0    0
+1    0
+2    5
+3    0
+Name: xfce4-mouse-settings, dtype: int64
+
+xfce4-notifyd-config: 
+0    1
+1    1
+2    3
+3    1
+Name: xfce4-notifyd-config, dtype: int64
+
+xfce4-panel: 
+0      0
+1      2
+2    262
+3      2
+Name: xfce4-panel, dtype: int64
+
+xfce4-power-manager: 
+0    0
+1    0
+2    0
+3    0
+Name: xfce4-power-manager, dtype: int64
+
+xfce4-power-manager-settings: 
+0    3
+1    3
+2    8
+3    3
+Name: xfce4-power-manager-settings, dtype: int64
+
+xfce4-screenshooter: 
+0     6
+1     6
+2    23
+3     6
+Name: xfce4-screenshooter, dtype: int64
+
+xfce4-session: 
+0    0
+1    0
+2    0
+3    0
+Name: xfce4-session, dtype: int64
+
+xfce4-session-settings: 
+0    11
+1    14
+2    44
+3    14
+Name: xfce4-session-settings, dtype: int64
+
+xfce4-settings-editor: 
+0    0
+1    0
+2    0
+3    0
+Name: xfce4-settings-editor, dtype: int64
+
+xfce4-taskmanager: 
+0     9
+1     8
+2    57
+3     8
+Name: xfce4-taskmanager, dtype: int64
+
+xfdesktop: 
+0    0
+1    0
+2    0
+3    0
+Name: xfdesktop, dtype: int64
+
+xfdesktop-settings: 
+0     7
+1     7
+2    50
+3     7
+Name: xfdesktop-settings, dtype: int64
+
+xfreerdp: 
+0     28
+1     25
+2    215
+3     25
+Name: xfreerdp, dtype: int64
+
+xfsettingsd: 
+0      1
+1      1
+2    185
+3      1
+Name: xfsettingsd, dtype: int64
+
+xfwm4: 
+0       0
+1       0
+2    1520
+3       0
+Name: xfwm4, dtype: int64
+
+xfwm4-settings: 
+0    0
+1    0
+2    8
+3    0
+Name: xfwm4-settings, dtype: int64
+
+xfwm4-workspace-settings: 
+0    1
+1    1
+2    1
+3    1
+Name: xfwm4-workspace-settings, dtype: int64
+
+xgc: 
+0    0
+1    0
+2    0
+3    0
+Name: xgc, dtype: int64
+
+xhydra: 
+0     3
+1    23
+2     5
+3    23
+Name: xhydra, dtype: int64
+
+xkbcomp: 
+0     95
+1     97
+2    671
+3     97
+Name: xkbcomp, dtype: int64
+
+xkbprint: 
+0     9
+1     9
+2    16
+3     9
+Name: xkbprint, dtype: int64
+
+xman: 
+0    42
+1    34
+2    96
+3    34
+Name: xman, dtype: int64
+
+xmllint: 
+0    13
+1    13
+2    13
+3    13
+Name: xmllint, dtype: int64
+
+xprop: 
+0    20
+1    23
+2    13
+3    23
+Name: xprop, dtype: int64
+
+xrandr: 
+0      0
+1      0
+2    472
+3      0
+Name: xrandr, dtype: int64
+
+xsm: 
+0    139
+1     89
+2    128
+3     89
+Name: xsm, dtype: int64
+
+Xtightvnc: 
+0    0
+1    0
+2    0
+3    0
+Name: Xtightvnc, dtype: int64
+
+xtightvncviewer: 
+0    46
+1    47
+2    65
+3    47
+Name: xtightvncviewer, dtype: int64
+
+Xvfb: 
+0    0
+1    0
+2    0
+3    0
+Name: Xvfb, dtype: int64
+
+xwininfo: 
+0    10
+1    12
+2    86
+3    12
+Name: xwininfo, dtype: int64
+
+xz: 
+0    16
+1    72
+2    71
+3    72
+Name: xz, dtype: int64
+
+yasm: 
+0       0
+1       0
+2    1005
+3       0
+Name: yasm, dtype: int64
+
+ytasm: 
+0       0
+1       0
+2    1002
+3       0
+Name: ytasm, dtype: int64
+
+zenity: 
+0    0
+1    0
+2    0
+3    0
+Name: zenity, dtype: int64
+
+zip: 
+0    329
+1    344
+2    370
+3    344
+Name: zip, dtype: int64
+
+zipcloak: 
+0    222
+1    261
+2    232
+3    261
+Name: zipcloak, dtype: int64
+
+zipinfo: 
+0    103
+1     97
+2    163
+3     97
+Name: zipinfo, dtype: int64
+
+zipnote: 
+0    236
+1    246
+2    227
+3    246
+Name: zipnote, dtype: int64
+
+zipsplit: 
+0    222
+1    236
+2    219
+3    236
+Name: zipsplit, dtype: int64
+
+zsh: 
+0    0
+1    0
+2    0
+3    0
+Name: zsh, dtype: int64
+
+[: 
+0     33
+1     30
+2    103
+3     30
+Name: [, dtype: int64

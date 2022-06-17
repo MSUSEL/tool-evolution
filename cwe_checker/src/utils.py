@@ -11,7 +11,7 @@ import time
 from collections import Counter
 
 statistics = {}
-releases = ["0.3"]  
+releases = ["stable", "lastest", "0.5", "0.4"]  
 # "0.2", "0.3", 
 # "0.4", "0.5", stable, latest
 UNABLE_TO_COUNT = -50
