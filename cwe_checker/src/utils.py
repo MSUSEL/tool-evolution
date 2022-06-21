@@ -4,6 +4,7 @@
 - To use this library: import utils
 '''
 
+from operator import mod
 import os
 import subprocess
 import json
@@ -11,9 +12,9 @@ import time
 from collections import Counter
 
 statistics = {}
-releases = ["stable", "lastest", "0.5", "0.4"]  
+releases = ["0.6"]  
 # "0.2", "0.3", 
-# "0.4", "0.5", stable, latest
+# "0.4", "0.5", "0.6", "stable", "latest"
 UNABLE_TO_COUNT = -50
 
 
@@ -50,6 +51,9 @@ def generate_output(file_path):
             elif release_id == "0.3":
                 modified_command = "bap " + file_path + " --pass=cwe-checker --cwe-checker-config=src/config.json"
                 print("Command: ", modified_command)
+            elif release_id == "0.6":
+                modified_command = base_command + ":/input cwe_checker:0.6 /input"
+                print("Command: ", modified_command)
                 
             # store output to count vulnerabilities
             print("Running command on ", filename, " using version ", release_id, "... \n")
@@ -82,7 +86,7 @@ def count_vulnerabilities(release_id, output):
     
     total = 0
     
-    if release_id == "0.5" or release_id == "stable":
+    if release_id == "0.5" or release_id == "0.6" or release_id == "stable":
         print("Using version 0.5 \n")
         OSJ = count_scanner(output, "OS Command Injection")
         print("OSJ: ", OSJ)
