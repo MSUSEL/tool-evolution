@@ -87,7 +87,7 @@ def count_vulnerabilities(release_id, output):
     total = 0
     
     if release_id == "0.5" or release_id == "0.6" or release_id == "stable":
-        print("Using version 0.5 \n")
+        print("Using version ", release_id, "\n")
         OSJ = count_scanner(output, "OS Command Injection")
         print("OSJ: ", OSJ)
         BUOV = count_scanner(output, "Buffer Overflow")

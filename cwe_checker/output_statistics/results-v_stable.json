@@ -1,1982 +1,1982 @@
 {
     "3proxy": {
-        "0.5": 70
+        "stable (0.5)": 70
     },
     "ab": {
-        "0.5": 9
+        "stable (0.5)": 9
     },
     "ag": {
-        "0.5": 69
+        "stable (0.5)": 69
     },
     "airdecap-ng": {
-        "0.5": 96
+        "stable (0.5)": 96
     },
     "airolib-ng": {
-        "0.5": 41
+        "stable (0.5)": 41
     },
     "apt-cache": {
-        "0.5": 86
+        "stable (0.5)": 86
     },
     "apt-ftparchive": {
-        "0.5": 433
+        "stable (0.5)": 433
     },
     "apt-mark": {
-        "0.5": 40
+        "stable (0.5)": 40
     },
     "ar": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "aria_chk": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "aria_dump_log": {
-        "0.5": 807
+        "stable (0.5)": 807
     },
     "aria_ftdump": {
-        "0.5": 824
+        "stable (0.5)": 824
     },
     "aria_pack": {
-        "0.5": 819
+        "stable (0.5)": 819
     },
     "aria_read_log": {
-        "0.5": 869
+        "stable (0.5)": 869
     },
     "arj": {
-        "0.5": 310
+        "stable (0.5)": 310
     },
     "aspell": {
-        "0.5": 246
+        "stable (0.5)": 246
     },
     "atk6-alive6": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "atk6-dnsdict6": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "atk6-fake_router26": {
-        "0.5": 104
+        "stable (0.5)": 104
     },
     "atk6-firewall6": {
-        "0.5": 95
+        "stable (0.5)": 95
     },
     "atk6-fragmentation6": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "atk6-fragrouter6": {
-        "0.5": 84
+        "stable (0.5)": 84
     },
     "atk6-fuzz_dhcps6": {
-        "0.5": 111
+        "stable (0.5)": 111
     },
     "atk6-fuzz_ip6": {
-        "0.5": 115
+        "stable (0.5)": 115
     },
     "atk6-implementation6": {
-        "0.5": 119
+        "stable (0.5)": 119
     },
     "atk6-thcping6": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "atk6-trace6": {
-        "0.5": 82
+        "stable (0.5)": 82
     },
     "atril": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "atril-previewer": {
-        "0.5": 1
+        "stable (0.5)": 1
     },
     "axel": {
-        "0.5": 43
+        "stable (0.5)": 43
     },
     "b2sum": {
-        "0.5": 24
+        "stable (0.5)": 24
     },
     "basenc": {
-        "0.5": 18
+        "stable (0.5)": 18
     },
     "bash": {
-        "0.5": 1599
+        "stable (0.5)": 1599
     },
     "bccmd": {
-        "0.5": 42
+        "stable (0.5)": 42
     },
     "bitmap": {
-        "0.5": 32
+        "stable (0.5)": 32
     },
     "bluemoon": {
-        "0.5": 51
+        "stable (0.5)": 51
     },
     "bluetoothctl": {
-        "0.5": 106
+        "stable (0.5)": 106
     },
     "bootctl": {
-        "0.5": 41
+        "stable (0.5)": 41
     },
     "broadwayd": {
-        "0.5": 11
+        "stable (0.5)": 11
     },
     "btattach": {
-        "0.5": 65
+        "stable (0.5)": 65
     },
     "btmgmt": {
-        "0.5": 152
+        "stable (0.5)": 152
     },
     "btmon": {
-        "0.5": 185
+        "stable (0.5)": 185
     },
     "btrfs": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "btrfs-debug-tree": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "btrfs-find-root": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "btrfs-image": {
-        "0.5": 271
+        "stable (0.5)": 271
     },
     "btrfs-map-logical": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "btrfs-select-super": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "btrfs-zero-log": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "btrfstune": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "bulk_extractor": {
-        "0.5": 2336
+        "stable (0.5)": 2336
     },
     "bully": {
-        "0.5": 185
+        "stable (0.5)": 185
     },
     "busctl": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "busybox": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "bwrap": {
-        "0.5": 32
+        "stable (0.5)": 32
     },
     "cadaver": {
-        "0.5": 102
+        "stable (0.5)": 102
     },
     "cgpt": {
-        "0.5": 26
+        "stable (0.5)": 26
     },
     "chage": {
-        "0.5": 29
+        "stable (0.5)": 29
     },
     "chcon": {
-        "0.5": 29
+        "stable (0.5)": 29
     },
     "cherrytree": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "chfn": {
-        "0.5": 31
+        "stable (0.5)": 31
     },
     "chgrp": {
-        "0.5": 32
+        "stable (0.5)": 32
     },
     "chmod": {
-        "0.5": 30
+        "stable (0.5)": 30
     },
     "choom": {
-        "0.5": 18
+        "stable (0.5)": 18
     },
     "chown": {
-        "0.5": 33
+        "stable (0.5)": 33
     },
     "chsh": {
-        "0.5": 25
+        "stable (0.5)": 25
     },
     "cifsdd": {
-        "0.5": 16
+        "stable (0.5)": 16
     },
     "ciptool": {
-        "0.5": 55
+        "stable (0.5)": 55
     },
     "citrix": {
-        "0.5": 111
+        "stable (0.5)": 111
     },
     "cjpeg": {
-        "0.5": 3
+        "stable (0.5)": 3
     },
     "closed_source_web_server_fuzz": {
-        "0.5": 119
+        "stable (0.5)": 119
     },
     "cluster": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "colormgr": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "column": {
-        "0.5": 49
+        "stable (0.5)": 49
     },
     "corkscrew": {
-        "0.5": 15
+        "stable (0.5)": 15
     },
     "cp": {
-        "0.5": 101
+        "stable (0.5)": 101
     },
     "cpio": {
-        "0.5": 151
+        "stable (0.5)": 151
     },
     "crunch": {
-        "0.5": 111
+        "stable (0.5)": 111
     },
     "csplit": {
-        "0.5": 124
+        "stable (0.5)": 124
     },
     "curl": {
-        "0.5": 61
+        "stable (0.5)": 61
     },
     "curlftpfs": {
-        "0.5": 30
+        "stable (0.5)": 30
     },
     "cutycapt": {
-        "0.5": 2
+        "stable (0.5)": 2
     },
     "cvtsudoers": {
-        "0.5": 176
+        "stable (0.5)": 176
     },
     "dash": {
-        "0.5": 53
+        "stable (0.5)": 53
     },
     "date": {
-        "0.5": 72
+        "stable (0.5)": 72
     },
     "dbd": {
-        "0.5": 33
+        "stable (0.5)": 33
     },
     "dbus-daemon": {
-        "0.5": 20
+        "stable (0.5)": 20
     },
     "dceoversmb": {
-        "0.5": 126
+        "stable (0.5)": 126
     },
     "dd": {
-        "0.5": 63
+        "stable (0.5)": 63
     },
     "desktop-file-install": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "desktop-file-validate": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "df": {
-        "0.5": 71
+        "stable (0.5)": 71
     },
     "diff": {
-        "0.5": 223
+        "stable (0.5)": 223
     },
     "diff3": {
-        "0.5": 53
+        "stable (0.5)": 53
     },
     "dig": {
-        "0.5": 173
+        "stable (0.5)": 173
     },
     "dir": {
-        "0.5": 158
+        "stable (0.5)": 158
     },
     "dirb": {
-        "0.5": 81
+        "stable (0.5)": 81
     },
     "dirmngr": {
-        "0.5": 527
+        "stable (0.5)": 527
     },
     "dirmngr-client": {
-        "0.5": 93
+        "stable (0.5)": 93
     },
     "dmesg": {
-        "0.5": 28
+        "stable (0.5)": 28
     },
     "dns2tcpc": {
-        "0.5": 32
+        "stable (0.5)": 32
     },
     "dns2tcpd": {
-        "0.5": 40
+        "stable (0.5)": 40
     },
     "dos2unix": {
-        "0.5": 5
+        "stable (0.5)": 5
     },
     "do_post": {
-        "0.5": 122
+        "stable (0.5)": 122
     },
     "dpkg": {
-        "0.5": 178
+        "stable (0.5)": 178
     },
     "dpkg-deb": {
-        "0.5": 95
+        "stable (0.5)": 95
     },
     "dpkg-divert": {
-        "0.5": 92
+        "stable (0.5)": 92
     },
     "dpkg-query": {
-        "0.5": 109
+        "stable (0.5)": 109
     },
     "dpkg-split": {
-        "0.5": 82
+        "stable (0.5)": 82
     },
     "dpkg-statoverride": {
-        "0.5": 29
+        "stable (0.5)": 29
     },
     "dpkg-trigger": {
-        "0.5": 33
+        "stable (0.5)": 33
     },
     "du": {
-        "0.5": 159
+        "stable (0.5)": 159
     },
     "dumpcap": {
-        "0.5": 33
+        "stable (0.5)": 33
     },
     "dumpkeys": {
-        "0.5": 31
+        "stable (0.5)": 31
     },
     "ed": {
-        "0.5": 47
+        "stable (0.5)": 47
     },
     "edgepaint": {
-        "0.5": 323
+        "stable (0.5)": 323
     },
     "editcap": {
-        "0.5": 9
+        "stable (0.5)": 9
     },
     "editres": {
-        "0.5": 22
+        "stable (0.5)": 22
     },
     "eject": {
-        "0.5": 54
+        "stable (0.5)": 54
     },
     "engrampa": {
-        "0.5": 1
+        "stable (0.5)": 1
     },
     "eqn": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "etterfilter": {
-        "0.5": 35
+        "stable (0.5)": 35
     },
     "etterlog": {
-        "0.5": 13
+        "stable (0.5)": 13
     },
     "exiv2": {
-        "0.5": 373
+        "stable (0.5)": 373
     },
     "exo-desktop-item-edit": {
-        "0.5": 1
+        "stable (0.5)": 1
     },
     "expr": {
-        "0.5": 161
+        "stable (0.5)": 161
     },
     "factor": {
-        "0.5": 54
+        "stable (0.5)": 54
     },
     "fastjar": {
-        "0.5": 58
+        "stable (0.5)": 58
     },
     "fidentify": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "filan": {
-        "0.5": 73
+        "stable (0.5)": 73
     },
     "file": {
-        "0.5": 87
+        "stable (0.5)": 87
     },
     "find": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "findmnt": {
-        "0.5": 19
+        "stable (0.5)": 19
     },
     "fish": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "fiwalk": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "flac": {
-        "0.5": 96
+        "stable (0.5)": 96
     },
     "futility": {
-        "0.5": 187
+        "stable (0.5)": 187
     },
     "g-ir-compiler": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "gatttool": {
-        "0.5": 212
+        "stable (0.5)": 212
     },
     "gawk": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "gdbus": {
-        "0.5": 12
+        "stable (0.5)": 12
     },
     "generic_chunked": {
-        "0.5": 114
+        "stable (0.5)": 114
     },
     "generic_listen_tcp": {
-        "0.5": 110
+        "stable (0.5)": 110
     },
     "generic_send_tcp": {
-        "0.5": 110
+        "stable (0.5)": 110
     },
     "generic_send_udp": {
-        "0.5": 110
+        "stable (0.5)": 110
     },
     "generic_web_server_fuzz": {
-        "0.5": 114
+        "stable (0.5)": 114
     },
     "generic_web_server_fuzz2": {
-        "0.5": 114
+        "stable (0.5)": 114
     },
     "gio": {
-        "0.5": 47
+        "stable (0.5)": 47
     },
     "git": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "git-shell": {
-        "0.5": 1938
+        "stable (0.5)": 1938
     },
     "gnome-keyring-daemon": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "gopherd": {
-        "0.5": 112
+        "stable (0.5)": 112
     },
     "gpasswd": {
-        "0.5": 66
+        "stable (0.5)": 66
     },
     "gpg": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "gpg-agent": {
-        "0.5": 369
+        "stable (0.5)": 369
     },
     "gpg-connect-agent": {
-        "0.5": 136
+        "stable (0.5)": 136
     },
     "gpg-wks-server": {
-        "0.5": 161
+        "stable (0.5)": 161
     },
     "gpgcompose": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "gpgconf": {
-        "0.5": 95
+        "stable (0.5)": 95
     },
     "gpgsm": {
-        "0.5": 370
+        "stable (0.5)": 370
     },
     "gpgsplit": {
-        "0.5": 67
+        "stable (0.5)": 67
     },
     "gpgtar": {
-        "0.5": 126
+        "stable (0.5)": 126
     },
     "gpgv": {
-        "0.5": 294
+        "stable (0.5)": 294
     },
     "grep": {
-        "0.5": 186
+        "stable (0.5)": 186
     },
     "grepjar": {
-        "0.5": 124
+        "stable (0.5)": 124
     },
     "groff": {
-        "0.5": 186
+        "stable (0.5)": 186
     },
     "grops": {
-        "0.5": 218
+        "stable (0.5)": 218
     },
     "grotty": {
-        "0.5": 149
+        "stable (0.5)": 149
     },
     "grub-editenv": {
-        "0.5": 121
+        "stable (0.5)": 121
     },
     "grub-file": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "grub-fstest": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "grub-glue-efi": {
-        "0.5": 123
+        "stable (0.5)": 123
     },
     "grub-menulst2cfg": {
-        "0.5": 94
+        "stable (0.5)": 94
     },
     "grub-mkfont": {
-        "0.5": 131
+        "stable (0.5)": 131
     },
     "grub-mkimage": {
-        "0.5": 189
+        "stable (0.5)": 189
     },
     "grub-mklayout": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "grub-mknetdir": {
-        "0.5": 246
+        "stable (0.5)": 246
     },
     "grub-mkpasswd-pbkdf2": {
-        "0.5": 128
+        "stable (0.5)": 128
     },
     "grub-mkrelpath": {
-        "0.5": 127
+        "stable (0.5)": 127
     },
     "grub-mkrescue": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "grub-mkstandalone": {
-        "0.5": 273
+        "stable (0.5)": 273
     },
     "grub-mount": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "grub-render-label": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "grub-script-check": {
-        "0.5": 127
+        "stable (0.5)": 127
     },
     "grub-syslinux2cfg": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "gvmap": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "gzip": {
-        "0.5": 71
+        "stable (0.5)": 71
     },
     "halflife": {
-        "0.5": 111
+        "stable (0.5)": 111
     },
     "hashcat": {
-        "0.5": 348
+        "stable (0.5)": 348
     },
     "hashdeep": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "hciattach": {
-        "0.5": 54
+        "stable (0.5)": 54
     },
     "hciconfig": {
-        "0.5": 59
+        "stable (0.5)": 59
     },
     "hcidump": {
-        "0.5": 107
+        "stable (0.5)": 107
     },
     "hcitool": {
-        "0.5": 69
+        "stable (0.5)": 69
     },
     "heartbleeder": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "hexdump": {
-        "0.5": 29
+        "stable (0.5)": 29
     },
     "hexeditor": {
-        "0.5": 82
+        "stable (0.5)": 82
     },
     "host": {
-        "0.5": 72
+        "stable (0.5)": 72
     },
     "hotpatcher": {
-        "0.5": 27
+        "stable (0.5)": 27
     },
     "ht": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "htop": {
-        "0.5": 71
+        "stable (0.5)": 71
     },
     "httptunnel-client": {
-        "0.5": 13
+        "stable (0.5)": 13
     },
     "httptunnel-server": {
-        "0.5": 13
+        "stable (0.5)": 13
     },
     "hydra": {
-        "0.5": 1
+        "stable (0.5)": 1
     },
     "ico": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "iconv": {
-        "0.5": 40
+        "stable (0.5)": 40
     },
     "ike-scan": {
-        "0.5": 73
+        "stable (0.5)": 73
     },
     "infocmp": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "innochecksum": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "install": {
-        "0.5": 97
+        "stable (0.5)": 97
     },
     "iostat": {
-        "0.5": 62
+        "stable (0.5)": 62
     },
     "ip": {
-        "0.5": 205
+        "stable (0.5)": 205
     },
     "ipcs": {
-        "0.5": 21
+        "stable (0.5)": 21
     },
     "ivstools": {
-        "0.5": 40
+        "stable (0.5)": 40
     },
     "join": {
-        "0.5": 23
+        "stable (0.5)": 23
     },
     "journalctl": {
-        "0.5": 6
+        "stable (0.5)": 6
     },
     "kbxutil": {
-        "0.5": 145
+        "stable (0.5)": 145
     },
     "kismetdb_clean": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "kismetdb_dump_devices": {
-        "0.5": 37
+        "stable (0.5)": 37
     },
     "kismetdb_statistics": {
-        "0.5": 39
+        "stable (0.5)": 39
     },
     "kismetdb_to_gpx": {
-        "0.5": 48
+        "stable (0.5)": 48
     },
     "kismetdb_to_kml": {
-        "0.5": 39
+        "stable (0.5)": 39
     },
     "kismetdb_to_pcap": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "kismetdb_to_wiglecsv": {
-        "0.5": 48
+        "stable (0.5)": 48
     },
     "kismet_cap_kismetdb": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "kismet_cap_linux_bluetooth": {
-        "0.5": 45
+        "stable (0.5)": 45
     },
     "kismet_cap_linux_wifi": {
-        "0.5": 133
+        "stable (0.5)": 133
     },
     "kismet_cap_nrf_51822": {
-        "0.5": 45
+        "stable (0.5)": 45
     },
     "kismet_cap_nrf_52840": {
-        "0.5": 39
+        "stable (0.5)": 39
     },
     "kismet_cap_nrf_mousejack": {
-        "0.5": 50
+        "stable (0.5)": 50
     },
     "kismet_cap_nxp_kw41z": {
-        "0.5": 41
+        "stable (0.5)": 41
     },
     "kismet_cap_pcapfile": {
-        "0.5": 37
+        "stable (0.5)": 37
     },
     "kismet_cap_rz_killerbee": {
-        "0.5": 42
+        "stable (0.5)": 42
     },
     "kismet_cap_ti_cc_2531": {
-        "0.5": 43
+        "stable (0.5)": 43
     },
     "kismet_cap_ti_cc_2540": {
-        "0.5": 43
+        "stable (0.5)": 43
     },
     "kismet_cap_ubertooth_one": {
-        "0.5": 41
+        "stable (0.5)": 41
     },
     "kmod": {
-        "0.5": 285
+        "stable (0.5)": 285
     },
     "l2ping": {
-        "0.5": 26
+        "stable (0.5)": 26
     },
     "l2test": {
-        "0.5": 27
+        "stable (0.5)": 27
     },
     "ld": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "ldapcompare": {
-        "0.5": 43
+        "stable (0.5)": 43
     },
     "ldapdelete": {
-        "0.5": 68
+        "stable (0.5)": 68
     },
     "ldapexop": {
-        "0.5": 42
+        "stable (0.5)": 42
     },
     "ldapmodify": {
-        "0.5": 42
+        "stable (0.5)": 42
     },
     "ldapmodrdn": {
-        "0.5": 41
+        "stable (0.5)": 41
     },
     "ldappasswd": {
-        "0.5": 44
+        "stable (0.5)": 44
     },
     "ldapsearch": {
-        "0.5": 86
+        "stable (0.5)": 86
     },
     "ldapwhoami": {
-        "0.5": 40
+        "stable (0.5)": 40
     },
     "ldrdf": {
-        "0.5": 55
+        "stable (0.5)": 55
     },
     "lefty": {
-        "0.5": 268
+        "stable (0.5)": 268
     },
     "less": {
-        "0.5": 121
+        "stable (0.5)": 121
     },
     "lexgrog": {
-        "0.5": 17
+        "stable (0.5)": 17
     },
     "light-locker": {
-        "0.5": 1
+        "stable (0.5)": 1
     },
     "line_send_tcp": {
-        "0.5": 110
+        "stable (0.5)": 110
     },
     "ln": {
-        "0.5": 51
+        "stable (0.5)": 51
     },
     "loadkeys": {
-        "0.5": 63
+        "stable (0.5)": 63
     },
     "locale": {
-        "0.5": 25
+        "stable (0.5)": 25
     },
     "localedef": {
-        "0.5": 334
+        "stable (0.5)": 334
     },
     "logger": {
-        "0.5": 47
+        "stable (0.5)": 47
     },
     "login": {
-        "0.5": 47
+        "stable (0.5)": 47
     },
     "loginctl": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "logtop": {
-        "0.5": 19
+        "stable (0.5)": 19
     },
     "lowntfs-3g": {
-        "0.5": 77
+        "stable (0.5)": 77
     },
     "ls": {
-        "0.5": 158
+        "stable (0.5)": 158
     },
     "lsblk": {
-        "0.5": 48
+        "stable (0.5)": 48
     },
     "lsciphers": {
-        "0.5": 658
+        "stable (0.5)": 658
     },
     "lscpu": {
-        "0.5": 66
+        "stable (0.5)": 66
     },
     "lsipc": {
-        "0.5": 38
+        "stable (0.5)": 38
     },
     "lslogins": {
-        "0.5": 46
+        "stable (0.5)": 46
     },
     "lsmem": {
-        "0.5": 28
+        "stable (0.5)": 28
     },
     "lsns": {
-        "0.5": 15
+        "stable (0.5)": 15
     },
     "lsof": {
-        "0.5": 206
+        "stable (0.5)": 206
     },
     "lspci": {
-        "0.5": 7
+        "stable (0.5)": 7
     },
     "lstopo": {
-        "0.5": 44
+        "stable (0.5)": 44
     },
     "lstopo-no-graphics": {
-        "0.5": 44
+        "stable (0.5)": 44
     },
     "lsusb": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "luit": {
-        "0.5": 9
+        "stable (0.5)": 9
     },
     "make": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "man": {
-        "0.5": 61
+        "stable (0.5)": 61
     },
     "mandb": {
-        "0.5": 50
+        "stable (0.5)": 50
     },
     "mariadb": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "mariadb-admin": {
-        "0.5": 753
+        "stable (0.5)": 753
     },
     "mariadb-binlog": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "mariadb-check": {
-        "0.5": 737
+        "stable (0.5)": 737
     },
     "mariadb-conv": {
-        "0.5": 286
+        "stable (0.5)": 286
     },
     "mariadb-dump": {
-        "0.5": 770
+        "stable (0.5)": 770
     },
     "mariadb-import": {
-        "0.5": 704
+        "stable (0.5)": 704
     },
     "mariadb-plugin": {
-        "0.5": 252
+        "stable (0.5)": 252
     },
     "mariadb-show": {
-        "0.5": 745
+        "stable (0.5)": 745
     },
     "mariadb-slap": {
-        "0.5": 746
+        "stable (0.5)": 746
     },
     "mariadb-tzinfo-to-sql": {
-        "0.5": 247
+        "stable (0.5)": 247
     },
     "mariadb-upgrade": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "mariadb-waitpid": {
-        "0.5": 241
+        "stable (0.5)": 241
     },
     "mariadbd-safe-helper": {
-        "0.5": 215
+        "stable (0.5)": 215
     },
     "mate-calc": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "mate-calc-cmd": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "mawk": {
-        "0.5": 97
+        "stable (0.5)": 97
     },
     "md5deep": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "mdsearch": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "medusa": {
-        "0.5": 139
+        "stable (0.5)": 139
     },
     "metaflac": {
-        "0.5": 95
+        "stable (0.5)": 95
     },
     "mingle": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "minicom": {
-        "0.5": 203
+        "stable (0.5)": 203
     },
     "mkdir": {
-        "0.5": 52
+        "stable (0.5)": 52
     },
     "mkfifo": {
-        "0.5": 37
+        "stable (0.5)": 37
     },
     "mkfs.btrfs": {
-        "0.5": 247
+        "stable (0.5)": 247
     },
     "mknod": {
-        "0.5": 39
+        "stable (0.5)": 39
     },
     "mksquashfs": {
-        "0.5": 156
+        "stable (0.5)": 156
     },
     "mm2gv": {
-        "0.5": 102
+        "stable (0.5)": 102
     },
     "mmcli": {
-        "0.5": 27
+        "stable (0.5)": 27
     },
     "more": {
-        "0.5": 23
+        "stable (0.5)": 23
     },
     "mount": {
-        "0.5": 23
+        "stable (0.5)": 23
     },
     "mousepad": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "mpg123.bin": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "mpris-proxy": {
-        "0.5": 15
+        "stable (0.5)": 15
     },
     "mpstat": {
-        "0.5": 69
+        "stable (0.5)": 69
     },
     "msrpcfuzz": {
-        "0.5": 124
+        "stable (0.5)": 124
     },
     "msrpcfuzz_udp": {
-        "0.5": 124
+        "stable (0.5)": 124
     },
     "mt-gnu": {
-        "0.5": 105
+        "stable (0.5)": 105
     },
     "mv": {
-        "0.5": 94
+        "stable (0.5)": 94
     },
     "myisamchk": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "myisamlog": {
-        "0.5": 446
+        "stable (0.5)": 446
     },
     "myisampack": {
-        "0.5": 471
+        "stable (0.5)": 471
     },
     "myisam_ftdump": {
-        "0.5": 463
+        "stable (0.5)": 463
     },
     "my_print_defaults": {
-        "0.5": 242
+        "stable (0.5)": 242
     },
     "nano": {
-        "0.5": 319
+        "stable (0.5)": 319
     },
     "nasm": {
-        "0.5": 1159
+        "stable (0.5)": 1159
     },
     "ncdu": {
-        "0.5": 138
+        "stable (0.5)": 138
     },
     "ncrack": {
-        "0.5": 21
+        "stable (0.5)": 21
     },
     "ndisasm": {
-        "0.5": 27
+        "stable (0.5)": 27
     },
     "net": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "netkit-ftp": {
-        "0.5": 49
+        "stable (0.5)": 49
     },
     "netstat": {
-        "0.5": 134
+        "stable (0.5)": 134
     },
     "networkctl": {
-        "0.5": 15
+        "stable (0.5)": 15
     },
     "nl": {
-        "0.5": 131
+        "stable (0.5)": 131
     },
     "nm": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "nm-applet": {
-        "0.5": 33
+        "stable (0.5)": 33
     },
     "nm-connection-editor": {
-        "0.5": 25
+        "stable (0.5)": 25
     },
     "nmap_centos5": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "nmblookup": {
-        "0.5": 42
+        "stable (0.5)": 42
     },
     "nmcli": {
-        "0.5": 330
+        "stable (0.5)": 330
     },
     "nmtui": {
-        "0.5": 183
+        "stable (0.5)": 183
     },
     "nslookup": {
-        "0.5": 75
+        "stable (0.5)": 75
     },
     "nstat": {
-        "0.5": 34
+        "stable (0.5)": 34
     },
     "nsupdate": {
-        "0.5": 102
+        "stable (0.5)": 102
     },
     "ntfs-3g": {
-        "0.5": 89
+        "stable (0.5)": 89
     },
     "ntfsdecrypt": {
-        "0.5": 12
+        "stable (0.5)": 12
     },
     "ntfsinfo": {
-        "0.5": 5
+        "stable (0.5)": 5
     },
     "ntfsrecover": {
-        "0.5": 145
+        "stable (0.5)": 145
     },
     "ntfssecaudit": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "ntfswipe": {
-        "0.5": 18
+        "stable (0.5)": 18
     },
     "ntlm2": {
-        "0.5": 176
+        "stable (0.5)": 176
     },
     "ntlm_brute": {
-        "0.5": 172
+        "stable (0.5)": 172
     },
     "ntpdc": {
-        "0.5": 24
+        "stable (0.5)": 24
     },
     "ntpq": {
-        "0.5": 91
+        "stable (0.5)": 91
     },
     "numfmt": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "obexctl": {
-        "0.5": 58
+        "stable (0.5)": 58
     },
     "objcopy": {
-        "0.5": 612
+        "stable (0.5)": 612
     },
     "objdump": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "od": {
-        "0.5": 1
+        "stable (0.5)": 1
     },
     "onesixtyone": {
-        "0.5": 9
+        "stable (0.5)": 9
     },
     "openfortivpn": {
-        "0.5": 97
+        "stable (0.5)": 97
     },
     "openssl": {
-        "0.5": 112
+        "stable (0.5)": 112
     },
     "ophcrack": {
-        "0.5": 13
+        "stable (0.5)": 13
     },
     "ophcrack-cli": {
-        "0.5": 280
+        "stable (0.5)": 280
     },
     "out123": {
-        "0.5": 72
+        "stable (0.5)": 72
     },
     "pacat": {
-        "0.5": 3
+        "stable (0.5)": 3
     },
     "packetforge-ng": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "packetq": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "pactl": {
-        "0.5": 3
+        "stable (0.5)": 3
     },
     "parole": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "partx": {
-        "0.5": 76
+        "stable (0.5)": 76
     },
     "passwd": {
-        "0.5": 26
+        "stable (0.5)": 26
     },
     "patch": {
-        "0.5": 162
+        "stable (0.5)": 162
     },
     "pavucontrol": {
-        "0.5": 10
+        "stable (0.5)": 10
     },
     "perl": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "perl5.32.1": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "perror": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "photorec": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "pic": {
-        "0.5": 97
+        "stable (0.5)": 97
     },
     "pidstat": {
-        "0.5": 46
+        "stable (0.5)": 46
     },
     "pinentry-curses": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "pinentry-gnome3": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "ping": {
-        "0.5": 18
+        "stable (0.5)": 18
     },
     "pixiewps": {
-        "0.5": 34
+        "stable (0.5)": 34
     },
     "pmspike": {
-        "0.5": 115
+        "stable (0.5)": 115
     },
     "post_fuzz": {
-        "0.5": 119
+        "stable (0.5)": 119
     },
     "post_spike": {
-        "0.5": 122
+        "stable (0.5)": 122
     },
     "pr": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "preconv": {
-        "0.5": 97
+        "stable (0.5)": 97
     },
     "printf": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "procan": {
-        "0.5": 66
+        "stable (0.5)": 66
     },
     "profiles": {
-        "0.5": 30
+        "stable (0.5)": 30
     },
     "proxytunnel": {
-        "0.5": 67
+        "stable (0.5)": 67
     },
     "ps": {
-        "0.5": 100
+        "stable (0.5)": 100
     },
     "pstat": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "pth-curl": {
-        "0.5": 388
+        "stable (0.5)": 388
     },
     "ptx": {
-        "0.5": 156
+        "stable (0.5)": 156
     },
     "pulseaudio": {
-        "0.5": 2
+        "stable (0.5)": 2
     },
     "pv": {
-        "0.5": 10
+        "stable (0.5)": 10
     },
     "qt5ct": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "quake": {
-        "0.5": 111
+        "stable (0.5)": 111
     },
     "quakeserver": {
-        "0.5": 111
+        "stable (0.5)": 111
     },
     "r2agent": {
-        "0.5": 254
+        "stable (0.5)": 254
     },
     "r2r": {
-        "0.5": 292
+        "stable (0.5)": 292
     },
     "rabin2": {
-        "0.5": 254
+        "stable (0.5)": 254
     },
     "radare2": {
-        "0.5": 256
+        "stable (0.5)": 256
     },
     "radiff2": {
-        "0.5": 254
+        "stable (0.5)": 254
     },
     "rafind2": {
-        "0.5": 254
+        "stable (0.5)": 254
     },
     "ragg2": {
-        "0.5": 254
+        "stable (0.5)": 254
     },
     "rahash2": {
-        "0.5": 254
+        "stable (0.5)": 254
     },
     "ranlib": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "rarun2": {
-        "0.5": 254
+        "stable (0.5)": 254
     },
     "rasign2": {
-        "0.5": 254
+        "stable (0.5)": 254
     },
     "rasm2": {
-        "0.5": 254
+        "stable (0.5)": 254
     },
     "rawshark": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "rax2": {
-        "0.5": 254
+        "stable (0.5)": 254
     },
     "rb": {
-        "0.5": 16
+        "stable (0.5)": 16
     },
     "rctest": {
-        "0.5": 50
+        "stable (0.5)": 50
     },
     "rdesktop": {
-        "0.5": 477
+        "stable (0.5)": 477
     },
     "rdf2bin": {
-        "0.5": 56
+        "stable (0.5)": 56
     },
     "rdma": {
-        "0.5": 63
+        "stable (0.5)": 63
     },
     "readelf": {
-        "0.5": 87
+        "stable (0.5)": 87
     },
     "readlink": {
-        "0.5": 25
+        "stable (0.5)": 25
     },
     "realpath": {
-        "0.5": 27
+        "stable (0.5)": 27
     },
     "rearj": {
-        "0.5": 59
+        "stable (0.5)": 59
     },
     "reaver": {
-        "0.5": 267
+        "stable (0.5)": 267
     },
     "recordmydesktop": {
-        "0.5": 104
+        "stable (0.5)": 104
     },
     "redir": {
-        "0.5": 21
+        "stable (0.5)": 21
     },
     "rendercheck": {
-        "0.5": 42
+        "stable (0.5)": 42
     },
     "replace": {
-        "0.5": 228
+        "stable (0.5)": 228
     },
     "resizepart": {
-        "0.5": 33
+        "stable (0.5)": 33
     },
     "resolvectl": {
-        "0.5": 24
+        "stable (0.5)": 24
     },
     "resolveip": {
-        "0.5": 241
+        "stable (0.5)": 241
     },
     "resolve_stack_dump": {
-        "0.5": 241
+        "stable (0.5)": 241
     },
     "rfcomm": {
-        "0.5": 36
+        "stable (0.5)": 36
     },
     "ristretto": {
-        "0.5": 4
+        "stable (0.5)": 4
     },
     "rm": {
-        "0.5": 35
+        "stable (0.5)": 35
     },
     "rmdir": {
-        "0.5": 26
+        "stable (0.5)": 26
     },
     "rpcclient": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "rpcgen": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "rsync": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "rx": {
-        "0.5": 16
+        "stable (0.5)": 16
     },
     "rz": {
-        "0.5": 16
+        "stable (0.5)": 16
     },
     "sadf": {
-        "0.5": 215
+        "stable (0.5)": 215
     },
     "samba-regedit": {
-        "0.5": 22
+        "stable (0.5)": 22
     },
     "sane-find-scanner": {
-        "0.5": 101
+        "stable (0.5)": 101
     },
     "sar.sysstat": {
-        "0.5": 137
+        "stable (0.5)": 137
     },
     "sb": {
-        "0.5": 12
+        "stable (0.5)": 12
     },
     "sbd": {
-        "0.5": 20
+        "stable (0.5)": 20
     },
     "scalpel": {
-        "0.5": 80
+        "stable (0.5)": 80
     },
     "scanimage": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "scp": {
-        "0.5": 134
+        "stable (0.5)": 134
     },
     "screen": {
-        "0.5": 505
+        "stable (0.5)": 505
     },
     "script": {
-        "0.5": 19
+        "stable (0.5)": 19
     },
     "scriptlive": {
-        "0.5": 18
+        "stable (0.5)": 18
     },
     "sdptool": {
-        "0.5": 63
+        "stable (0.5)": 63
     },
     "sed": {
-        "0.5": 66
+        "stable (0.5)": 66
     },
     "sendmsrpc": {
-        "0.5": 120
+        "stable (0.5)": 120
     },
     "seq": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "sftp": {
-        "0.5": 170
+        "stable (0.5)": 170
     },
     "sha1deep": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "sha1sum": {
-        "0.5": 15
+        "stable (0.5)": 15
     },
     "sha224sum": {
-        "0.5": 16
+        "stable (0.5)": 16
     },
     "sha256deep": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "sha256sum": {
-        "0.5": 16
+        "stable (0.5)": 16
     },
     "sha384sum": {
-        "0.5": 16
+        "stable (0.5)": 16
     },
     "sha512sum": {
-        "0.5": 16
+        "stable (0.5)": 16
     },
     "sharkd": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "shred": {
-        "0.5": 45
+        "stable (0.5)": 45
     },
     "shuf": {
-        "0.5": 22
+        "stable (0.5)": 22
     },
     "size": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "skipfish": {
-        "0.5": 650
+        "stable (0.5)": 650
     },
     "smbclient": {
-        "0.5": 46
+        "stable (0.5)": 46
     },
     "smbcontrol": {
-        "0.5": 21
+        "stable (0.5)": 21
     },
     "snmpnetstat": {
-        "0.5": 115
+        "stable (0.5)": 115
     },
     "socat": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "sort": {
-        "0.5": 70
+        "stable (0.5)": 70
     },
     "speech-dispatcher": {
-        "0.5": 61
+        "stable (0.5)": 61
     },
     "split": {
-        "0.5": 29
+        "stable (0.5)": 29
     },
     "spooftooph": {
-        "0.5": 116
+        "stable (0.5)": 116
     },
     "sqldiff": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "sqlite3": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "sqsh": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "ss": {
-        "0.5": 110
+        "stable (0.5)": 110
     },
     "ssh": {
-        "0.5": 400
+        "stable (0.5)": 400
     },
     "ssh-add": {
-        "0.5": 206
+        "stable (0.5)": 206
     },
     "ssh-agent": {
-        "0.5": 168
+        "stable (0.5)": 168
     },
     "ssh-keygen": {
-        "0.5": 256
+        "stable (0.5)": 256
     },
     "ssh-keyscan": {
-        "0.5": 271
+        "stable (0.5)": 271
     },
     "sslsplit": {
-        "0.5": 127
+        "stable (0.5)": 127
     },
     "ss_spike": {
-        "0.5": 119
+        "stable (0.5)": 119
     },
     "stat": {
-        "0.5": 91
+        "stable (0.5)": 91
     },
     "statd_spike": {
-        "0.5": 115
+        "stable (0.5)": 115
     },
     "stdbuf": {
-        "0.5": 34
+        "stable (0.5)": 34
     },
     "strace": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "strings": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "stty": {
-        "0.5": 46
+        "stable (0.5)": 46
     },
     "stunnel4": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "su": {
-        "0.5": 40
+        "stable (0.5)": 40
     },
     "sudo": {
-        "0.5": 36
+        "stable (0.5)": 36
     },
     "sudoreplay": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "sunrpcfuzz": {
-        "0.5": 114
+        "stable (0.5)": 114
     },
     "svn": {
-        "0.5": 50
+        "stable (0.5)": 50
     },
     "svnadmin": {
-        "0.5": 2
+        "stable (0.5)": 2
     },
     "svnbench": {
-        "0.5": 4
+        "stable (0.5)": 4
     },
     "svnlook": {
-        "0.5": 4
+        "stable (0.5)": 4
     },
     "svnrdump": {
-        "0.5": 6
+        "stable (0.5)": 6
     },
     "svnserve": {
-        "0.5": 9
+        "stable (0.5)": 9
     },
     "sx": {
-        "0.5": 12
+        "stable (0.5)": 12
     },
     "systemctl": {
-        "0.5": 135
+        "stable (0.5)": 135
     },
     "systemd-analyze": {
-        "0.5": 620
+        "stable (0.5)": 620
     },
     "systemd-hwdb": {
-        "0.5": 78
+        "stable (0.5)": 78
     },
     "systemd-mount": {
-        "0.5": 7
+        "stable (0.5)": 7
     },
     "systemd-run": {
-        "0.5": 5
+        "stable (0.5)": 5
     },
     "systemd-sysusers": {
-        "0.5": 36
+        "stable (0.5)": 36
     },
     "systemd-tmpfiles": {
-        "0.5": 8
+        "stable (0.5)": 8
     },
     "sz": {
-        "0.5": 12
+        "stable (0.5)": 12
     },
     "tac": {
-        "0.5": 127
+        "stable (0.5)": 127
     },
     "tail": {
-        "0.5": 26
+        "stable (0.5)": 26
     },
     "tapestat": {
-        "0.5": 38
+        "stable (0.5)": 38
     },
     "tar": {
-        "0.5": 443
+        "stable (0.5)": 443
     },
     "tbl": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "tcpbridge": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "tcpcapinfo": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "tcpdump": {
-        "0.5": 24
+        "stable (0.5)": 24
     },
     "tcpliveplay": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "tcpprep": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "tcpreplay": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "tcpreplay-edit": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "tcprewrite": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "telnet.netkit": {
-        "0.5": 111
+        "stable (0.5)": 111
     },
     "test": {
-        "0.5": 30
+        "stable (0.5)": 30
     },
     "testdisk": {
-        "0.5": 179
+        "stable (0.5)": 179
     },
     "text2pcap": {
-        "0.5": 26
+        "stable (0.5)": 26
     },
     "thunar": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "tic": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "tigerdeep": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "tmux": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "top": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "touch": {
-        "0.5": 70
+        "stable (0.5)": 70
     },
     "tpmc": {
-        "0.5": 32
+        "stable (0.5)": 32
     },
     "tr": {
-        "0.5": 21
+        "stable (0.5)": 21
     },
     "traceroute.db": {
-        "0.5": 43
+        "stable (0.5)": 43
     },
     "troff": {
-        "0.5": 243
+        "stable (0.5)": 243
     },
     "trust": {
-        "0.5": 66
+        "stable (0.5)": 66
     },
     "tshark": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "tsk_comparedir": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "tsk_gettimes": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "tsk_loaddb": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "tsk_recover": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "tsort": {
-        "0.5": 16
+        "stable (0.5)": 16
     },
     "udevadm": {
-        "0.5": 364
+        "stable (0.5)": 364
     },
     "udisksctl": {
-        "0.5": 16
+        "stable (0.5)": 16
     },
     "umax_pp": {
-        "0.5": 124
+        "stable (0.5)": 124
     },
     "uniq": {
-        "0.5": 21
+        "stable (0.5)": 21
     },
     "unix2dos": {
-        "0.5": 5
+        "stable (0.5)": 5
     },
     "unrar-nonfree": {
-        "0.5": 266
+        "stable (0.5)": 266
     },
     "unsquashfs": {
-        "0.5": 69
+        "stable (0.5)": 69
     },
     "unzip": {
-        "0.5": 97
+        "stable (0.5)": 97
     },
     "unzipsfx": {
-        "0.5": 54
+        "stable (0.5)": 54
     },
     "update-alternatives": {
-        "0.5": 98
+        "stable (0.5)": 98
     },
     "update-mime-database": {
-        "0.5": 16
+        "stable (0.5)": 16
     },
     "upx-ucl": {
-        "0.5": 258
+        "stable (0.5)": 258
     },
     "VBoxClient": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "vdir": {
-        "0.5": 158
+        "stable (0.5)": 158
     },
     "vim": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "vim.basic": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "vim.tiny": {
-        "0.5": 162
+        "stable (0.5)": 162
     },
     "voiphopper": {
-        "0.5": 189
+        "stable (0.5)": 189
     },
     "vsyasm": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "wash": {
-        "0.5": 267
+        "stable (0.5)": 267
     },
     "wdctl": {
-        "0.5": 26
+        "stable (0.5)": 26
     },
     "webfuzz": {
-        "0.5": 113
+        "stable (0.5)": 113
     },
     "wg": {
-        "0.5": 18
+        "stable (0.5)": 18
     },
     "wget": {
-        "0.5": 426
+        "stable (0.5)": 426
     },
     "whatis": {
-        "0.5": 30
+        "stable (0.5)": 30
     },
     "whirlpooldeep": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "who": {
-        "0.5": 41
+        "stable (0.5)": 41
     },
     "whois": {
-        "0.5": 99
+        "stable (0.5)": 99
     },
     "winexe": {
-        "0.5": 4
+        "stable (0.5)": 4
     },
     "wpa_passphrase": {
-        "0.5": 61
+        "stable (0.5)": 61
     },
     "x11perf": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "x11_spike": {
-        "0.5": 120
+        "stable (0.5)": 120
     },
     "x86_64-linux-gnu-ar": {
-        "0.5": 37
+        "stable (0.5)": 37
     },
     "x86_64-linux-gnu-as": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "x86_64-linux-gnu-c++filt": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "x86_64-linux-gnu-cpp-10": {
-        "0.5": 93
+        "stable (0.5)": 93
     },
     "x86_64-linux-gnu-g++-10": {
-        "0.5": 92
+        "stable (0.5)": 92
     },
     "x86_64-linux-gnu-gcc-10": {
-        "0.5": 98
+        "stable (0.5)": 98
     },
     "x86_64-linux-gnu-gcov-dump-10": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "x86_64-linux-gnu-gcov-tool-10": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "x86_64-linux-gnu-gprof": {
-        "0.5": 321
+        "stable (0.5)": 321
     },
     "x86_64-linux-gnu-ld.bfd": {
-        "0.5": 798
+        "stable (0.5)": 798
     },
     "x86_64-linux-gnu-ld.gold": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "x86_64-linux-gnu-objcopy": {
-        "0.5": 19
+        "stable (0.5)": 19
     },
     "x86_64-linux-gnu-objdump": {
-        "0.5": 14
+        "stable (0.5)": 14
     },
     "x86_64-linux-gnu-ranlib": {
-        "0.5": 37
+        "stable (0.5)": 37
     },
     "x86_64-linux-gnu-readelf": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "x86_64-linux-gnu-strip": {
-        "0.5": 19
+        "stable (0.5)": 19
     },
     "xargs": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "xauth": {
-        "0.5": 45
+        "stable (0.5)": 45
     },
     "xclock": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "xdg-dbus-proxy": {
-        "0.5": 16
+        "stable (0.5)": 16
     },
     "xditview": {
-        "0.5": 13
+        "stable (0.5)": 13
     },
     "xdotool": {
-        "0.5": 27
+        "stable (0.5)": 27
     },
     "xedit": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "xfce4-about": {
-        "0.5": 5
+        "stable (0.5)": 5
     },
     "xfce4-accessibility-settings": {
-        "0.5": 2
+        "stable (0.5)": 2
     },
     "xfce4-appearance-settings": {
-        "0.5": 2
+        "stable (0.5)": 2
     },
     "xfce4-appfinder": {
-        "0.5": 21
+        "stable (0.5)": 21
     },
     "xfce4-clipman": {
-        "0.5": 2
+        "stable (0.5)": 2
     },
     "xfce4-clipman-history": {
-        "0.5": 2
+        "stable (0.5)": 2
     },
     "xfce4-clipman-settings": {
-        "0.5": 2
+        "stable (0.5)": 2
     },
     "xfce4-color-settings": {
-        "0.5": 11
+        "stable (0.5)": 11
     },
     "xfce4-display-settings": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "xfce4-keyboard-settings": {
-        "0.5": 2
+        "stable (0.5)": 2
     },
     "xfce4-mime-helper": {
-        "0.5": 1
+        "stable (0.5)": 1
     },
     "xfce4-mime-settings": {
-        "0.5": 2
+        "stable (0.5)": 2
     },
     "xfce4-mouse-settings": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "xfce4-notifyd-config": {
-        "0.5": 1
+        "stable (0.5)": 1
     },
     "xfce4-panel": {
-        "0.5": 2
+        "stable (0.5)": 2
     },
     "xfce4-power-manager": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "xfce4-power-manager-settings": {
-        "0.5": 3
+        "stable (0.5)": 3
     },
     "xfce4-screenshooter": {
-        "0.5": 6
+        "stable (0.5)": 6
     },
     "xfce4-session": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "xfce4-session-settings": {
-        "0.5": 14
+        "stable (0.5)": 14
     },
     "xfce4-settings-editor": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "xfce4-taskmanager": {
-        "0.5": 8
+        "stable (0.5)": 8
     },
     "xfdesktop": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "xfdesktop-settings": {
-        "0.5": 7
+        "stable (0.5)": 7
     },
     "xfreerdp": {
-        "0.5": 25
+        "stable (0.5)": 25
     },
     "xfsettingsd": {
-        "0.5": 1
+        "stable (0.5)": 1
     },
     "xfwm4": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "xfwm4-settings": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "xfwm4-workspace-settings": {
-        "0.5": 1
+        "stable (0.5)": 1
     },
     "xgc": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "xhydra": {
-        "0.5": 23
+        "stable (0.5)": 23
     },
     "xkbcomp": {
-        "0.5": 97
+        "stable (0.5)": 97
     },
     "xkbprint": {
-        "0.5": 9
+        "stable (0.5)": 9
     },
     "xman": {
-        "0.5": 34
+        "stable (0.5)": 34
     },
     "xmllint": {
-        "0.5": 13
+        "stable (0.5)": 13
     },
     "xprop": {
-        "0.5": 23
+        "stable (0.5)": 23
     },
     "xrandr": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "xsm": {
-        "0.5": 89
+        "stable (0.5)": 89
     },
     "Xtightvnc": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "xtightvncviewer": {
-        "0.5": 47
+        "stable (0.5)": 47
     },
     "Xvfb": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "xwininfo": {
-        "0.5": 12
+        "stable (0.5)": 12
     },
     "xz": {
-        "0.5": 72
+        "stable (0.5)": 72
     },
     "yasm": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "ytasm": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "zenity": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "zip": {
-        "0.5": 344
+        "stable (0.5)": 344
     },
     "zipcloak": {
-        "0.5": 261
+        "stable (0.5)": 261
     },
     "zipinfo": {
-        "0.5": 97
+        "stable (0.5)": 97
     },
     "zipnote": {
-        "0.5": 246
+        "stable (0.5)": 246
     },
     "zipsplit": {
-        "0.5": 236
+        "stable (0.5)": 236
     },
     "zsh": {
-        "0.5": 0
+        "stable (0.5)": 0
     },
     "[": {
-        "0.5": 30
+        "stable (0.5)": 30
     }
 }
