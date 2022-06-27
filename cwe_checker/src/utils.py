@@ -12,9 +12,10 @@ import time
 from collections import Counter
 
 statistics = {}
-releases = ["0.6"]  
+info_array = {}
+releases = ["0.4", "0.5", "0.6"]  
 # "0.2", "0.3", 
-# "0.4", "0.5", "0.6", "stable", "latest"
+# "0.4", "0.5", "0.6"
 UNABLE_TO_COUNT = -50
 
 
@@ -24,8 +25,10 @@ def generate_output(file_path):
     files = os.listdir(file_path)
     for filename in files:
         statistics[filename] = {}
-    
+        info_array[filename] = {}
+        
     double_quotes = "\"\""
+    num = 0
     
     for release_id in releases:
         
@@ -67,7 +70,8 @@ def generate_output(file_path):
             output = str(output)
             
             try:
-                num_vulnerabilities = count_vulnerabilities(release_id, output)
+                num_vulnerabilities = count_vulnerabilities(release_id, output, filename)
+                
                 # print("Total number of vulnerabilities:", num_vulnerabilities, "\n")
             except:
                 print("Exception Detected. \n")
@@ -82,14 +86,16 @@ def generate_output(file_path):
     store_data(statistics)
     
 
-def count_vulnerabilities(release_id, output):
+def count_vulnerabilities(release_id, output, filename):
     
     total = 0
     
-    if release_id == "0.5" or release_id == "0.6" or release_id == "stable":
+    if release_id == "0.5" or release_id == "0.6":
         print("Using version ", release_id, "\n")
         OSJ = count_scanner(output, "OS Command Injection")
         print("OSJ: ", OSJ)
+        IROM = count_scanner(output, "Improper Restriction of Operations within the Bounds of a Memory Buffer")
+        print("IROM:", IROM)
         BUOV = count_scanner(output, "Buffer Overflow")
         print("BUOV: ", BUOV)
         ECFS = count_scanner(output, "Use of Externally-Controlled Format String")
@@ -120,18 +126,22 @@ def count_vulnerabilities(release_id, output):
         print("PDF: ", PDF)
         EXP = count_scanner(output,"Exposed IOCTL with Insufficient Access Control")
         print("EXP: ", EXP)
-        OOB = count_scanner(output, "may be out of bounds")
-        print("OOB: ", OOB)
-        
-        total = OSJ + BUOV + ECFS + IFWA + IE + CJ + IEP + TOU + DF + UAF + USP + SPT + NPD + UMSK + PDF + EXP + OOB
-        return total
-    
-    elif release_id == "0.4" or release_id == "latest" or release_id == "0.3" or release_id == "0.2":
-        print("Using version 0.4 \n")
-        OOB = count_scanner(output, "Out-of-bounds read")
+        OOB = count_scanner(output, "Out-of-bounds Read")
         print("OOB: ", OOB)
         OOBW = count_scanner(output, "Out-of-bounds Write")
         print("OOBW: ", OOBW)
+        
+        total = OSJ + IROM + BUOV + ECFS + IFWA + IE + CJ + IEP + TOU + DF + UAF + USP + SPT + NPD + UMSK + PDF + EXP + OOB + OOBW
+        info_array[filename][release_id] = "Total:", total, "[CWE-78] OS Command Injection:", OSJ, "[CWE-119] Improper Restriction of Operations within the Bounds of a Memory Buffer:", IROM, "[CWE-121] Buffer Overflow:", BUOV, "[CWE-134] Use of Externally-Controlled Format String:", ECFS, "[CWE-190] Integer Overflow or Wraparound:", IFWA, "[CWE-215] Information Exposure Through Debug Information:", IE, "[CWE-243] Creation of chroot Jail Without Changing Working Directory:", CJ, "[CWE-332] Insufficient Entropy in PRNG:", IEP, "[CWE-367] Time-of-check Time-of-use (TOCTOU) Race Condition:", TOU, "[CWE-415] Double Free:", DF, "[CWE-416] Use After Free:", UAF, "[CWE-426] Untrusted Search Path:", USP, "[CWE-467] Use of sizeof() on a Pointer Type:", SPT, "[CWE-467] NULL Pointer Dereference:", NPD, "[CWE-560] Use of umask() with chmod-style Argument:", UMSK, "[CWE-676] Use of Potentially Dangerous Function:", PDF, "[CWE-782] Exposed IOCTL with Insufficient Access Control:", EXP, "[CWE-125] Out-of-bounds Read:", OOB, "[CWE-787] Out-of-bounds Write:", OOBW
+        
+        return total
+    
+    elif release_id == "0.4" or release_id == "0.3" or release_id == "0.2":
+        print("Using version 0.4 \n")
+        OOB = count_scanner(output, "Out-of-bounds read")
+        print("OOB: ", OOB)
+        # OOBW = count_scanner(output, "Out-of-bounds Write")
+        # print("OOBW: ", OOBW)
         IOW = count_scanner(output, "Integer Overflow or Wraparound")
         print("IOW: ", IOW)
         IE = count_scanner(output, "Information Exposure Through Debug Information")
@@ -164,7 +174,8 @@ def count_vulnerabilities(release_id, output):
         print("EXP: ", EXP)
         
         total = OOB + IOW + IE + CCJ + UE + IEP + TOCK + DF + UAF + USP + UUV + UOSO + NPD + CSA + PDF + EXP
-    
+        info_array[filename][release_id] = "Total:", total, "[CWE-125] Out-of-bounds read:", OOB, "[CWE-190] Integer Overflow or Wraparound:", IOW, "[CWE-215] Information Exposure Through Debug Information:", IE, "[CWE-243] Creation of chroot Jail Without Changing Working Directory:", CCJ, "[CWE-248] Uncaught Exception:", UE, "[CWE-332] Insufficient Entropy in PRNG:", IEP, "[CWE-367] Time-of-check Time-of-use (TOCTOU) Race Condition:", TOCK, "[CWE-415] Double Free:", DF, "[CWE-416] Use After Free:", UAF, "[CWE-426] Untrusted Search Path:", USP, "[CWE-457] Use of Uninitialized Variable:", UUV, "[CWE-467] Use of sizeof() on a Pointer Type:", UOSO, "[CWE-476] NULL Pointer Dereference:", NPD, "[CWE-560] Use of umask() with chmod-style Argument:", CSA, "[CWE-676] Use of Potentially Dangerous Function:", PDF, "[CWE-782] Exposed IOCTL with Insufficient Access Control:", EXP
+     
         return total
     
 
@@ -179,5 +190,8 @@ def count_scanner(output, vulnerability):
 
 
 def store_data(statistics):
-    with open(r'C:\Users\clema\REU_2022\tool-evolution\cwe_checker\output_statistics\cwe_checker_results' + str(int(time.time())) + '.json',
+    with open(r'C:\Users\clema\REU_2022\tool-evolution\cwe_checker\output_statistics\parsed_results' + '.json',
         'w', encoding='utf-8') as output_file: json.dump(statistics, output_file, ensure_ascii=False, indent=4)
+    with open(r'C:\Users\clema\REU_2022\tool-evolution\cwe_checker\output_statistics\detailed_analysis' + '.txt',
+        'w', encoding='utf-8') as output_file: json.dump(info_array, output_file, ensure_ascii=False, indent=4)
+    # str(int(time.time())) 
