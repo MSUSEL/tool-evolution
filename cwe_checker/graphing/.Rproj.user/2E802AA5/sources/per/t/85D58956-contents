@@ -1,0 +1,32 @@
+# Load package to read JSON files
+library("rjson")
+#Load ggplot2
+library(ggplot2)
+
+library(tidyr)
+
+# Set cur working dir
+setwd("C:/Users/clema/REU_2022/tool-evolution/cwe_checker/output_statistics")
+
+# Store data in data frame
+results <- fromJSON(file = "parsed_results.json")
+cwe_df <- lapply(results, as.data.frame)
+cwe_df2  <- do.call(rbind, cwe_df)
+cwe_df2$progNm <- row.names(cwe_df2)
+
+# par(mfrow = c(3,3))
+
+pdf("C:\\Users\\clema\\OneDrive\\Documents\\REU_2022\\tool-evolution\\cwe_checker\\graphing\\test_plots.pdf")
+boxplot(cwe_df2[,1:3])
+# lapply(1:nrow(cwe_df2), function(i){
+#   
+#   # browser()
+#   the_name <- cwe_df2$progNm[i]
+#   boxplot(cwe_df2[i,1:3], type = 'l', main = the_name)
+# }
+# )
+dev.off()
+
+cwe_df2_long <- pivot_longer(cwe_df2, !progNm, names_to = "version")
+
+p1 <- ggplot(cwe_df2_long, mapping = aes(x = version, y = value))
