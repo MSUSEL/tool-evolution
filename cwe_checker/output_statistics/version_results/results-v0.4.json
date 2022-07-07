@@ -1,0 +1,1982 @@
+{
+    "3proxy": {
+        "0.4": 969
+    },
+    "ab": {
+        "0.4": 44
+    },
+    "ag": {
+        "0.4": 2206
+    },
+    "airdecap-ng": {
+        "0.4": 174
+    },
+    "airolib-ng": {
+        "0.4": 93
+    },
+    "apt-cache": {
+        "0.4": 331
+    },
+    "apt-ftparchive": {
+        "0.4": 1084
+    },
+    "apt-mark": {
+        "0.4": 102
+    },
+    "ar": {
+        "0.4": 2500
+    },
+    "aria_chk": {
+        "0.4": 0
+    },
+    "aria_dump_log": {
+        "0.4": 3299
+    },
+    "aria_ftdump": {
+        "0.4": 3350
+    },
+    "aria_pack": {
+        "0.4": 3402
+    },
+    "aria_read_log": {
+        "0.4": 3987
+    },
+    "arj": {
+        "0.4": 437
+    },
+    "aspell": {
+        "0.4": 605
+    },
+    "atk6-alive6": {
+        "0.4": 0
+    },
+    "atk6-dnsdict6": {
+        "0.4": 0
+    },
+    "atk6-fake_router26": {
+        "0.4": 95
+    },
+    "atk6-firewall6": {
+        "0.4": 87
+    },
+    "atk6-fragmentation6": {
+        "0.4": 22
+    },
+    "atk6-fragrouter6": {
+        "0.4": 76
+    },
+    "atk6-fuzz_dhcps6": {
+        "0.4": 92
+    },
+    "atk6-fuzz_ip6": {
+        "0.4": 84
+    },
+    "atk6-implementation6": {
+        "0.4": 81
+    },
+    "atk6-thcping6": {
+        "0.4": 0
+    },
+    "atk6-trace6": {
+        "0.4": 118
+    },
+    "atril": {
+        "0.4": 0
+    },
+    "atril-previewer": {
+        "0.4": 21
+    },
+    "axel": {
+        "0.4": 164
+    },
+    "b2sum": {
+        "0.4": 32
+    },
+    "basenc": {
+        "0.4": 19
+    },
+    "bash": {
+        "0.4": 2025
+    },
+    "bccmd": {
+        "0.4": 63
+    },
+    "bitmap": {
+        "0.4": 467
+    },
+    "bluemoon": {
+        "0.4": 17
+    },
+    "bluetoothctl": {
+        "0.4": 261
+    },
+    "bootctl": {
+        "0.4": 66
+    },
+    "broadwayd": {
+        "0.4": 73
+    },
+    "btattach": {
+        "0.4": 19
+    },
+    "btmgmt": {
+        "0.4": 188
+    },
+    "btmon": {
+        "0.4": 333
+    },
+    "btrfs": {
+        "0.4": 1572
+    },
+    "btrfs-debug-tree": {
+        "0.4": 806
+    },
+    "btrfs-find-root": {
+        "0.4": 791
+    },
+    "btrfs-image": {
+        "0.4": 881
+    },
+    "btrfs-map-logical": {
+        "0.4": 790
+    },
+    "btrfs-select-super": {
+        "0.4": 786
+    },
+    "btrfs-zero-log": {
+        "0.4": 786
+    },
+    "btrfstune": {
+        "0.4": 787
+    },
+    "bulk_extractor": {
+        "0.4": 4333
+    },
+    "bully": {
+        "0.4": 408
+    },
+    "busctl": {
+        "0.4": 43
+    },
+    "busybox": {
+        "0.4": 0
+    },
+    "bwrap": {
+        "0.4": 42
+    },
+    "cadaver": {
+        "0.4": 139
+    },
+    "cgpt": {
+        "0.4": 72
+    },
+    "chage": {
+        "0.4": 79
+    },
+    "chcon": {
+        "0.4": 175
+    },
+    "cherrytree": {
+        "0.4": 0
+    },
+    "chfn": {
+        "0.4": 61
+    },
+    "chgrp": {
+        "0.4": 193
+    },
+    "chmod": {
+        "0.4": 195
+    },
+    "choom": {
+        "0.4": 34
+    },
+    "chown": {
+        "0.4": 194
+    },
+    "chsh": {
+        "0.4": 65
+    },
+    "cifsdd": {
+        "0.4": 38
+    },
+    "ciptool": {
+        "0.4": 77
+    },
+    "citrix": {
+        "0.4": 343
+    },
+    "cjpeg": {
+        "0.4": 27
+    },
+    "closed_source_web_server_fuzz": {
+        "0.4": 358
+    },
+    "cluster": {
+        "0.4": 477
+    },
+    "colormgr": {
+        "0.4": 0
+    },
+    "column": {
+        "0.4": 61
+    },
+    "corkscrew": {
+        "0.4": 414
+    },
+    "cp": {
+        "0.4": 703
+    },
+    "cpio": {
+        "0.4": 412
+    },
+    "crunch": {
+        "0.4": 163
+    },
+    "csplit": {
+        "0.4": 472
+    },
+    "curl": {
+        "0.4": 325
+    },
+    "curlftpfs": {
+        "0.4": 32
+    },
+    "cutycapt": {
+        "0.4": 28
+    },
+    "cvtsudoers": {
+        "0.4": 450
+    },
+    "dash": {
+        "0.4": 131
+    },
+    "date": {
+        "0.4": 98
+    },
+    "dbd": {
+        "0.4": 117
+    },
+    "dbus-daemon": {
+        "0.4": 442
+    },
+    "dceoversmb": {
+        "0.4": 366
+    },
+    "dd": {
+        "0.4": 96
+    },
+    "desktop-file-install": {
+        "0.4": 83
+    },
+    "desktop-file-validate": {
+        "0.4": 82
+    },
+    "df": {
+        "0.4": 171
+    },
+    "diff": {
+        "0.4": 883
+    },
+    "diff3": {
+        "0.4": 105
+    },
+    "dig": {
+        "0.4": 405
+    },
+    "dir": {
+        "0.4": 233
+    },
+    "dirb": {
+        "0.4": 73
+    },
+    "dirmngr": {
+        "0.4": 981
+    },
+    "dirmngr-client": {
+        "0.4": 137
+    },
+    "dmesg": {
+        "0.4": 28
+    },
+    "dns2tcpc": {
+        "0.4": 84
+    },
+    "dns2tcpd": {
+        "0.4": 110
+    },
+    "dos2unix": {
+        "0.4": 88
+    },
+    "do_post": {
+        "0.4": 350
+    },
+    "dpkg": {
+        "0.4": 601
+    },
+    "dpkg-deb": {
+        "0.4": 211
+    },
+    "dpkg-divert": {
+        "0.4": 251
+    },
+    "dpkg-query": {
+        "0.4": 275
+    },
+    "dpkg-split": {
+        "0.4": 219
+    },
+    "dpkg-statoverride": {
+        "0.4": 63
+    },
+    "dpkg-trigger": {
+        "0.4": 78
+    },
+    "du": {
+        "0.4": 677
+    },
+    "dumpcap": {
+        "0.4": 196
+    },
+    "dumpkeys": {
+        "0.4": 87
+    },
+    "ed": {
+        "0.4": 48
+    },
+    "edgepaint": {
+        "0.4": 412
+    },
+    "editcap": {
+        "0.4": 41
+    },
+    "editres": {
+        "0.4": 86
+    },
+    "eject": {
+        "0.4": 75
+    },
+    "engrampa": {
+        "0.4": 550
+    },
+    "eqn": {
+        "0.4": 0
+    },
+    "etterfilter": {
+        "0.4": 64
+    },
+    "etterlog": {
+        "0.4": 67
+    },
+    "exiv2": {
+        "0.4": 610
+    },
+    "exo-desktop-item-edit": {
+        "0.4": 36
+    },
+    "expr": {
+        "0.4": 476
+    },
+    "factor": {
+        "0.4": 116
+    },
+    "fastjar": {
+        "0.4": 89
+    },
+    "fidentify": {
+        "0.4": 0
+    },
+    "filan": {
+        "0.4": 47
+    },
+    "file": {
+        "0.4": 27
+    },
+    "find": {
+        "0.4": 0
+    },
+    "findmnt": {
+        "0.4": 11
+    },
+    "fish": {
+        "0.4": 0
+    },
+    "fiwalk": {
+        "0.4": 0
+    },
+    "flac": {
+        "0.4": 408
+    },
+    "futility": {
+        "0.4": 200
+    },
+    "g-ir-compiler": {
+        "0.4": 0
+    },
+    "gatttool": {
+        "0.4": 331
+    },
+    "gawk": {
+        "0.4": 0
+    },
+    "gdbus": {
+        "0.4": 42
+    },
+    "generic_chunked": {
+        "0.4": 357
+    },
+    "generic_listen_tcp": {
+        "0.4": 347
+    },
+    "generic_send_tcp": {
+        "0.4": 342
+    },
+    "generic_send_udp": {
+        "0.4": 340
+    },
+    "generic_web_server_fuzz": {
+        "0.4": 358
+    },
+    "generic_web_server_fuzz2": {
+        "0.4": 365
+    },
+    "gio": {
+        "0.4": 4
+    },
+    "git": {
+        "0.4": 0
+    },
+    "git-shell": {
+        "0.4": 0
+    },
+    "gnome-keyring-daemon": {
+        "0.4": 0
+    },
+    "gopherd": {
+        "0.4": 345
+    },
+    "gpasswd": {
+        "0.4": 109
+    },
+    "gpg": {
+        "0.4": 0
+    },
+    "gpg-agent": {
+        "0.4": 593
+    },
+    "gpg-connect-agent": {
+        "0.4": 288
+    },
+    "gpg-wks-server": {
+        "0.4": 454
+    },
+    "gpgcompose": {
+        "0.4": 0
+    },
+    "gpgconf": {
+        "0.4": 159
+    },
+    "gpgsm": {
+        "0.4": 817
+    },
+    "gpgsplit": {
+        "0.4": 82
+    },
+    "gpgtar": {
+        "0.4": 300
+    },
+    "gpgv": {
+        "0.4": 1244
+    },
+    "grep": {
+        "0.4": 689
+    },
+    "grepjar": {
+        "0.4": 448
+    },
+    "groff": {
+        "0.4": 318
+    },
+    "grops": {
+        "0.4": 439
+    },
+    "grotty": {
+        "0.4": 321
+    },
+    "grub-editenv": {
+        "0.4": 1074
+    },
+    "grub-file": {
+        "0.4": 0
+    },
+    "grub-fstest": {
+        "0.4": 0
+    },
+    "grub-glue-efi": {
+        "0.4": 1072
+    },
+    "grub-menulst2cfg": {
+        "0.4": 265
+    },
+    "grub-mkfont": {
+        "0.4": 1109
+    },
+    "grub-mkimage": {
+        "0.4": 1478
+    },
+    "grub-mklayout": {
+        "0.4": 0
+    },
+    "grub-mknetdir": {
+        "0.4": 1575
+    },
+    "grub-mkpasswd-pbkdf2": {
+        "0.4": 1094
+    },
+    "grub-mkrelpath": {
+        "0.4": 1073
+    },
+    "grub-mkrescue": {
+        "0.4": 0
+    },
+    "grub-mkstandalone": {
+        "0.4": 1684
+    },
+    "grub-mount": {
+        "0.4": 0
+    },
+    "grub-render-label": {
+        "0.4": 0
+    },
+    "grub-script-check": {
+        "0.4": 1131
+    },
+    "grub-syslinux2cfg": {
+        "0.4": 0
+    },
+    "gvmap": {
+        "0.4": 477
+    },
+    "gzip": {
+        "0.4": 159
+    },
+    "halflife": {
+        "0.4": 344
+    },
+    "hashcat": {
+        "0.4": 2351
+    },
+    "hashdeep": {
+        "0.4": 584
+    },
+    "hciattach": {
+        "0.4": 44
+    },
+    "hciconfig": {
+        "0.4": 69
+    },
+    "hcidump": {
+        "0.4": 1003
+    },
+    "hcitool": {
+        "0.4": 61
+    },
+    "heartbleeder": {
+        "0.4": 0
+    },
+    "hexdump": {
+        "0.4": 69
+    },
+    "hexeditor": {
+        "0.4": 97
+    },
+    "host": {
+        "0.4": 389
+    },
+    "hotpatcher": {
+        "0.4": 78
+    },
+    "ht": {
+        "0.4": 0
+    },
+    "htop": {
+        "0.4": 2153
+    },
+    "httptunnel-client": {
+        "0.4": 242
+    },
+    "httptunnel-server": {
+        "0.4": 279
+    },
+    "hydra": {
+        "0.4": 110
+    },
+    "ico": {
+        "0.4": 10
+    },
+    "iconv": {
+        "0.4": 341
+    },
+    "ike-scan": {
+        "0.4": 135
+    },
+    "infocmp": {
+        "0.4": 0
+    },
+    "innochecksum": {
+        "0.4": 0
+    },
+    "install": {
+        "0.4": 503
+    },
+    "iostat": {
+        "0.4": 108
+    },
+    "ip": {
+        "0.4": 694
+    },
+    "ipcs": {
+        "0.4": 37
+    },
+    "ivstools": {
+        "0.4": 108
+    },
+    "join": {
+        "0.4": 41
+    },
+    "journalctl": {
+        "0.4": 74
+    },
+    "kbxutil": {
+        "0.4": 368
+    },
+    "kismetdb_clean": {
+        "0.4": 0
+    },
+    "kismetdb_dump_devices": {
+        "0.4": 768
+    },
+    "kismetdb_statistics": {
+        "0.4": 781
+    },
+    "kismetdb_to_gpx": {
+        "0.4": 1000
+    },
+    "kismetdb_to_kml": {
+        "0.4": 1057
+    },
+    "kismetdb_to_pcap": {
+        "0.4": 0
+    },
+    "kismetdb_to_wiglecsv": {
+        "0.4": 1434
+    },
+    "kismet_cap_kismetdb": {
+        "0.4": 0
+    },
+    "kismet_cap_linux_bluetooth": {
+        "0.4": 199
+    },
+    "kismet_cap_linux_wifi": {
+        "0.4": 250
+    },
+    "kismet_cap_nrf_51822": {
+        "0.4": 179
+    },
+    "kismet_cap_nrf_52840": {
+        "0.4": 196
+    },
+    "kismet_cap_nrf_mousejack": {
+        "0.4": 191
+    },
+    "kismet_cap_nxp_kw41z": {
+        "0.4": 199
+    },
+    "kismet_cap_pcapfile": {
+        "0.4": 184
+    },
+    "kismet_cap_rz_killerbee": {
+        "0.4": 183
+    },
+    "kismet_cap_ti_cc_2531": {
+        "0.4": 193
+    },
+    "kismet_cap_ti_cc_2540": {
+        "0.4": 193
+    },
+    "kismet_cap_ubertooth_one": {
+        "0.4": 181
+    },
+    "kmod": {
+        "0.4": 448
+    },
+    "l2ping": {
+        "0.4": 28
+    },
+    "l2test": {
+        "0.4": 34
+    },
+    "ld": {
+        "0.4": 2907
+    },
+    "ldapcompare": {
+        "0.4": 70
+    },
+    "ldapdelete": {
+        "0.4": 68
+    },
+    "ldapexop": {
+        "0.4": 69
+    },
+    "ldapmodify": {
+        "0.4": 92
+    },
+    "ldapmodrdn": {
+        "0.4": 80
+    },
+    "ldappasswd": {
+        "0.4": 69
+    },
+    "ldapsearch": {
+        "0.4": 90
+    },
+    "ldapwhoami": {
+        "0.4": 67
+    },
+    "ldrdf": {
+        "0.4": 46
+    },
+    "lefty": {
+        "0.4": 490
+    },
+    "less": {
+        "0.4": 288
+    },
+    "lexgrog": {
+        "0.4": 41
+    },
+    "light-locker": {
+        "0.4": 29
+    },
+    "line_send_tcp": {
+        "0.4": 342
+    },
+    "ln": {
+        "0.4": 96
+    },
+    "loadkeys": {
+        "0.4": 156
+    },
+    "locale": {
+        "0.4": 62
+    },
+    "localedef": {
+        "0.4": 1235
+    },
+    "logger": {
+        "0.4": 37
+    },
+    "login": {
+        "0.4": 76
+    },
+    "loginctl": {
+        "0.4": 0
+    },
+    "logtop": {
+        "0.4": 1017
+    },
+    "lowntfs-3g": {
+        "0.4": 140
+    },
+    "ls": {
+        "0.4": 233
+    },
+    "lsblk": {
+        "0.4": 54
+    },
+    "lsciphers": {
+        "0.4": 0
+    },
+    "lscpu": {
+        "0.4": 137
+    },
+    "lsipc": {
+        "0.4": 72
+    },
+    "lslogins": {
+        "0.4": 42
+    },
+    "lsmem": {
+        "0.4": 46
+    },
+    "lsns": {
+        "0.4": 37
+    },
+    "lsof": {
+        "0.4": 281
+    },
+    "lspci": {
+        "0.4": 96
+    },
+    "lstopo": {
+        "0.4": 291
+    },
+    "lstopo-no-graphics": {
+        "0.4": 257
+    },
+    "lsusb": {
+        "0.4": 68
+    },
+    "luit": {
+        "0.4": 31
+    },
+    "make": {
+        "0.4": 0
+    },
+    "man": {
+        "0.4": 108
+    },
+    "mandb": {
+        "0.4": 100
+    },
+    "mariadb": {
+        "0.4": 1522
+    },
+    "mariadb-admin": {
+        "0.4": 1718
+    },
+    "mariadb-binlog": {
+        "0.4": 0
+    },
+    "mariadb-check": {
+        "0.4": 1699
+    },
+    "mariadb-conv": {
+        "0.4": 1377
+    },
+    "mariadb-dump": {
+        "0.4": 1897
+    },
+    "mariadb-import": {
+        "0.4": 1719
+    },
+    "mariadb-plugin": {
+        "0.4": 1090
+    },
+    "mariadb-show": {
+        "0.4": 1718
+    },
+    "mariadb-slap": {
+        "0.4": 1769
+    },
+    "mariadb-tzinfo-to-sql": {
+        "0.4": 1080
+    },
+    "mariadb-upgrade": {
+        "0.4": 0
+    },
+    "mariadb-waitpid": {
+        "0.4": 1070
+    },
+    "mariadbd-safe-helper": {
+        "0.4": 1004
+    },
+    "mate-calc": {
+        "0.4": 202
+    },
+    "mate-calc-cmd": {
+        "0.4": 0
+    },
+    "mawk": {
+        "0.4": 208
+    },
+    "md5deep": {
+        "0.4": 584
+    },
+    "mdsearch": {
+        "0.4": 0
+    },
+    "medusa": {
+        "0.4": 131
+    },
+    "metaflac": {
+        "0.4": 105
+    },
+    "mingle": {
+        "0.4": 0
+    },
+    "minicom": {
+        "0.4": 267
+    },
+    "mkdir": {
+        "0.4": 250
+    },
+    "mkfifo": {
+        "0.4": 177
+    },
+    "mkfs.btrfs": {
+        "0.4": 870
+    },
+    "mknod": {
+        "0.4": 201
+    },
+    "mksquashfs": {
+        "0.4": 342
+    },
+    "mm2gv": {
+        "0.4": 179
+    },
+    "mmcli": {
+        "0.4": 94
+    },
+    "more": {
+        "0.4": 47
+    },
+    "mount": {
+        "0.4": 27
+    },
+    "mousepad": {
+        "0.4": 173
+    },
+    "mpg123.bin": {
+        "0.4": 115
+    },
+    "mpris-proxy": {
+        "0.4": 120
+    },
+    "mpstat": {
+        "0.4": 103
+    },
+    "msrpcfuzz": {
+        "0.4": 355
+    },
+    "msrpcfuzz_udp": {
+        "0.4": 350
+    },
+    "mt-gnu": {
+        "0.4": 238
+    },
+    "mv": {
+        "0.4": 675
+    },
+    "myisamchk": {
+        "0.4": 0
+    },
+    "myisamlog": {
+        "0.4": 1784
+    },
+    "myisampack": {
+        "0.4": 1854
+    },
+    "myisam_ftdump": {
+        "0.4": 1808
+    },
+    "my_print_defaults": {
+        "0.4": 1071
+    },
+    "nano": {
+        "0.4": 527
+    },
+    "nasm": {
+        "0.4": 745
+    },
+    "ncdu": {
+        "0.4": 1607
+    },
+    "ncrack": {
+        "0.4": 1213
+    },
+    "ndisasm": {
+        "0.4": 27
+    },
+    "net": {
+        "0.4": 538
+    },
+    "netkit-ftp": {
+        "0.4": 141
+    },
+    "netstat": {
+        "0.4": 137
+    },
+    "networkctl": {
+        "0.4": 161
+    },
+    "nl": {
+        "0.4": 480
+    },
+    "nm": {
+        "0.4": 2480
+    },
+    "nm-applet": {
+        "0.4": 195
+    },
+    "nm-connection-editor": {
+        "0.4": 244
+    },
+    "nmap_centos5": {
+        "0.4": 0
+    },
+    "nmblookup": {
+        "0.4": 194
+    },
+    "nmcli": {
+        "0.4": 759
+    },
+    "nmtui": {
+        "0.4": 342
+    },
+    "nslookup": {
+        "0.4": 442
+    },
+    "nstat": {
+        "0.4": 67
+    },
+    "nsupdate": {
+        "0.4": 31
+    },
+    "ntfs-3g": {
+        "0.4": 159
+    },
+    "ntfsdecrypt": {
+        "0.4": 33
+    },
+    "ntfsinfo": {
+        "0.4": 88
+    },
+    "ntfsrecover": {
+        "0.4": 146
+    },
+    "ntfssecaudit": {
+        "0.4": 50
+    },
+    "ntfswipe": {
+        "0.4": 102
+    },
+    "ntlm2": {
+        "0.4": 516
+    },
+    "ntlm_brute": {
+        "0.4": 509
+    },
+    "ntpdc": {
+        "0.4": 104
+    },
+    "ntpq": {
+        "0.4": 182
+    },
+    "numfmt": {
+        "0.4": 0
+    },
+    "obexctl": {
+        "0.4": 169
+    },
+    "objcopy": {
+        "0.4": 2647
+    },
+    "objdump": {
+        "0.4": 3071
+    },
+    "od": {
+        "0.4": 60
+    },
+    "onesixtyone": {
+        "0.4": 18
+    },
+    "openfortivpn": {
+        "0.4": 170
+    },
+    "openssl": {
+        "0.4": 266
+    },
+    "ophcrack": {
+        "0.4": 536
+    },
+    "ophcrack-cli": {
+        "0.4": 527
+    },
+    "out123": {
+        "0.4": 49
+    },
+    "pacat": {
+        "0.4": 3
+    },
+    "packetforge-ng": {
+        "0.4": 0
+    },
+    "packetq": {
+        "0.4": 0
+    },
+    "pactl": {
+        "0.4": 23
+    },
+    "parole": {
+        "0.4": 251
+    },
+    "partx": {
+        "0.4": 128
+    },
+    "passwd": {
+        "0.4": 71
+    },
+    "patch": {
+        "0.4": 308
+    },
+    "pavucontrol": {
+        "0.4": 319
+    },
+    "perl": {
+        "0.4": 0
+    },
+    "perl5.32.1": {
+        "0.4": 0
+    },
+    "perror": {
+        "0.4": 0
+    },
+    "photorec": {
+        "0.4": 0
+    },
+    "pic": {
+        "0.4": 233
+    },
+    "pidstat": {
+        "0.4": 106
+    },
+    "pinentry-curses": {
+        "0.4": 0
+    },
+    "pinentry-gnome3": {
+        "0.4": 0
+    },
+    "ping": {
+        "0.4": 21
+    },
+    "pixiewps": {
+        "0.4": 72
+    },
+    "pmspike": {
+        "0.4": 344
+    },
+    "post_fuzz": {
+        "0.4": 358
+    },
+    "post_spike": {
+        "0.4": 351
+    },
+    "pr": {
+        "0.4": 0
+    },
+    "preconv": {
+        "0.4": 141
+    },
+    "printf": {
+        "0.4": 0
+    },
+    "procan": {
+        "0.4": 46
+    },
+    "profiles": {
+        "0.4": 81
+    },
+    "proxytunnel": {
+        "0.4": 67
+    },
+    "ps": {
+        "0.4": 57
+    },
+    "pstat": {
+        "0.4": 0
+    },
+    "pth-curl": {
+        "0.4": 1248
+    },
+    "ptx": {
+        "0.4": 558
+    },
+    "pulseaudio": {
+        "0.4": 100
+    },
+    "pv": {
+        "0.4": 182
+    },
+    "qt5ct": {
+        "0.4": 104
+    },
+    "quake": {
+        "0.4": 344
+    },
+    "quakeserver": {
+        "0.4": 348
+    },
+    "r2agent": {
+        "0.4": 418
+    },
+    "r2r": {
+        "0.4": 513
+    },
+    "rabin2": {
+        "0.4": 418
+    },
+    "radare2": {
+        "0.4": 425
+    },
+    "radiff2": {
+        "0.4": 418
+    },
+    "rafind2": {
+        "0.4": 418
+    },
+    "ragg2": {
+        "0.4": 418
+    },
+    "rahash2": {
+        "0.4": 418
+    },
+    "ranlib": {
+        "0.4": 2500
+    },
+    "rarun2": {
+        "0.4": 418
+    },
+    "rasign2": {
+        "0.4": 418
+    },
+    "rasm2": {
+        "0.4": 418
+    },
+    "rawshark": {
+        "0.4": 0
+    },
+    "rax2": {
+        "0.4": 418
+    },
+    "rb": {
+        "0.4": 55
+    },
+    "rctest": {
+        "0.4": 80
+    },
+    "rdesktop": {
+        "0.4": 1062
+    },
+    "rdf2bin": {
+        "0.4": 12
+    },
+    "rdma": {
+        "0.4": 161
+    },
+    "readelf": {
+        "0.4": 736
+    },
+    "readlink": {
+        "0.4": 93
+    },
+    "realpath": {
+        "0.4": 105
+    },
+    "rearj": {
+        "0.4": 196
+    },
+    "reaver": {
+        "0.4": 531
+    },
+    "recordmydesktop": {
+        "0.4": 247
+    },
+    "redir": {
+        "0.4": 484
+    },
+    "rendercheck": {
+        "0.4": 69
+    },
+    "replace": {
+        "0.4": 1079
+    },
+    "resizepart": {
+        "0.4": 48
+    },
+    "resolvectl": {
+        "0.4": 62
+    },
+    "resolveip": {
+        "0.4": 1072
+    },
+    "resolve_stack_dump": {
+        "0.4": 1089
+    },
+    "rfcomm": {
+        "0.4": 32
+    },
+    "ristretto": {
+        "0.4": 215
+    },
+    "rm": {
+        "0.4": 193
+    },
+    "rmdir": {
+        "0.4": 61
+    },
+    "rpcclient": {
+        "0.4": 0
+    },
+    "rpcgen": {
+        "0.4": 0
+    },
+    "rsync": {
+        "0.4": 0
+    },
+    "rx": {
+        "0.4": 55
+    },
+    "rz": {
+        "0.4": 55
+    },
+    "sadf": {
+        "0.4": 670
+    },
+    "samba-regedit": {
+        "0.4": 198
+    },
+    "sane-find-scanner": {
+        "0.4": 149
+    },
+    "sar.sysstat": {
+        "0.4": 316
+    },
+    "sb": {
+        "0.4": 38
+    },
+    "sbd": {
+        "0.4": 131
+    },
+    "scalpel": {
+        "0.4": 90
+    },
+    "scanimage": {
+        "0.4": 8
+    },
+    "scp": {
+        "0.4": 140
+    },
+    "screen": {
+        "0.4": 1208
+    },
+    "script": {
+        "0.4": 104
+    },
+    "scriptlive": {
+        "0.4": 57
+    },
+    "sdptool": {
+        "0.4": 115
+    },
+    "sed": {
+        "0.4": 210
+    },
+    "sendmsrpc": {
+        "0.4": 360
+    },
+    "seq": {
+        "0.4": 0
+    },
+    "sftp": {
+        "0.4": 214
+    },
+    "sha1deep": {
+        "0.4": 584
+    },
+    "sha1sum": {
+        "0.4": 30
+    },
+    "sha224sum": {
+        "0.4": 20
+    },
+    "sha256deep": {
+        "0.4": 584
+    },
+    "sha256sum": {
+        "0.4": 20
+    },
+    "sha384sum": {
+        "0.4": 20
+    },
+    "sha512sum": {
+        "0.4": 20
+    },
+    "sharkd": {
+        "0.4": 0
+    },
+    "shred": {
+        "0.4": 56
+    },
+    "shuf": {
+        "0.4": 95
+    },
+    "size": {
+        "0.4": 2485
+    },
+    "skipfish": {
+        "0.4": 1118
+    },
+    "smbclient": {
+        "0.4": 79
+    },
+    "smbcontrol": {
+        "0.4": 34
+    },
+    "snmpnetstat": {
+        "0.4": 39
+    },
+    "socat": {
+        "0.4": 0
+    },
+    "sort": {
+        "0.4": 217
+    },
+    "speech-dispatcher": {
+        "0.4": 166
+    },
+    "split": {
+        "0.4": 34
+    },
+    "spooftooph": {
+        "0.4": 140
+    },
+    "sqldiff": {
+        "0.4": 0
+    },
+    "sqlite3": {
+        "0.4": 0
+    },
+    "sqsh": {
+        "0.4": 145
+    },
+    "ss": {
+        "0.4": 127
+    },
+    "ssh": {
+        "0.4": 1031
+    },
+    "ssh-add": {
+        "0.4": 303
+    },
+    "ssh-agent": {
+        "0.4": 250
+    },
+    "ssh-keygen": {
+        "0.4": 483
+    },
+    "ssh-keyscan": {
+        "0.4": 465
+    },
+    "sslsplit": {
+        "0.4": 408
+    },
+    "ss_spike": {
+        "0.4": 344
+    },
+    "stat": {
+        "0.4": 137
+    },
+    "statd_spike": {
+        "0.4": 345
+    },
+    "stdbuf": {
+        "0.4": 71
+    },
+    "strace": {
+        "0.4": 0
+    },
+    "strings": {
+        "0.4": 2477
+    },
+    "stty": {
+        "0.4": 77
+    },
+    "stunnel4": {
+        "0.4": 0
+    },
+    "su": {
+        "0.4": 78
+    },
+    "sudo": {
+        "0.4": 180
+    },
+    "sudoreplay": {
+        "0.4": 138
+    },
+    "sunrpcfuzz": {
+        "0.4": 352
+    },
+    "svn": {
+        "0.4": 262
+    },
+    "svnadmin": {
+        "0.4": 11
+    },
+    "svnbench": {
+        "0.4": 27
+    },
+    "svnlook": {
+        "0.4": 22
+    },
+    "svnrdump": {
+        "0.4": 40
+    },
+    "svnserve": {
+        "0.4": 26
+    },
+    "sx": {
+        "0.4": 38
+    },
+    "systemctl": {
+        "0.4": 139
+    },
+    "systemd-analyze": {
+        "0.4": 2845
+    },
+    "systemd-hwdb": {
+        "0.4": 125
+    },
+    "systemd-mount": {
+        "0.4": 1
+    },
+    "systemd-run": {
+        "0.4": 2
+    },
+    "systemd-sysusers": {
+        "0.4": 55
+    },
+    "systemd-tmpfiles": {
+        "0.4": 21
+    },
+    "sz": {
+        "0.4": 38
+    },
+    "tac": {
+        "0.4": 473
+    },
+    "tail": {
+        "0.4": 115
+    },
+    "tapestat": {
+        "0.4": 30
+    },
+    "tar": {
+        "0.4": 905
+    },
+    "tbl": {
+        "0.4": 406
+    },
+    "tcpbridge": {
+        "0.4": 2378
+    },
+    "tcpcapinfo": {
+        "0.4": 1106
+    },
+    "tcpdump": {
+        "0.4": 820
+    },
+    "tcpliveplay": {
+        "0.4": 1180
+    },
+    "tcpprep": {
+        "0.4": 1514
+    },
+    "tcpreplay": {
+        "0.4": 1559
+    },
+    "tcpreplay-edit": {
+        "0.4": 2625
+    },
+    "tcprewrite": {
+        "0.4": 2226
+    },
+    "telnet.netkit": {
+        "0.4": 106
+    },
+    "test": {
+        "0.4": 103
+    },
+    "testdisk": {
+        "0.4": 1392
+    },
+    "text2pcap": {
+        "0.4": 69
+    },
+    "thunar": {
+        "0.4": 0
+    },
+    "tic": {
+        "0.4": 34
+    },
+    "tigerdeep": {
+        "0.4": 584
+    },
+    "tmux": {
+        "0.4": 2102
+    },
+    "top": {
+        "0.4": 0
+    },
+    "touch": {
+        "0.4": 98
+    },
+    "tpmc": {
+        "0.4": 29
+    },
+    "tr": {
+        "0.4": 47
+    },
+    "traceroute.db": {
+        "0.4": 70
+    },
+    "troff": {
+        "0.4": 834
+    },
+    "trust": {
+        "0.4": 160
+    },
+    "tshark": {
+        "0.4": 414
+    },
+    "tsk_comparedir": {
+        "0.4": 0
+    },
+    "tsk_gettimes": {
+        "0.4": 0
+    },
+    "tsk_loaddb": {
+        "0.4": 0
+    },
+    "tsk_recover": {
+        "0.4": 0
+    },
+    "tsort": {
+        "0.4": 171
+    },
+    "udevadm": {
+        "0.4": 633
+    },
+    "udisksctl": {
+        "0.4": 11
+    },
+    "umax_pp": {
+        "0.4": 76
+    },
+    "uniq": {
+        "0.4": 30
+    },
+    "unix2dos": {
+        "0.4": 88
+    },
+    "unrar-nonfree": {
+        "0.4": 1479
+    },
+    "unsquashfs": {
+        "0.4": 98
+    },
+    "unzip": {
+        "0.4": 163
+    },
+    "unzipsfx": {
+        "0.4": 87
+    },
+    "update-alternatives": {
+        "0.4": 50
+    },
+    "update-mime-database": {
+        "0.4": 51
+    },
+    "upx-ucl": {
+        "0.4": 2735
+    },
+    "VBoxClient": {
+        "0.4": 0
+    },
+    "vdir": {
+        "0.4": 233
+    },
+    "vim": {
+        "0.4": 0
+    },
+    "vim.basic": {
+        "0.4": 0
+    },
+    "vim.tiny": {
+        "0.4": 2224
+    },
+    "voiphopper": {
+        "0.4": 147
+    },
+    "vsyasm": {
+        "0.4": 1005
+    },
+    "wash": {
+        "0.4": 531
+    },
+    "wdctl": {
+        "0.4": 35
+    },
+    "webfuzz": {
+        "0.4": 340
+    },
+    "wg": {
+        "0.4": 854
+    },
+    "wget": {
+        "0.4": 1079
+    },
+    "whatis": {
+        "0.4": 73
+    },
+    "whirlpooldeep": {
+        "0.4": 584
+    },
+    "who": {
+        "0.4": 72
+    },
+    "whois": {
+        "0.4": 106
+    },
+    "winexe": {
+        "0.4": 2
+    },
+    "wpa_passphrase": {
+        "0.4": 74
+    },
+    "x11perf": {
+        "0.4": 108
+    },
+    "x11_spike": {
+        "0.4": 345
+    },
+    "x86_64-linux-gnu-ar": {
+        "0.4": 80
+    },
+    "x86_64-linux-gnu-as": {
+        "0.4": 0
+    },
+    "x86_64-linux-gnu-c++filt": {
+        "0.4": 0
+    },
+    "x86_64-linux-gnu-cpp-10": {
+        "0.4": 983
+    },
+    "x86_64-linux-gnu-g++-10": {
+        "0.4": 986
+    },
+    "x86_64-linux-gnu-gcc-10": {
+        "0.4": 983
+    },
+    "x86_64-linux-gnu-gcov-dump-10": {
+        "0.4": 0
+    },
+    "x86_64-linux-gnu-gcov-tool-10": {
+        "0.4": 0
+    },
+    "x86_64-linux-gnu-gprof": {
+        "0.4": 283
+    },
+    "x86_64-linux-gnu-ld.bfd": {
+        "0.4": 952
+    },
+    "x86_64-linux-gnu-ld.gold": {
+        "0.4": 0
+    },
+    "x86_64-linux-gnu-objcopy": {
+        "0.4": 1299
+    },
+    "x86_64-linux-gnu-objdump": {
+        "0.4": 1420
+    },
+    "x86_64-linux-gnu-ranlib": {
+        "0.4": 80
+    },
+    "x86_64-linux-gnu-readelf": {
+        "0.4": 566
+    },
+    "x86_64-linux-gnu-strip": {
+        "0.4": 1299
+    },
+    "xargs": {
+        "0.4": 0
+    },
+    "xauth": {
+        "0.4": 76
+    },
+    "xclock": {
+        "0.4": 0
+    },
+    "xdg-dbus-proxy": {
+        "0.4": 52
+    },
+    "xditview": {
+        "0.4": 53
+    },
+    "xdotool": {
+        "0.4": 45
+    },
+    "xedit": {
+        "0.4": 0
+    },
+    "xfce4-about": {
+        "0.4": 5
+    },
+    "xfce4-accessibility-settings": {
+        "0.4": 0
+    },
+    "xfce4-appearance-settings": {
+        "0.4": 0
+    },
+    "xfce4-appfinder": {
+        "0.4": 124
+    },
+    "xfce4-clipman": {
+        "0.4": 56
+    },
+    "xfce4-clipman-history": {
+        "0.4": 59
+    },
+    "xfce4-clipman-settings": {
+        "0.4": 11
+    },
+    "xfce4-color-settings": {
+        "0.4": 28
+    },
+    "xfce4-display-settings": {
+        "0.4": 0
+    },
+    "xfce4-keyboard-settings": {
+        "0.4": 33
+    },
+    "xfce4-mime-helper": {
+        "0.4": 17
+    },
+    "xfce4-mime-settings": {
+        "0.4": 29
+    },
+    "xfce4-mouse-settings": {
+        "0.4": 5
+    },
+    "xfce4-notifyd-config": {
+        "0.4": 3
+    },
+    "xfce4-panel": {
+        "0.4": 262
+    },
+    "xfce4-power-manager": {
+        "0.4": 0
+    },
+    "xfce4-power-manager-settings": {
+        "0.4": 8
+    },
+    "xfce4-screenshooter": {
+        "0.4": 23
+    },
+    "xfce4-session": {
+        "0.4": 0
+    },
+    "xfce4-session-settings": {
+        "0.4": 44
+    },
+    "xfce4-settings-editor": {
+        "0.4": 0
+    },
+    "xfce4-taskmanager": {
+        "0.4": 57
+    },
+    "xfdesktop": {
+        "0.4": 0
+    },
+    "xfdesktop-settings": {
+        "0.4": 50
+    },
+    "xfreerdp": {
+        "0.4": 215
+    },
+    "xfsettingsd": {
+        "0.4": 185
+    },
+    "xfwm4": {
+        "0.4": 1520
+    },
+    "xfwm4-settings": {
+        "0.4": 8
+    },
+    "xfwm4-workspace-settings": {
+        "0.4": 1
+    },
+    "xgc": {
+        "0.4": 0
+    },
+    "xhydra": {
+        "0.4": 5
+    },
+    "xkbcomp": {
+        "0.4": 671
+    },
+    "xkbprint": {
+        "0.4": 16
+    },
+    "xman": {
+        "0.4": 96
+    },
+    "xmllint": {
+        "0.4": 13
+    },
+    "xprop": {
+        "0.4": 13
+    },
+    "xrandr": {
+        "0.4": 472
+    },
+    "xsm": {
+        "0.4": 128
+    },
+    "Xtightvnc": {
+        "0.4": 0
+    },
+    "xtightvncviewer": {
+        "0.4": 65
+    },
+    "Xvfb": {
+        "0.4": 0
+    },
+    "xwininfo": {
+        "0.4": 86
+    },
+    "xz": {
+        "0.4": 71
+    },
+    "yasm": {
+        "0.4": 1005
+    },
+    "ytasm": {
+        "0.4": 1002
+    },
+    "zenity": {
+        "0.4": 0
+    },
+    "zip": {
+        "0.4": 370
+    },
+    "zipcloak": {
+        "0.4": 232
+    },
+    "zipinfo": {
+        "0.4": 163
+    },
+    "zipnote": {
+        "0.4": 227
+    },
+    "zipsplit": {
+        "0.4": 219
+    },
+    "zsh": {
+        "0.4": 0
+    },
+    "[": {
+        "0.4": 103
+    }
+}
