@@ -1,7 +1,6 @@
 
 library(rjson)
 library(ggplot2)
-library(tidyr)
 library(tidyverse)
 
 setwd("C:/Users/clema/REU_2022/tool-evolution/cwe_checker/output_statistics/version_results")
@@ -29,26 +28,37 @@ cwe_df_long <- pivot_longer(cwe_df, !progNm, names_to = "Version", values_to = "
   left_join(version_dates)
 
 
-# pdf("C:\\Users\\clema\\REU_2022\\tool-evolution\\cwe_checker\\graphing\\vul_per_version.pdf")
-# dev.off()
-
-
-p1 <- ggplot(data = cwe_df_long, mapping = aes(x = Version, y = vulCt))+
+p1 <- 
+  ggplot(data = cwe_df_long, mapping = aes(x = Version, y = vulCt))+
   geom_line(mapping = aes(group = progNm), color = 'black', alpha = 0.1, size = 2)+
   ggtitle('CWE_CHECKER Vulnerabilities per Version')
 
-p2 <- ggplot(data = cwe_df_long, mapping = aes(x = Version, y = vulCt))+
+ggsave("C:\\Users\\clema\\REU_2022\\tool-evolution\\cwe_checker\\graphing\\vul_per_version.pdf")
+
+
+p2 <- 
+  ggplot(data = cwe_df_long, mapping = aes(x = Version, y = vulCt))+
   stat_summary(fun = 'mean', geom = 'point')+
   ggtitle('CWE_CHECKER Version Means')
 
-p3 <- ggplot(data = cwe_df_long, mapping = aes(x = Version, y = vulCt))+
+ggsave("C:\\Users\\clema\\REU_2022\\tool-evolution\\cwe_checker\\graphing\\version_means.pdf")
+
+
+p3 <- 
+  ggplot(data = cwe_df_long, mapping = aes(x = Version, y = vulCt))+
   geom_violin()+
   stat_summary(fun = 'mean', geom = 'point')+
   ggtitle('CWE_CHECKER Violin Plot')
 
-p4 <- ggplot(data = cwe_df_long, mapping = aes(x = Version, y = vulCt))+
+ggsave("C:\\Users\\clema\\REU_2022\\tool-evolution\\cwe_checker\\graphing\\violin_plot.pdf")
+
+
+p4 <- 
+  ggplot(data = cwe_df_long, mapping = aes(x = Version, y = vulCt))+
   geom_jitter()+
   ggtitle('CWE_CHECKER Jitter Plot')
+
+ggsave("C:\\Users\\clema\\REU_2022\\tool-evolution\\cwe_checker\\graphing\\jitter_plot.pdf")
 
 
 
