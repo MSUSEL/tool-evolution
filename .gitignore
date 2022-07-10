@@ -2,3 +2,9 @@
 
 cve-bin-tool-runner/.DS_Store
 cve-bin-tool-runner/.env
+
+*.Rproj
+.Rproj.user
+.Rapp.history
+.Rhistory
+.Rdata
