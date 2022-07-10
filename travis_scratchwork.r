@@ -57,6 +57,8 @@ long_form %>% ggplot(aes(x = version, y=vuln_count)) +
 long_form %>% ggplot(aes(x = version, y=vuln_count)) +
   ggtitle("cve bin tool violins") + 
   geom_violin()
+
+
   
 
 
