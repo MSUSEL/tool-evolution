@@ -3,11 +3,11 @@ library(rjson)
 
 
 # Give the input file name to the function.
-cve_bin_dataframe <- fromJSON(file = "./cve-bin-tool-runner/data_outputs/full_results_1655757361.json") %>% 
+cve_bin_raw <- fromJSON(file = "./cve-bin-tool-runner/data_outputs/full_results_1655757361.json") %>% 
   lapply(as.data.frame) %>%
   do.call(rbind, .)
 
-cve_bin_dataframe <- cve_bin_dataframe[, names(cve_bin_dataframe)!="X3.1"]
+cve_bin_raw <- cve_bin_raw[, names(cve_bin_raw)!="X3.1"]
 
 version_dates <- data.frame(
   "3.1.1"="4-20-2022",
@@ -21,24 +21,25 @@ version_dates <- data.frame(
   "1.1"="10-15-2020",
   "1.0"="4-30-2020"
 )
-names(version_dates) <- substring(names(version_dates), 2)
+names(version_dates) <- gsub("X", "version_", names(version_dates))
 version_dates <- t(version_dates)
 dates <- as.Date(version_dates, format = "%m-%d-%Y") %>% as.data.frame
 dates$version <- rownames(version_dates)
 names(dates)[1] <- "date"
 
 # make file names be a column
-names(cve_bin_dataframe) <- substring(names(cve_bin_dataframe), 2)
-cve_bin_dataframe$file <- rownames(cve_bin_dataframe)
+
+names(cve_bin_raw) <- gsub("X", "version_", names(cve_bin_raw))
+cve_bin_dataframe <- cve_bin_raw
+cve_bin_dataframe$filename <- rownames(cve_bin_dataframe)
 
 # go to long form
 long_form <- cve_bin_dataframe %>% 
-  pivot_longer(!file, names_to="version", values_to="vuln_count")
+  pivot_longer(!filename, names_to="version", values_to="vuln_count")
 
 long_form <- left_join(long_form, dates)
 
-# coerce data from char to date
-  
+## (dear colleen), DATA import done
 
 
 # make plot
@@ -57,6 +58,12 @@ long_form %>% ggplot(aes(x = version, y=vuln_count)) +
 long_form %>% ggplot(aes(x = version, y=vuln_count)) +
   ggtitle("cve bin tool violins") + 
   geom_violin()
+
+
+# Doing clustering
+## time needs to be spanning the rows, and variables the columns
+View(long_form)
+View(cve_bin_dataframe)
 
 
   
