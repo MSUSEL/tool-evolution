@@ -28,7 +28,7 @@ colors = c(seq(-3,-2,length=100),seq(-2,0.5,length=100),seq(0.5,6,length=100))
 my_palette <- colorRampPalette(c("white", "black"))(n = 299)
 
 # heatmap with built in function 
-# normalize each columns
+# normalize each column
 cve_bin_dataframe %>% mutate_if(is.numeric, ~(scale(.) %>% as.vector)) %>%
   # sort by vulnerabilities in first version
   arrange(desc(version_3.1.1)) %>% 
@@ -36,4 +36,12 @@ cve_bin_dataframe %>% mutate_if(is.numeric, ~(scale(.) %>% as.vector)) %>%
   select(-starts_with("filename")) %>% 
   as.matrix() %>% 
   heatmap.2(Rowv = F, Colv = F, tracecol = NA, col=my_palette, labRow = F, margin=c(10, 2))
+
+cwe_checker %>% mutate_if(is.numeric, ~(scale(.) %>% as.vector)) %>%
+  # sort by vulnerabilities in first version
+  arrange(desc(version_0.4)) %>% 
+  # remove filename column
+  select(-starts_with("filename")) %>% 
+  as.matrix() %>% 
+  heatmap.2(Rowv = F, Colv = F, tracecol = NA, col=my_palette, labRow = F)
 

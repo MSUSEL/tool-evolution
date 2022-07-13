@@ -90,3 +90,25 @@ cwe_checker_long %>% ggplot(mapping = aes(x = version, y = vuln_count))+
   geom_line(mapping = aes(group = filename), color = 'black', alpha = 0.1, size = 2)+
   ggtitle('CWE_CHECKER Vulnerabilities per version')
 ```
+
+## Binary Heat Map
+
+```{r}
+my_palette <- colorRampPalette(c("red", "white", "black"))(n = 299)
+
+cve_bin %>% mutate_if(is.numeric, ~(scale(.) %>% as.vector)) %>%
+  # sort by vulnerabilities in first version
+  arrange(desc(version_3.1.1)) %>% 
+  # remove filename column
+  select(-starts_with("filename")) %>% 
+  as.matrix() %>% 
+  heatmap.2(Rowv = F, Colv = F, tracecol = NA, col=my_palette, labRow = F)
+
+cwe_checker %>% mutate_if(is.numeric, ~(scale(.) %>% as.vector)) %>%
+  # sort by vulnerabilities in first version
+  arrange(desc(version_0.4)) %>% 
+  # remove filename column
+  select(-starts_with("filename")) %>% 
+  as.matrix() %>% 
+  heatmap.2(Rowv = F, Colv = F, tracecol = NA, col=my_palette, labRow = F)
+```
