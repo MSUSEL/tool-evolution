@@ -20,11 +20,11 @@ library(gplots)
 Importing and standardizing data for CVE bin tool
 
 ```{r}
-cve_bin_raw <- fromJSON(file = "./cve-bin-tool-runner/data_outputs/full_results_1655757361.json") %>% 
+cve_bin <- fromJSON(file = "./cve-bin-tool-runner/data_outputs/full_results_1655757361.json") %>% 
   lapply(as.data.frame) %>%
   do.call(rbind, .)
 
-cve_bin_raw <- cve_bin_raw[, names(cve_bin_raw)!="X3.1"]
+cve_bin <- cve_bin[, names(cve_bin)!="X3.1"]
 
 version_dates <- data.frame(
   "3.1.1"="4-20-2022",
@@ -46,25 +46,47 @@ names(dates)[1] <- "date"
 
 # make file names be a column
 
-names(cve_bin_raw) <- gsub("X", "version_", names(cve_bin_raw))
-cve_bin_dataframe <- cve_bin_raw
-cve_bin_dataframe$filename <- rownames(cve_bin_dataframe)
+names(cve_bin) <- gsub("X", "version_", names(cve_bin))
+cve_bin$filename <- rownames(cve_bin)
 
 # go to long form
-long_form <- cve_bin_dataframe %>% 
+cve_bin_long <- cve_bin %>% 
   pivot_longer(!filename, names_to="version", values_to="vuln_count")
 
-long_form <- left_join(long_form, dates)
+cve_bin_long <- left_join(cve_bin_long, dates)
 ```
 
 ## CWE Checker Data import
 
 ```{r}
-cve_bin_dataframe %>% mutate_if(is.numeric, ~(scale(.) %>% as.vector)) %>%
-  # sort by vulnerabilities in first version
-  arrange(desc(version_3.1.1)) %>% 
-  # remove filename column
-  select(-starts_with("filename")) %>% 
-  as.matrix() %>% 
-  heatmap.2(Rowv = F, Colv = F, tracecol = NA, col=my_palette, labRow = F)
+cwe_checker <- fromJSON(file = "./cwe_checker/output_statistics/version_results/parsed_results.json") %>%
+  lapply(as.data.frame) %>%
+  do.call(rbind,.)
+
+cwe_checker$filename <- row.names(cwe_checker)
+names(cwe_checker) <- gsub('X', 'version_', names(cwe_checker))
+
+version_dates <- data.frame(version_0.6 = '2022-06-10', version_0.5 = '2021-07-05', version_0.4 = '2021-01-07') %>%
+  t() %>%
+  as.data.frame()
+
+names(version_dates)[names(version_dates) == 'V1'] <- 'date'
+version_dates$version <- row.names(version_dates)
+as.Date(version_dates$date)
+
+cwe_checker_long <- pivot_longer(cwe_checker, !filename, names_to = "version", values_to = "vuln_count") %>%
+  left_join(version_dates)
+```
+
+## Graphing Averages Over time
+
+```{r}
+cve_bin_long %>% ggplot(aes(x = date, y=vuln_count)) +
+    ggtitle("CVE bin tool (no v3.1, .1 alpha)") +
+    geom_line(mapping = aes(group = filename), color="black", alpha=0.1, size=2)
+
+
+cwe_checker_long %>% ggplot(mapping = aes(x = version, y = vuln_count))+
+  geom_line(mapping = aes(group = filename), color = 'black', alpha = 0.1, size = 2)+
+  ggtitle('CWE_CHECKER Vulnerabilities per version')
 ```

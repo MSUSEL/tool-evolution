@@ -16,7 +16,7 @@ version_dates <- data.frame(version_0.6 = '2022-06-10', version_0.5 = '2021-07-0
 
 names(version_dates)[names(version_dates) == 'V1'] <- 'date'
 version_dates$version <- row.names(version_dates)
-as.date(version_dates$date)
+as.Date(version_dates$date)
 
 cwe_df_long <- pivot_longer(cwe_df, !filename, names_to = "version", values_to = "vuln_count") %>%
   left_join(version_dates)
