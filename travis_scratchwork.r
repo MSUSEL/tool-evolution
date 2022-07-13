@@ -1,5 +1,6 @@
 library(tidyverse)
 library(rjson)
+library(gplots)
 
 
 # Give the input file name to the function.
@@ -41,8 +42,9 @@ long_form <- left_join(long_form, dates)
 
 ## (dear colleen), DATA import done
 
+write.csv(long_form,"./csvs_final_data/cve_bin_tool_long.csv")
 
-# make plot
+# basic average plot
 long_form %>% ggplot(aes(x = date, y=vuln_count)) +
     ggtitle("CVE bin tool (no v3.1, .1 alpha)") +
     geom_line(mapping = aes(group = file), color="black", alpha=0.1, size=2)
@@ -59,13 +61,21 @@ long_form %>% ggplot(aes(x = version, y=vuln_count)) +
   ggtitle("cve bin tool violins") + 
   geom_violin()
 
-
-# Doing clustering
-## time needs to be spanning the rows, and variables the columns
+# time needs to be spanning the rows, and variables the columns
 View(long_form)
 View(cve_bin_dataframe)
 
+colors = c(seq(-3,-2,length=100),seq(-2,0.5,length=100),seq(0.5,6,length=100))
 
-  
+my_palette <- colorRampPalette(c("white", "black"))(n = 299)
 
+# heatmap with built in function 
+# normalize each columns
+cve_bin_dataframe %>% mutate_if(is.numeric, ~(scale(.) %>% as.vector)) %>%
+  # sort by vulnerabilities in first version
+  arrange(desc(version_3.1.1)) %>% 
+  # remove filename column
+  select(-starts_with("filename")) %>% 
+  as.matrix() %>% 
+  heatmap.2(Rowv = F, Colv = F, tracecol = NA, col=my_palette, labRow = F, margin=c(10, 2))
 

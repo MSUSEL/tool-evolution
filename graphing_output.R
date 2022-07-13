@@ -3,7 +3,7 @@ library(rjson)
 library(ggplot2)
 library(tidyverse)
 
-cwe_df <- fromJSON(file = "./tool-evolution/cwe_checker/output_statistics/version_results/parsed_results.json") %>%
+cwe_df <- fromJSON(file = "./cwe_checker/output_statistics/version_results/parsed_results.json") %>%
   lapply(as.data.frame) %>%
   do.call(rbind,.)
 
@@ -23,7 +23,6 @@ cwe_df_long <- pivot_longer(cwe_df, !filename, names_to = "version", values_to =
 
 
 # (dear Travis)
-
 
 
 pdf("C:\\Users\\clema\\REU_2022\\tool-evolution\\cwe_checker\\graphing\\box_plot.pdf")
