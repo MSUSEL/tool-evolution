@@ -3,6 +3,7 @@ library(rjson)
 library(ggplot2)
 library(tidyverse)
 
+# CWE_CHECKER
 cwe_checker <- fromJSON(file = "./cwe_checker/output_statistics/version_results/parsed_results.json") %>%
   lapply(as.data.frame) %>%
   do.call(rbind,.)
@@ -23,10 +24,11 @@ cwe_checker_long <- pivot_longer(cwe_checker, !filename, names_to = "version", v
   left_join(version_dates)
 
 
-
+# CVE_BIN_TOOL
 cve_bin <- fromJSON(file = "./cve-bin-tool-runner/data_outputs/full_results_1655757361.json") %>% 
   lapply(as.data.frame) %>%
   do.call(rbind, .)
+
 cve_bin <- cve_bin[, names(cve_bin)!="X3.1"]
 version_dates <- data.frame(
   "3.1.1"="4-20-2022",
@@ -40,14 +42,17 @@ version_dates <- data.frame(
   "1.1"="10-15-2020",
   "1.0"="4-30-2020"
 )
+
 names(version_dates) <- gsub("X", "version_", names(version_dates))
 version_dates <- t(version_dates)
 dates <- as.Date(version_dates, format = "%m-%d-%Y") %>% as.data.frame
 dates$version <- rownames(version_dates)
 names(dates)[1] <- "date"
+
 # make file names be a column
 names(cve_bin) <- gsub("X", "version_", names(cve_bin))
 cve_bin$filename <- rownames(cve_bin)
+
 # go to long form
 cve_bin_long <- cve_bin %>% 
   pivot_longer(!filename, names_to="version", values_to="vuln_count")
@@ -55,10 +60,16 @@ cve_bin_long <- left_join(cve_bin_long, dates)
 
 
 
+# Heatmap
+
+data <- expand.grid(X = cve_bin, Y = cwe_checker)
 
 
 
-# 
+
+
+
+
 # pdf("C:\\Users\\clema\\REU_2022\\tool-evolution\\cwe_checker\\graphing\\box_plot.pdf")
 # my_box <- boxplot(cwe_df[,1:3])
 # dev.off()
