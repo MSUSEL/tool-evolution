@@ -1,6 +1,7 @@
 library(tidyverse)
 library(rjson)
 library(gplots)
+library(maditr)
 
 # basic average plot
 cve_bin_long %>% ggplot(aes(x = date, y=vuln_count)) +
@@ -8,40 +9,30 @@ cve_bin_long %>% ggplot(aes(x = date, y=vuln_count)) +
     geom_line(mapping = aes(group = filename), color="black", alpha=0.1, size=2)
 
 # what are the average number of vulnerabilities for each version?
-long_form %>% ggplot(aes(x = version, y=vuln_count)) +
+cve_bin_long %>% ggplot(aes(x = version, y=vuln_count)) +
   stat_summary(fun = "mean", geom="point")
 
-long_form %>% ggplot(aes(x = version, y=vuln_count)) +
-  ggtitle("cve bin tool jittered points") + 
+cve_bin_long %>% ggplot(aes(x = version, y=vuln_count)) +
   geom_jitter()
 
-long_form %>% ggplot(aes(x = version, y=vuln_count)) +
-  ggtitle("cve bin tool violins") + 
+cwe_checker_long %>% ggplot(aes(x = version, y=vuln_count)) +
   geom_violin()
 
-# time needs to be spanning the rows, and variables the columns
-View(long_form)
-View(cve_bin_dataframe)
 
-colors = c(seq(-3,-2,length=100),seq(-2,0.5,length=100),seq(0.5,6,length=100))
+cwe_checker_long %>% within(is_zero <- vuln_count == 0) %>%
+  ggplot(mapping = aes(x = version, y = reorder(filename, is_zero), fill = is_zero)) +
+    geom_tile() +
+    theme(
+      axis.text.y=element_blank()
+    ) +
+    scale_fill_manual(values=c("FALSE"="firebrick", "TRUE"="dodgerblue"))
 
-my_palette <- colorRampPalette(c("white", "black"))(n = 299)
+cwe_checker %>% select(starts_with("version")) %>%
+  sapply(mean)
 
-# heatmap with built in function 
-# normalize each column
-cve_bin_dataframe %>% mutate_if(is.numeric, ~(scale(.) %>% as.vector)) %>%
-  # sort by vulnerabilities in first version
-  arrange(desc(version_3.1.1)) %>% 
-  # remove filename column
-  select(-starts_with("filename")) %>% 
-  as.matrix() %>% 
-  heatmap.2(Rowv = F, Colv = F, tracecol = NA, col=my_palette, labRow = F, margin=c(10, 2))
-
-cwe_checker %>% mutate_if(is.numeric, ~(scale(.) %>% as.vector)) %>%
-  # sort by vulnerabilities in first version
-  arrange(desc(version_0.4)) %>% 
-  # remove filename column
-  select(-starts_with("filename")) %>% 
-  as.matrix() %>% 
-  heatmap.2(Rowv = F, Colv = F, tracecol = NA, col=my_palette, labRow = F)
-
+cve_bin %>% select(starts_with("version")) %>% 
+  apply(2, function(c) c!=0) %>%
+  apply(2, sum) %>% 
+  tibble(version = names(.), not_zero = .) %>%
+  ggplot(mapping = aes(x=version, y = not_zero)) +
+    geom_bar(stat = 'identity')

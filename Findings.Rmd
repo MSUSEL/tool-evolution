@@ -9,6 +9,10 @@ output: pdf_document
 
 Import requirements
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+```
+
 ```{r}
 library(tidyverse)
 library(rjson)
@@ -106,9 +110,50 @@ cve_bin %>% mutate_if(is.numeric, ~(scale(.) %>% as.vector)) %>%
 
 cwe_checker %>% mutate_if(is.numeric, ~(scale(.) %>% as.vector)) %>%
   # sort by vulnerabilities in first version
-  arrange(desc(version_0.4)) %>% 
+  arrange(desc(version_0.6)) %>% 
+  rev() %>%
   # remove filename column
   select(-starts_with("filename")) %>% 
   as.matrix() %>% 
   heatmap.2(Rowv = F, Colv = F, tracecol = NA, col=my_palette, labRow = F)
+```
+
+## Exploring stability of not being zero
+
+### Heat map
+
+```{r}
+cve_bin_long %>% within(is_zero <- vuln_count == 0) %>%
+  ggplot(mapping = aes(x = version, y = reorder(filename, is_zero), fill = is_zero)) +
+    geom_tile() +
+    theme(
+      axis.text.y=element_blank()
+    ) +
+    scale_fill_manual(values=c("FALSE"="firebrick", "TRUE"="dodgerblue"))
+
+cwe_checker_long %>% within(is_zero <- vuln_count == 0) %>%
+  ggplot(mapping = aes(x = version, y = reorder(filename, is_zero), fill = is_zero)) +
+    geom_tile() +
+    theme(
+      axis.text.y=element_blank()
+    ) +
+    scale_fill_manual(values=c("FALSE"="firebrick", "TRUE"="dodgerblue"))
+```
+
+### Bar Chart
+
+```{r}
+cve_bin %>% select(starts_with("version")) %>% 
+  apply(2, function(c) c!=0) %>%
+  apply(2, sum) %>% 
+  tibble(version = names(.), not_zero = .) %>%
+  ggplot(mapping = aes(x=version, y = not_zero)) +
+    geom_bar(stat = 'identity')
+
+cwe_checker %>% select(starts_with("version")) %>% 
+  apply(2, function(c) c!=0) %>%
+  apply(2, sum) %>% 
+  tibble(version = names(.), not_zero = .) %>%
+  ggplot(mapping = aes(x=version, y = not_zero)) +
+    geom_bar(stat = 'identity')
 ```
