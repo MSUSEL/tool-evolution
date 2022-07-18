@@ -1,5 +1,5 @@
 # choose which results file to use (by unix time stamp of acquisition run time completion)
-use_date <- 1655757361
+use_date <- 1658175857
 
 # pull in results file
 cve_bin <- fromJSON(file = sprintf("./01_acquisition/04_product/cve_bin_tool_results_%d.json", use_date)) %>% 
