@@ -10,7 +10,7 @@ output: pdf_document
 Import requirements
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 ```
 
 ```{r}
@@ -21,36 +21,10 @@ library(gplots)
 
 ## Import input data (cve bin tool)
 
-Importing and standardizing data for CVE bin tool
+Run the import file
 
 ```{r}
-cve_bin <- read.csv("./02_wrangling/04_product/cve_bin_tool_wide_1658175857.csv 
-")
-cve_bin_long <- read.csv("./02_wrangling/04_product/cve_bin_tool_long_1658175857.csv 
-")
-```
-
-## CWE Checker Data import
-
-```{r}
-cwe_checker <- fromJSON(file = "../cwe_checker/output_statistics/version_results/parsed_results.json") %>%
-  lapply(as.data.frame) %>%
-  do.call(rbind,.)
-
-cwe_checker$filename <- row.names(cwe_checker)
-names(cwe_checker) <- gsub('X', 'version_', names(cwe_checker))
-
-version_dates <- data.frame(version_0.6 = '2022-06-10', version_0.5 = '2021-07-05', version_0.4 = '2021-01-07') %>%
-  t() %>%
-  as.data.frame()
-
-
-names(version_dates)[names(version_dates) == 'V1'] <- 'date'
-version_dates$version <- row.names(version_dates)
-as.Date(version_dates$date)
-
-cwe_checker_long <- pivot_longer(cwe_checker, !filename, names_to = "version", values_to = "vuln_count") %>%
-  left_join(version_dates)
+source("./03_analysis/01_input/import.r", local = knitr::knit_global())
 ```
 
 ## Graphing Averages Over time
