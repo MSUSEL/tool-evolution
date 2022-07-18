@@ -24,7 +24,7 @@ library(gplots)
 Importing and standardizing data for CVE bin tool
 
 ```{r}
-cve_bin <- fromJSON(file = "./cve-bin-tool-runner/data_outputs/full_results_1655757361.json") %>% 
+cve_bin <- fromJSON(file = "../cve-bin-tool-runner/products/full_results_1655757361.json") %>% 
   lapply(as.data.frame) %>%
   do.call(rbind, .)
 
@@ -63,7 +63,7 @@ cve_bin_long <- left_join(cve_bin_long, dates)
 ## CWE Checker Data import
 
 ```{r}
-cwe_checker <- fromJSON(file = "./cwe_checker/output_statistics/version_results/parsed_results.json") %>%
+cwe_checker <- fromJSON(file = "../cwe_checker/output_statistics/version_results/parsed_results.json") %>%
   lapply(as.data.frame) %>%
   do.call(rbind,.)
 
@@ -73,6 +73,7 @@ names(cwe_checker) <- gsub('X', 'version_', names(cwe_checker))
 version_dates <- data.frame(version_0.6 = '2022-06-10', version_0.5 = '2021-07-05', version_0.4 = '2021-01-07') %>%
   t() %>%
   as.data.frame()
+
 
 names(version_dates)[names(version_dates) == 'V1'] <- 'date'
 version_dates$version <- row.names(version_dates)
