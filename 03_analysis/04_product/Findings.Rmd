@@ -102,3 +102,17 @@ cwe_checker %>% select(starts_with("version")) %>%
   ggplot(mapping = aes(x=version, y = not_zero)) +
     geom_bar(stat = 'identity')
 ```
+
+## Alluvium
+```{r}
+source("./03_analysis/04_product/alluvium.r")
+
+cwe_checker %>% select(starts_with("version")) %>%
+  apply(2, findInterval, quants) %>%
+  apply(2, function(val) names(quants)[val]) %>%
+  make_alluvium_graph()
+
+cve_bin %>% select(starts_with("version")) %>%
+  apply(2, function(c) floor(c/20)) %>%
+  make_alluvium_graph()
+```
