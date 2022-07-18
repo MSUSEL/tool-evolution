@@ -8,3 +8,5 @@ cve-bin-tool-runner/.env
 .Rapp.history
 .Rhistory
 .Rdata
+
+*workbench*.r
