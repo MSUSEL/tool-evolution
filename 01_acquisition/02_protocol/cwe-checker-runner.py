@@ -10,15 +10,8 @@ import os
 import json
 
 # Directory with all binaries
-file_path = r"C:\Users\clema\REU_2022\benchmarks\binary"
-# file_path = r"C:\Users\clema\REU_2022\benchmarks\binaryTest"
-# file_path = r"/mnt/c/Users/clema/REU_2022/benchmarks/binaryTest"
-
+file_path = "../01_input/binaries"
 files = os.listdir(file_path)
-
-# write names of binary files to "binaries.json"
-# with open('binaries.json', 'w') as output_file:
-#     json.dump(files, output_file)
 
 # Initialize and generate program output
 utils.generate_output(file_path)
