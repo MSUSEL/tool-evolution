@@ -8,6 +8,8 @@ source("./03_analysis/01_input/import.r")
 
 cve_bin_long$filename <- as.factor(cve_bin_long$file)
 
+
+
 cve_bin_long %>% within(bin <- as.factor(floor(cve_bin_long$vuln_count / 50))) %>%
   ggplot(aes(x = version, stratum = bin, alluvium = filename,
              fill = bin, label = bin)) +
