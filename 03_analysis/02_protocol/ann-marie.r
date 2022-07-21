@@ -28,11 +28,11 @@ file.copy("/home/amr/Documents/Research/CyberQA/REU_2022/tool-evolution/BinaryAt
 # Import the data and store in a list
 scores_wide <- 
   # get the index nums for the file names with wide data
-  list.files("./01_input/csvs_final_data") %>% 
+  list.files("./03_analysis/01_input/csvs_final_data") %>%
   # get the file names for the wide data using index nums
-  .[grep("wide", .)] %>% 
+  .[grep("wide", .)] %>%
   # read csvs to data frames
-  lapply(., function(fileNm) {read.csv(paste("./01_input/csvs_final_data", fileNm, sep = "/"))}) %>%
+  lapply(., function(fileNm) {read.csv(paste("./03_analysis/01_input/csvs_final_data", fileNm, sep = "/"))}) %>%
   # make the names of the binaries the row names in each df
   # sort data frames by row names 
   lapply(., function(df) { 
@@ -43,16 +43,15 @@ scores_wide <-
 
 scores_long <- 
   # get the index nums for the file names with wide data
-  list.files("./01_input/csvs_final_data") %>% 
+  list.files("./03_analysis/01_input/csvs_final_data") %>% 
   # get the file names for the wide data using index nums
-  .[grep("long", .)] %>% 
+  .[grep("long", .)] %>%
   # read csvs to data frames
-  lapply(., function(fileNm) {read.csv(paste("./01_input/csvs_final_data", fileNm, sep = "/"), row.names = "X")})
+  lapply(., function(fileNm) {read.csv(paste("./03_analysis/01_input/csvs_final_data", fileNm, sep = "/"))})
 
-names(scores_wide) <- names(scores_long) <- c("cve_bin_tool", "cwe_checker")
+names(scores_long) <- names(scores_wide) <- c("cve_bin_tool", "cwe_checker")
 
-scores_long <-
-  lapply(names(scores_long), 
+scores_long <- lapply(names(scores_long), 
          function(toolNm) {
            cbind(
              scores_long[[toolNm]],
@@ -61,7 +60,7 @@ scores_long <-
   ) %>%
   do.call(rbind, .)
 
-datAttr <- read.csv("./01_input/BinaryAttrs.csv")
+datAttr <- read.csv("./03_analysis/01_input/BinaryAttrs.csv")
 
 
 # Cluster Static Analysis Tool Scores Across All Tool Versions ------------

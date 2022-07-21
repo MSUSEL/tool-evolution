@@ -3,5 +3,3 @@ cve_bin_long <- read.csv("./02_wrangling/04_product/cve_bin_tool_long_1658175857
 
 cwe_checker <- read.csv("./03_analysis/01_input/cwe_checker_wide.csv")
 cwe_checker_long <- read.csv("./03_analysis/01_input/cwe_checker_long.csv")
-
-"hello"
