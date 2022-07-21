@@ -12,10 +12,12 @@ clusts_long <- scores_long_withClusts %>% select(all_of(c("filename", "toolName"
   ) %>%
   pivot_longer(cols = !filename, names_to = "tool", values_to = "cluster")
 
+my_palette <- c("#185abc", "#e8f0fe", "#aecbfa", "#fce8e6", "#3c4043")
+
 clusts_long %>%
   ggplot(aes(x = tool, stratum = cluster, alluvium = filename,
              fill = cluster, label = cluster)) +
-  scale_fill_brewer(type = "qual", palette = "Set2") +
+  scale_fill_brewer(type = "qual", palette = "greens") +
   geom_flow(stat = "alluvium", lode.guidance = "frontback") +
   geom_stratum() +
   poster_theme() +
@@ -23,3 +25,6 @@ clusts_long %>%
     legend.position = "bottom",
     legend.background = element_rect(fill = "grey")
   )
+
+# favorite palettes: 
+# "accent", "BuGn", "
