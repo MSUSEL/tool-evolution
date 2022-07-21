@@ -13,6 +13,8 @@ poster_theme <- function() {
     
     axis.line = element_line(color='#031330'),
     axis.text = element_text(color='#000000'),
+    
+    legend.background = element_rect(fill="#105397")
   )
 }
 
