@@ -1,16 +1,5 @@
 library(plyr); library(dplyr)
 
-# heat map but normalized between zero and 1
-cwe_checker %>% apply_standardization() %>%
-  rev() %>%
-  arrange(version_0.6) %>%
-  plot_as_heatmap()
-
-cve_bin %>% apply_standardization() %>%
-  arrange(version_3.1.1) %>%
-  plot_as_heatmap()
-  
-  
 apply_standardization <- function(d) {
   d %>% select(starts_with("version")) %>%
     apply(2, function(x) (x-min(x))/(max(x)-min(x))) %>%
@@ -25,3 +14,16 @@ plot_as_heatmap <- function(d) {
     as.matrix() %>% 
     heatmap.2(Rowv = F, Colv = F, tracecol = NA, col=my_palette, labRow = F)
 }
+
+# heat map but normalized between zero and 1
+cwe_checker %>% apply_standardization() %>%
+  rev() %>%
+  arrange(version_0.6) %>%
+  plot_as_heatmap()
+
+cve_bin %>% apply_standardization() %>%
+  arrange(version_3.1.1) %>%
+  plot_as_heatmap()
+  
+  
+
