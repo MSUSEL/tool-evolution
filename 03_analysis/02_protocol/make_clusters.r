@@ -71,7 +71,11 @@ kmeans_opt_clustNums <-
 
 # set desired number of clusters. The order of the numofclust vector matters and
 # should match up with the order of the tools in the scores_wide list
+<<<<<<< HEAD
 numOfClusts <- c(3, 5)
+=======
+numOfClusts <- c(3, 3)
+>>>>>>> master
 # do the clustering
 kmeans_results <-
   # iterate over the scores for the different tools
