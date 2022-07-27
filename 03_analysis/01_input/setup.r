@@ -23,3 +23,13 @@ poster_theme <- function() {
   )
 }
 
+save_recent_plot <- function(name) {
+  ggsave(
+    sprintf("%s.png", name), 
+    bg     = '#105397', 
+    path   = "./03_analysis/04_product/",
+    height = 10,
+    width  = 10,
+    units  = "in"
+  )
+}
