@@ -24,7 +24,7 @@ library(gplots)
 Run the import file
 
 ```{r}
-source("./03_analysis/01_input/import.r", local = knitr::knit_global())
+source("./03_analysis/01_input/setup.r", local = knitr::knit_global())
 ```
 
 ## Graphing Averages Over time
