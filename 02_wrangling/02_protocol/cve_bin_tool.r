@@ -16,9 +16,9 @@ cve_bin <- fromJSON(file = sprintf("./01_acquisition/04_product/cve_bin_tool_res
   do.call(rbind, .)
 
 # pull in release date data
-version_dates <- read.csv("./02_wrangling/01_input/cve_bin_tool_release_dates.csv")
-version_dates <- t(version_dates)
-dates <- as.Date(version_dates, format = "%m-%d-%Y") %>% as.data.frame
+version_dates <- read.csv("./02_wrangling/01_input/cve_bin_tool_release_dates.csv") %>%
+    t()
+dates <- as.Date(version_dates, format = "%m/%d/%y") %>% as.data.frame()
 dates$version <- rownames(version_dates)
 names(dates)[1] <- "date"
 
