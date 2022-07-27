@@ -8,13 +8,13 @@ library(grid)
 library(egg)
 library(stringr)
 library(plotly)
-
+library (rjson)
 library(ggpubr)
 library(factoextra)
 
 ### Build wide and long formats
 # CWE_CHECKER
-cwe_checker <- fromJSON(file = "./cwe_checker/output_statistics/version_results/parsed_results.json") %>%
+cwe_checker <- fromJSON(file = "./01_acquisition/04_product/cwe_checker_parsed_results.json") %>%
   lapply(as.data.frame) %>%
   do.call(rbind,.)
 
@@ -34,7 +34,7 @@ cwe_checker_long <- pivot_longer(cwe_checker, !filename, names_to = "version", v
   left_join(version_dates)
 
 # CVE_BIN_TOOL
-cve_bin <- fromJSON(file = "./cve-bin-tool-runner/data_outputs/full_results_1655757361.json") %>% 
+cve_bin <- fromJSON(file = "./01_acquisition/04_product/cve_bin_tool_results_1655757361.json") %>% 
   lapply(as.data.frame) %>%
   do.call(rbind, .)
 
@@ -73,11 +73,11 @@ cve_bin_long <- left_join(cve_bin_long, dates)
 
 scores_wide <- 
   # get the index nums for the file names with wide data
-  list.files("./csvs_final_data") %>% 
+  list.files("./03_analysis/01_input/csvs_final_data") %>% 
   # get the file names for the wide data using index nums
   .[grep("wide", .)] %>% 
   # read csvs to data frames
-  lapply(., function(fileNm) {read.csv(paste("./csvs_final_data", fileNm, sep = "/"))}) %>%
+  lapply(., function(fileNm) {read.csv(paste("./03_analysis/01_input/csvs_final_data", fileNm, sep = "/"))}) %>%
   # make the names of the binaries the row names in each df
   # sort data frames by row names 
   lapply(., function(df) { 
@@ -88,11 +88,11 @@ scores_wide <-
 
 scores_long <- 
   # get the index nums for the file names with wide data
-  list.files("./csvs_final_data") %>% 
+  list.files("./03_analysis/01_input/csvs_final_data") %>% 
   # get the file names for the wide data using index nums
   .[grep("long", .)] %>% 
   # read csvs to data frames
-  lapply(., function(fileNm) {read.csv(paste("./csvs_final_data", fileNm, sep = "/"), row.names = "X")})
+  lapply(., function(fileNm) {read.csv(paste("./03_analysis/01_input/csvs_final_data", fileNm, sep = "/"), row.names = "X")})
 
 names(scores_wide) <- names(scores_long) <- c("cve_bin_tool", "cwe_checker")
 
@@ -106,7 +106,7 @@ scores_long <-
   ) %>%
   do.call(rbind, .)
 
-datAttr <- read.csv("./BinaryAttrs.csv")
+datAttr <- read.csv("./03_analysis/01_input/BinaryAttrs.csv")
 
 
 # Cluster Static Analysis Tool Scores Across All Tool Versions ------------
@@ -279,30 +279,29 @@ fviz_cluster(
 ### Build Heatmap
 
 scores_matrix <- data.matrix(versionDiffsAvgs)
-heatmap <- plot_ly(z = scores_matrix, type = "heatmap", y=row.names(scores_matrix), x=colnames(scores_matrix), alpha = 0.5, color = "Blues")
+heatmap <- plot_ly(z = scores_matrix, type = "heatmap", y=row.names(scores_matrix), x=colnames(scores_matrix), alpha = 0.5, color = "Blues")%>%
+  layout(title = "cwe_checker heatmap")
 
-
-
-# pdf("C:\\Users\\clema\\REU_2022\\tool-evolution\\cwe_checker\\graphing\\box_plot.pdf")
-# my_box <- boxplot(cwe_df[,1:3])
-# dev.off()
-# 
-# 
+### Box Plot
+plot.new()
+my_box <- boxplot(cwe_checker[,1:3], cex.axis=1.5, cex.main=2, cex.sub=2, col = "white", box(col = "white"), outcol =  "white", col.axis = "white", col.lab = "white", staplecol = "white", par(bg ="#92BCDB"))
+  box(lwd=2,col="white")
+  title(main = "Cwe-Checker Box Plot", col.main = "white")
+  par(cex.main = 2)
+  theme(axis.text.x = element_blank())
+      
+# axis(1, col = "white", col.ticks = "white", col.axis = "white", xaxt = "n")
+# axis(2, col = "white", col.ticks = "white", col.axis = "white")
+  
 # p1 <- 
 #   ggplot(data = cwe_df_long, mapping = aes(x = version, y = vuln_count))+
 #   geom_line(mapping = aes(group = filename), color = 'black', alpha = 0.1, size = 2)+
 #   ggtitle('CWE_CHECKER Vulnerabilities per version')
 # 
-# ggsave("C:\\Users\\clema\\REU_2022\\tool-evolution\\cwe_checker\\graphing\\vul_per_version.pdf")
-# 
-# 
 # p2 <- 
 #   ggplot(data = cwe_df_long, mapping = aes(x = version, y = vuln_count))+
 #   stat_summary(fun = 'mean', geom = 'point')+
 #   ggtitle('CWE_CHECKER version Means')
-# 
-# ggsave("C:\\Users\\clema\\REU_2022\\tool-evolution\\cwe_checker\\graphing\\version_means.pdf")
-# 
 # 
 # p3 <- 
 #   ggplot(data = cwe_df_long, mapping = aes(x = version, y = vuln_count))+
@@ -310,14 +309,8 @@ heatmap <- plot_ly(z = scores_matrix, type = "heatmap", y=row.names(scores_matri
 #   stat_summary(fun = 'mean', geom = 'point')+
 #   ggtitle('CWE_CHECKER Violin Plot')
 # 
-# ggsave("C:\\Users\\clema\\REU_2022\\tool-evolution\\cwe_checker\\graphing\\violin_plot.pdf")
-# 
-# 
 # p4 <- 
 #   ggplot(data = cwe_df_long, mapping = aes(x = version, y = vuln_count))+
 #   geom_jitter()+
 #   ggtitle('CWE_CHECKER Jitter Plot')
-# 
-# ggsave("C:\\Users\\clema\\REU_2022\\tool-evolution\\cwe_checker\\graphing\\jitter_plot.pdf")
-
 

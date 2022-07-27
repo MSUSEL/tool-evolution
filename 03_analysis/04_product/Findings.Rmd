@@ -1,3 +1,125 @@
+<<<<<<< HEAD
+---
+title: "Findings"
+author: "Travis Weber, Colleen Lemak"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+# Research Findings
+
+Import requirements
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+```
+
+```{r}
+library(tidyverse)
+library(rjson)
+library(gplots)
+```
+
+## Import input data (cve bin tool)
+
+Run the import file
+
+```{r}
+source("./03_analysis/01_input/import.r", local = knitr::knit_global())
+```
+
+## Graphing Averages Over time
+
+```{r}
+make_alpha_plot <- function(d) {
+  d %>% ggplot(aes(x = date, y = vuln_count)) +
+    geom_line(mapping = aes(group = filename), color="black", alpha=0.1, size=2)
+}
+
+cve_bin_long %>% make_alpha_plot() %>%
+    ggtitle('cve-bin-tool Vulnerabilities per version')
+
+cwe_checker_long %>% make_alpha_plot() %>%
+  ggtitle('CWE_CHECKER Vulnerabilities per version')
+```
+
+## Binary Heat Map
+
+```{r}
+my_palette <- colorRampPalette(c("red", "white", "black"))(n = 299)
+
+cve_bin %>% mutate_if(is.numeric, ~(scale(.) %>% as.vector)) %>%
+  # sort by vulnerabilities in first version
+  arrange(desc(version_3.1.1)) %>% 
+  # remove filename column
+  select(-starts_with("filename")) %>% 
+  as.matrix() %>% 
+  heatmap.2(Rowv = F, Colv = F, tracecol = NA, col=my_palette, labRow = F)
+
+cwe_checker %>% mutate_if(is.numeric, ~(scale(.) %>% as.vector)) %>%
+  # sort by vulnerabilities in first version
+  arrange(desc(version_0.6)) %>% 
+  rev() %>%
+  # remove filename column
+  select(-starts_with("filename")) %>% 
+  as.matrix() %>% 
+  heatmap.2(Rowv = F, Colv = F, tracecol = NA, col=my_palette, labRow = F)
+```
+
+## Exploring stability of not being zero
+
+### Heat map
+
+```{r}
+cve_bin_long %>% within(is_zero <- vuln_count == 0) %>%
+  ggplot(mapping = aes(x = version, y = reorder(filename, is_zero), fill = is_zero)) +
+    geom_tile() +
+    theme(
+      axis.text.y=element_blank()
+    ) +
+    scale_fill_manual(values=c("FALSE"="firebrick", "TRUE"="dodgerblue"))
+
+cwe_checker_long %>% within(is_zero <- vuln_count == 0) %>%
+  ggplot(mapping = aes(x = version, y = reorder(filename, is_zero), fill = is_zero)) +
+    geom_tile() +
+    theme(
+      axis.text.y=element_blank()
+    ) +
+    scale_fill_manual(values=c("FALSE"="firebrick", "TRUE"="dodgerblue"))
+```
+
+### Bar Chart
+
+```{r}
+cve_bin %>% select(starts_with("version")) %>% 
+  apply(2, function(c) c!=0) %>%
+  apply(2, sum) %>% 
+  tibble(version = names(.), not_zero = .) %>%
+  ggplot(mapping = aes(x=version, y = not_zero)) +
+    geom_bar(stat = 'identity')
+
+cwe_checker %>% select(starts_with("version")) %>% 
+  apply(2, function(c) c!=0) %>%
+  apply(2, sum) %>% 
+  tibble(version = names(.), not_zero = .) %>%
+  ggplot(mapping = aes(x=version, y = not_zero)) +
+    geom_bar(stat = 'identity')
+```
+
+## Alluvium
+```{r}
+source("./03_analysis/04_product/alluvium.r")
+
+cwe_checker %>% select(starts_with("version")) %>%
+  apply(2, findInterval, quants) %>%
+  apply(2, function(val) names(quants)[val]) %>%
+  make_alluvium_graph()
+
+cve_bin %>% select(starts_with("version")) %>%
+  apply(2, function(c) floor(c/20)) %>%
+  make_alluvium_graph()
+```
+=======
 ---
 title: "Findings"
 author: "Travis Weber, Colleen Lemak"
@@ -116,3 +238,4 @@ cve_bin %>% select(starts_with("version")) %>%
   apply(2, function(c) floor(c/20)) %>%
   make_alluvium_graph()
 ```
+>>>>>>> master

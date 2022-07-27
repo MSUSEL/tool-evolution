@@ -6,8 +6,12 @@ is_zero_heatmap <- function(d) {
     theme(
       axis.text.y=element_blank(),
       axis.text.x=element_text(angle = 40, hjust = 1),
+<<<<<<< HEAD
+      legend.key = element_rect(color = "black")
+=======
       legend.key = element_rect(color = "black"),
       legend.position = "top"
+>>>>>>> master
     ) +
     labs(y = "files") +
     scale_fill_manual(name = "",
