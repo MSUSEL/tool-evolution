@@ -282,8 +282,17 @@ scores_matrix <- data.matrix(versionDiffsAvgs)
 heatmap <- plot_ly(z = scores_matrix, type = "heatmap", y=row.names(scores_matrix), x=colnames(scores_matrix), alpha = 0.5, color = "Blues")%>%
   layout(title = "cwe_checker heatmap")
 
-# my_box <- boxplot(cwe_df[,1:3])
-# 
+### Box Plot
+plot.new()
+my_box <- boxplot(cwe_checker[,1:3], cex.axis=1.5, cex.main=2, cex.sub=2, col = "white", box(col = "white"), outcol =  "white", col.axis = "white", col.lab = "white", staplecol = "white", par(bg ="#92BCDB"))
+  box(lwd=2,col="white")
+  title(main = "Cwe-Checker Box Plot", col.main = "white")
+  par(cex.main = 2)
+  theme(axis.text.x = element_blank())
+      
+# axis(1, col = "white", col.ticks = "white", col.axis = "white", xaxt = "n")
+# axis(2, col = "white", col.ticks = "white", col.axis = "white")
+  
 # p1 <- 
 #   ggplot(data = cwe_df_long, mapping = aes(x = version, y = vuln_count))+
 #   geom_line(mapping = aes(group = filename), color = 'black', alpha = 0.1, size = 2)+
