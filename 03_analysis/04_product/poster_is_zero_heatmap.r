@@ -1,7 +1,7 @@
 is_zero_heatmap <- function(d) {
   d %>% within(is_zero <- vuln_count == 0) %>%
     ggplot(
-      mapping = aes(x = date, y = reorder(filename, is_zero, decreasing = TRUE), 
+      mapping = aes(x = version, y = reorder(filename, is_zero, decreasing = TRUE), 
                     fill = is_zero)) +
     geom_tile() +
     poster_theme() + 
