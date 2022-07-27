@@ -4,7 +4,7 @@ library(ggalluvial)
 library(alluvial)
 library(plyr); library(dplyr)
 
-source("./03_analysis/01_input/import.r")
+source("./03_analysis/01_input/setup.r")
 
 cve_bin_long$filename <- as.factor(cve_bin_long$file)
 

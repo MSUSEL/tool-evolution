@@ -2,21 +2,7 @@ library(tidyverse)
 library(rjson)
 library(ggplot2)
 
-source("./03_analysis/01_input/import.r")
-
-poster_theme <- function() {
-  theme(
-    panel.background = element_rect(fill='#105397'),
-    panel.grid = element_line(color='#031330'),
-    
-    plot.background = element_rect(fill='#105397'),
-    
-    axis.line = element_line(color='#031330'),
-    axis.text = element_text(color='#000000'),
-    
-    legend.background = element_rect(fill="#105397")
-  )
-}
+source("./03_analysis/01_input/setup.r")
 
 cve_bin_long %>% ggplot(aes(x = date, y = vuln_count)) +
   geom_line(mapping = aes(group = filename), color="#D9F8D4", alpha=0.1, size=2) +
