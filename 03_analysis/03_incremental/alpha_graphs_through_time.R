@@ -3,7 +3,7 @@ library(ggplot2)
 
 
 through_time_alpha <- function(d) {
-  d %>% ggplot(aes(x = date, y = vuln_count)) +
+  d %>% ggplot(aes(x = version, y = vuln_count)) +
     geom_line(mapping = aes(group = filename), color="#D9F8D4", alpha=0.2, size=2) +
     poster_theme() +
     labs(y = "Vulnerability Count", x = "Date") + 
