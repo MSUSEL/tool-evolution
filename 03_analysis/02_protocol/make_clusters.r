@@ -117,16 +117,11 @@ cluster_names <- data.frame(
   cluster_title = c("high", "medium", "low", "high", "low", "medium")
 )
 
-
+cluster_names$cluster_title <- factor(cluster_names$cluster_title, levels=c("high", "medium", "low"))
 
 scores_long_withClusts$clusterIdx <- 
   as.numeric(scores_long_withClusts$clusterIdx)
 
 scores_long_withClusts$cluster_title <- NULL
 
-scores_long_withClusts <- full_join(scores_long_withClusts, cluster_names)
-
-View(scores_long_withClusts)
-
-
-View(cluster_names)
+scores_long_withClusts <- join(scores_long_withClusts, cluster_names)
