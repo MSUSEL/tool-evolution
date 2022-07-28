@@ -20,6 +20,9 @@ poster_theme <- function() {
     axis.text = element_text(size = 10, color = "#FFFFFF"),
     
     legend.background = element_rect(fill="#105397"),
+    legend.key = element_rect(fill="#105397"),
+    
+    strip.background = element_rect(fill="#105397"),
   )
 }
 
