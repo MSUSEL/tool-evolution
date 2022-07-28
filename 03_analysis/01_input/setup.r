@@ -17,19 +17,19 @@ poster_theme <- function() {
     plot.background = element_rect(fill='#105397'),
     
     axis.line = element_line(color='#031330'),
-    axis.text.x = element_text(size = 10, color = "#FFFFFF"),
+    axis.text = element_text(size = 10, color = "#FFFFFF"),
     
     legend.background = element_rect(fill="#105397"),
   )
 }
 
-save_recent_plot <- function(name) {
+save_recent <- function(name, height=5, width=5) {
   ggsave(
     sprintf("%s.png", name), 
     bg     = '#105397', 
     path   = "./03_analysis/04_product/",
-    height = 10,
-    width  = 10,
+    height = height,
+    width  = width,
     units  = "in"
   )
 }
