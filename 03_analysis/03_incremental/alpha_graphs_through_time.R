@@ -1,27 +1,18 @@
 library(tidyverse)
-library(rjson)
 library(ggplot2)
 
-source("./03_analysis/01_input/setup.r")
 
-cve_bin_long %>% ggplot(aes(x = date, y = vuln_count)) +
-  geom_line(mapping = aes(group = filename), color="#D9F8D4", alpha=0.1, size=2) +
-  ggtitle('cve-bin-tool Vulnerabilities per version') +
-  poster_theme() +
-  theme(axis.text.x = element_text(angle = 45, hjust=1))
+through_time_alpha <- function(d) {
+  d %>% ggplot(aes(x = date, y = vuln_count)) +
+    geom_line(mapping = aes(group = filename), color="#D9F8D4", alpha=0.2, size=2) +
+    poster_theme() +
+    labs(y = "Vulnerability Count", x = "Date") + 
+    theme(
+      axis.text.x = element_text(angle = 40, hjust=1)
+    )
+}
 
-cwe_checker_long %>% ggplot(aes(x = date, y = vuln_count)) +
-  geom_line(mapping = aes(group = filename), color="#D9F8D4", alpha=0.1, size=2) +
-  ggtitle('cwe_checker Vulnerabilities per version') +
-  poster_theme() + 
-  theme(axis.text.x = element_text(angle = 45, hjust=1))
+cve_bin_long %>% through_time_alpha()
 
-
-ggsave(
-  'cve_bin_alpha.png', 
-  bg='#105397', 
-  path="./03_analysis/04_product/",
-  height="5in",
-  width = "5in"
-)
-ggsave('cwe_checker_alpha.png', bg='#105397', path="./03_analysis/04_product/")
+cwe_checker_long %>% through_time_alpha()
+  
