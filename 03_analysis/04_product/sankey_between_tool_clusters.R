@@ -4,7 +4,7 @@ library(alluvial)
 library(plyr); library(dplyr)
 library(stringi)
 
-clusts_long <- scores_long_withClusts %>% select(all_of(c("filename", "toolName", "clusterIdx"))) %>%
+clusts_long <- scores_long_withClusts %>% select(all_of(c("filename", "toolName", "cluster_title"))) %>%
   reshape(
     idvar = "filename", 
     timevar = "toolName", 
@@ -12,12 +12,14 @@ clusts_long <- scores_long_withClusts %>% select(all_of(c("filename", "toolName"
   ) %>%
   pivot_longer(cols = !filename, names_to = "tool", values_to = "cluster")
 
+View(clusts_long)
+
 my_palette <- c("#185abc", "#e8f0fe", "#aecbfa", "#fce8e6", "#3c4043")
 
 clusts_long %>%
   ggplot(aes(x = tool, stratum = cluster, alluvium = filename,
              fill = cluster, label = cluster)) +
-  scale_fill_brewer(type = "qual", palette = "greens") +
+  scale_fill_brewer(type = "qual", palette = "Greens") +
   geom_flow(stat = "alluvium", lode.guidance = "frontback") +
   geom_stratum() +
   poster_theme() +

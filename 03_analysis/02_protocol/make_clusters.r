@@ -107,3 +107,26 @@ names(scores_long_withClusts)[names(scores_long_withClusts) == "res.cluster"] <-
 # store cluster membership as a factor (the cluster number is meaningless to us;
 # we just want to know which groups the binaries belong to)
 scores_long_withClusts$clusterIdx <- factor(scores_long_withClusts$clusterIdx )
+
+# advert your eyes please
+# it works, and I am on a time budget
+cluster_names <- data.frame(
+  toolName = c("cve_bin_tool", "cve_bin_tool", "cve_bin_tool", 
+                  "cwe_checker", "cwe_checker", "cwe_checker"),
+  clusterIdx = c(1, 2, 3, 1, 2, 3),
+  cluster_title = c("high", "medium", "low", "high", "low", "medium")
+)
+
+
+
+scores_long_withClusts$clusterIdx <- 
+  as.numeric(scores_long_withClusts$clusterIdx)
+
+scores_long_withClusts$cluster_title <- NULL
+
+scores_long_withClusts <- full_join(scores_long_withClusts, cluster_names)
+
+View(scores_long_withClusts)
+
+
+View(cluster_names)
