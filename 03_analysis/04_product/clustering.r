@@ -7,7 +7,8 @@ cluster_plot <- function(d) {
     poster_theme() + 
     theme(
       legend.position = "none"
-    )
+    ) +
+    scale_fill_brewer(type = "qual", palette = "Greens")
 }
 
 

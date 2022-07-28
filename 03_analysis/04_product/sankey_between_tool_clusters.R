@@ -10,9 +10,18 @@ pivoted_scores <- scores_long_withClusts %>% select(all_of(c("filename", "toolNa
     timevar = "toolName", 
     direction = "wide"
   ) %>%
-  pivot_longer(cols = !filename, names_to = "tool", values_to = "cluster")
+  pivot_longer(cols = !filename, names_to = "tool", values_to = "cluster") %>%
+  # advert your eyes, nothing else worked
+  mutate(
+    "tool" = replace(tool, tool == "cluster_title.cve_bin_tool", "cve_bin_tool")
+  ) %>%
+  mutate(
+     "tool" = replace(tool, tool == "cluster_title.cwe_checker", "cwe_checker")
+  )
   
 pivoted_scores$cluster <- factor(pivoted_scores$cluster, levels=c("high", "medium", "low"))
+
+
 
 pivoted_scores %>% ggplot(aes(x = tool, stratum = cluster, alluvium = filename,
              fill = cluster, label = cluster)) +
@@ -21,7 +30,6 @@ pivoted_scores %>% ggplot(aes(x = tool, stratum = cluster, alluvium = filename,
   geom_stratum() +
   poster_theme() +
   theme(
-    legend.position = "bottom",
-    legend.background = element_rect(fill = "grey")
+    legend.position = "bottom"
   ) +
   labs(x = "Tool")
