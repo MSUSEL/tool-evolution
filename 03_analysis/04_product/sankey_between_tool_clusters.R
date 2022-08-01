@@ -19,13 +19,10 @@ pivoted_scores <- scores_long_withClusts %>% select(all_of(c("filename", "toolNa
      "tool" = replace(tool, tool == "cluster_title.cwe_checker", "cwe_checker")
   )
   
-pivoted_scores$cluster <- factor(pivoted_scores$cluster, levels=c("high", "medium", "low"))
-
-
+# pivoted_scores$cluster <- factor(pivoted_scores$cluster, levels=c("high", "medium", "low"))
 
 pivoted_scores %>% ggplot(aes(x = tool, stratum = cluster, alluvium = filename,
              fill = cluster, label = cluster)) +
-  #  scale_fill_brewer(type = "qual") +
   geom_flow(stat = "alluvium", lode.guidance = "frontback") +
   geom_stratum() +
   poster_theme() +

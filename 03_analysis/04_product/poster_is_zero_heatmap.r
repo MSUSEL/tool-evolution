@@ -8,19 +8,19 @@ is_zero_heatmap <- function(d) {
     theme(
       axis.text.y=element_blank(),
       axis.text.x=element_text(angle = 40, hjust = 1),
-      axis.title.y=element_text(angle = 0, vjust = .5),
       legend.key = element_rect(color = "black"),
-      legend.position = "top"
+      legend.position = "top",
+      legend.text = element_text(size = 11)
     ) +
-    labs(y = "Files", x = "Date") +
+    labs(y = "Binaries", x = "Version") +
     scale_fill_manual(name = "",
                       values=c("FALSE"="#E9F8E4", "TRUE"="#64BB63"),
                       labels = c("At Least 1 Vulnerability", "No Vulnerabilities")
     )
 }
 
-cve_bin_long %>% is_zero_heatmap()
-cwe_checker_long %>% is_zero_heatmap()
+cve_bin_long %>% name_swaps() %>% is_zero_heatmap()
+cwe_checker_long %>% name_swaps() %>% is_zero_heatmap()
   
   
 

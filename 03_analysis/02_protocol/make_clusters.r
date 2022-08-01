@@ -114,7 +114,7 @@ cluster_names <- data.frame(
   toolName = c("cve_bin_tool", "cve_bin_tool", "cve_bin_tool", 
                   "cwe_checker", "cwe_checker", "cwe_checker"),
   clusterIdx = c(1, 2, 3, 1, 2, 3),
-  cluster_title = c("low", "medium", "high", "medium", "high", "low")
+  cluster_title = c("high", "low", "medium", "low", "medium", "high")
 )
 
 cluster_names$cluster_title <- factor(cluster_names$cluster_title, levels=c("high", "medium", "low"))
