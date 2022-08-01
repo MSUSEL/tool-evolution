@@ -1,5 +1,3 @@
-
-
 # Load Libraries -------------------------------------------------------------------
 
 library(tidyr)
@@ -20,7 +18,7 @@ library(factoextra)
 # Import the data and store in a list
 scores_wide <- 
   # get the index nums for the file names with wide data
-  list.files("./03_analysis/01_input/csvs_final_data") %>%
+  list.files("./03_clustering/01_input/") %>%
   # get the file names for the wide data using index nums
   .[grep("wide", .)] %>%
   # read csvs to data frames
@@ -51,8 +49,6 @@ scores_long <- lapply(names(scores_long),
                       }
 ) %>%
   do.call(rbind, .)
-
-datAttr <- read.csv("./03_analysis/01_input/BinaryAttrs.csv")
 
 
 # Cluster Static Analysis Tool Scores Across All Tool Versions ------------
