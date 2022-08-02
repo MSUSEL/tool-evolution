@@ -50,29 +50,18 @@ scores_long <- lapply(names(scores_long),
 ) %>%
   do.call(rbind, .)
 
-
 # Cluster Static Analysis Tool Scores Across All Tool Versions ------------
-
-# use clValid to help us have an ideo of the optimal cluster numbers
-kmeans_opt_clustNums <- 
-  # iterate over the scores for the different tools
-  llply(
-    scores_wide, function(scores) { 
-      # allow cluster number to vary from 2 to 5
-      out <- clValid(obj = scores, nClust = 2:5, clMethods = "kmeans")
-      out <-getRanksWeights(out) 
-      print(out$ranks, quote = FALSE)
-    }
-  )
 
 # set desired number of clusters. The order of the numofclust vector matters and
 # should match up with the order of the tools in the scores_wide list
 numOfClusts <- c(3, 3)
+
+View(scores_wide)
+
 # do the clustering
 kmeans_results <-
   # iterate over the scores for the different tools
   mapply(kmeans, scores_wide, numOfClusts, SIMPLIFY = FALSE)
-# llply(scores_wide, kmeans, centers = numOfClusts)
 
 # create list with cluster membership for each binary based on clustering above
 clustIdsDfList <- 
