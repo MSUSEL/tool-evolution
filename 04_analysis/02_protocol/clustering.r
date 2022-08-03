@@ -1,9 +1,9 @@
 cluster_plot <- function(d) {
   d %>% ggplot(mapping = aes(x = version, y = vuln_count))+
-    geom_line(mapping = aes(group = filename, color = cluster_title), alpha = 0.5, size = 1) +
+    geom_line(mapping = aes(group = filename, color = clusterIdx), alpha = 0.5, size = 1) +
     scale_x_discrete(guide = guide_axis(angle = 90)) +
     xlab("Version") + ylab("Findings Count") +
-    facet_grid(cols = vars(cluster_title)) +
+    facet_grid(cols = vars(clusterIdx)) +
     poster_theme() + 
     theme(
       legend.position = "none"

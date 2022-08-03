@@ -1,3 +1,5 @@
+library(purrr)
+
 quants <- quantile(cwe_checker_long$vuln_count)
 
 make_alluvium_graph <- function(d) {
