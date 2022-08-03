@@ -3,6 +3,7 @@
 
 - To use this library: import utils
 '''
+## We dropped versions 0.1, 0.2, and 0.3 because they did not work
 
 from operator import mod
 import os
@@ -13,9 +14,9 @@ from collections import Counter
 
 statistics = {}
 info_array = {}
+
 releases = ["0.4", "0.5", "0.6"]  
-# "0.2", "0.3", 
-# "0.4", "0.5", "0.6"
+
 UNABLE_TO_COUNT = -50
 
 
@@ -26,37 +27,31 @@ def generate_output(file_path):
     for filename in files:
         statistics[filename] = {}
         info_array[filename] = {}
-        
-    double_quotes = "\"\""
-    num = 0
-    
+             
+    # build commands
+    base_command = "docker run --rm -v " + file_path + "\\"
+
+    version_commands = {
+        "version_0.4" : (base_command, ":/tmp/input cwe_checker:0.4 cwe_checker /tmp/input"),
+        "version_0.5" : (base_command, ":/input cwe_checker:0.5 /input"),
+        "version_0.6" : (base_command, ":/input cwe_checker:0.6 /input")
+    }
+      
     for release_id in releases:
         
         for filename in files:
             
             print("Before running version ", release_id, " on file ", filename)
             
-            # build commands
-            base_command = "docker run --rm -v " + file_path + "\\" + filename
-            
-            if release_id == "0.5":
-                modified_command = base_command + ":/input cwe_checker:0.5 /input"
-                print("Command: ", modified_command)
-            elif release_id == "0.4":
-                modified_command = base_command + ":/tmp/input cwe_checker:0.4 cwe_checker /tmp/input"
-                print("Command: ", modified_command)
-            elif release_id == "stable":
-                modified_command = base_command + ":/input fkiecad/cwe_checker:stable /input"
-                print("Command: ", modified_command)
-            elif release_id == "latest":
-                modified_command = base_command + ":/input fkiecad/cwe_checker:latest /input"
-                print("Command: ", modified_command)
-            elif release_id == "0.3":
-                modified_command = "bap " + file_path + " --pass=cwe-checker --cwe-checker-config=src/config.json"
-                print("Command: ", modified_command)
-            elif release_id == "0.6":
-                modified_command = base_command + ":/input cwe_checker:0.6 /input"
-                print("Command: ", modified_command)
+            # if release_id == "0.5":
+            #     modified_command = base_command + ":/input cwe_checker:0.5 /input"
+            #     print("Command: ", modified_command)
+            # elif release_id == "0.4":
+            #     modified_command = base_command + ":/tmp/input cwe_checker:0.4 cwe_checker /tmp/input"
+            #     print("Command: ", modified_command)
+            # elif release_id == "0.6":
+            #     modified_command = base_command + ":/input cwe_checker:0.6 /input"
+            #     print("Command: ", modified_command)
                 
             # store output to count vulnerabilities
             print("Running command on ", filename, " using version ", release_id, "... \n")
