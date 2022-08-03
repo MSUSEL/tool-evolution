@@ -1,0 +1,2 @@
+
+OSJ, OS Command Injection, 0.5-0.6, [CWE-78]
