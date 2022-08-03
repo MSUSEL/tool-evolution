@@ -5,6 +5,7 @@
 against other static analysis tools.
 '''
 
+from pytest import ExitCode
 import utils
 import os
 import json
@@ -12,6 +13,8 @@ import json
 # Directory with all binaries
 file_path = "./01_acquisition/01_input/binaries"
 files = os.listdir(file_path)
+print(len(files))
+exit
 
 # write names of binary files to "binaries.json"
 with open('./01_acquisition/04_product/binaries.json', 'w') as output_file:
