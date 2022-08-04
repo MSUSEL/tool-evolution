@@ -14,6 +14,7 @@ version_dates <- read.csv("./02_wrangling/01_input/cve_bin_tool_release_dates.cs
     t()
 dates <- as.Date(version_dates, format = "%m/%d/%y") %>% as.data.frame()
 dates$version <- rownames(version_dates)
+# structure of input file must be preserved for this code block to work
 names(dates)[1] <- "date"
 
 # make file names be a column

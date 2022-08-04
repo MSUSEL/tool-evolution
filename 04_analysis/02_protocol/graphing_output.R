@@ -281,16 +281,24 @@ fviz_cluster(
 scores_matrix <- data.matrix(versionDiffsAvgs)
 x_lab <- list(title="cwe-checker", color="white")
 y_lab <- list(title="cve-bin-tool", color="white")
+ay <- list(
+  side = "right",
+  title = "Binaries",
+  titlecolor=list(color="white")
+  )
 
-heatmap <- plot_ly(z = scores_matrix, type = "heatmap", y=row.names(scores_matrix), x=colnames(scores_matrix), alpha = 0.5, colorscale = "Viridis", colorbar = list(title = "Vulnerability \n Differences", titlefont=list(color="white"), tickfont=list(color="white"), tickcolor="white"))%>%
-  layout(title = "",
+heatmap <- plot_ly(z = scores_matrix, type = "heatmap", y=row.names(scores_matrix), x=colnames(scores_matrix), 
+           alpha = 0.5, colorscale = "Viridis", colorbar = list(title = "Vulnerability \n Differences", 
+           titlefont=list(color="white"), tickfont=list(color="white"), tickcolor="white"))%>%
+  layout(title = "Tool Versions Across Binaries", 
          paper_bgcolor="#105397", 
-         # titlefont = list(color = "white"), 
+         titlefont = list(color = "white"),
          # xaxis = list(color="white"), 
          # yaxis = list(color="white"), 
          tickcolor = "white",
          xaxis = x_lab,
-         yaxis = y_lab)
+         yaxis = y_lab)%>%
+  layout(yaxis2 = ay)
 
 ## Box Plot
 # plot.new()

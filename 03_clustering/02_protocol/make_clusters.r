@@ -1,5 +1,3 @@
-
-
 # Load Libraries -------------------------------------------------------------------
 
 library(tidyr)
@@ -14,17 +12,21 @@ library(stringr)
 library(ggpubr)
 library(factoextra)
 
+# set seed
+# Unix time stamp from while writing this code
+set.seed(132414231234)
+
 
 # Data import and tidying -------------------------------------------------
 
 # Import the data and store in a list
 scores_wide <- 
   # get the index nums for the file names with wide data
-  list.files("./03_analysis/01_input/csvs_final_data") %>%
+  list.files("./03_clustering/01_input/") %>%
   # get the file names for the wide data using index nums
   .[grep("wide", .)] %>%
   # read csvs to data frames
-  lapply(., function(fileNm) {read.csv(paste("./03_analysis/01_input/csvs_final_data", fileNm, sep = "/"))}) %>%
+  lapply(., function(fileNm) {read.csv(paste("./03_clustering/01_input/", fileNm, sep = "/"))}) %>%
   # make the names of the binaries the row names in each df
   # sort data frames by row names 
   lapply(., function(df) { 
@@ -35,11 +37,11 @@ scores_wide <-
 
 scores_long <- 
   # get the index nums for the file names with wide data
-  list.files("./03_analysis/01_input/csvs_final_data") %>% 
+  list.files("./03_clustering/01_input/") %>% 
   # get the file names for the wide data using index nums
   .[grep("long", .)] %>%
   # read csvs to data frames
-  lapply(., function(fileNm) {read.csv(paste("./03_analysis/01_input/csvs_final_data", fileNm, sep = "/"))})
+  lapply(., function(fileNm) {read.csv(paste("./03_clustering/01_input/", fileNm, sep = "/"))})
 
 names(scores_long) <- names(scores_wide) <- c("cve_bin_tool", "cwe_checker")
 
@@ -52,31 +54,16 @@ scores_long <- lapply(names(scores_long),
 ) %>%
   do.call(rbind, .)
 
-datAttr <- read.csv("./03_analysis/01_input/BinaryAttrs.csv")
-
-
 # Cluster Static Analysis Tool Scores Across All Tool Versions ------------
-
-# use clValid to help us have an ideo of the optimal cluster numbers
-kmeans_opt_clustNums <- 
-  # iterate over the scores for the different tools
-  llply(
-    scores_wide, function(scores) { 
-      # allow cluster number to vary from 2 to 5
-      out <- clValid(obj = scores, nClust = 2:5, clMethods = "kmeans")
-      out <-getRanksWeights(out) 
-      print(out$ranks, quote = FALSE)
-    }
-  )
 
 # set desired number of clusters. The order of the numofclust vector matters and
 # should match up with the order of the tools in the scores_wide list
-numOfClusts <- c(3, 3)
+numOfClusts <- c(5, 3)
+
 # do the clustering
 kmeans_results <-
   # iterate over the scores for the different tools
   mapply(kmeans, scores_wide, numOfClusts, SIMPLIFY = FALSE)
-# llply(scores_wide, kmeans, centers = numOfClusts)
 
 # create list with cluster membership for each binary based on clustering above
 clustIdsDfList <- 
@@ -89,6 +76,7 @@ clustIdsDfList <-
   return(df)
   }
   ) 
+
 # store cluster membership in data frame 
 clustIdsDf <-  
   lapply(
@@ -108,13 +96,12 @@ names(scores_long_withClusts)[names(scores_long_withClusts) == "res.cluster"] <-
 # we just want to know which groups the binaries belong to)
 scores_long_withClusts$clusterIdx <- factor(scores_long_withClusts$clusterIdx )
 
-# advert your eyes please
-# it works, and I am on a time budget
+# These are hard coded labels
 cluster_names <- data.frame(
   toolName = c("cve_bin_tool", "cve_bin_tool", "cve_bin_tool", 
                   "cwe_checker", "cwe_checker", "cwe_checker"),
   clusterIdx = c(1, 2, 3, 1, 2, 3),
-  cluster_title = c("low", "medium", "high", "medium", "high", "low")
+  cluster_title = c("medium", "low", "high", "low", "medium", "high")
 )
 
 cluster_names$cluster_title <- factor(cluster_names$cluster_title, levels=c("high", "medium", "low"))
@@ -125,3 +112,30 @@ scores_long_withClusts$clusterIdx <-
 scores_long_withClusts$cluster_title <- NULL
 
 scores_long_withClusts <- join(scores_long_withClusts, cluster_names)
+
+## standard deviation
+
+sapply(c(cve_bin_long, cwe_checker_long), function (tool_data) {
+  sapply(c(1, 2, 3), function (clust_id) {
+    df_subset <- tool_data[tool_data$cluster_id == clust_id,]
+    sd(df_subset$vuln_count)
+  })
+})
+
+
+#### TEMP (out of order)
+
+# use clValid to help us have an ideo of the optimal cluster numbers
+kmeans_opt_clustNums <- 
+  # iterate over the scores for the different tools
+  llply(
+    scores_wide, function(scores) { 
+      # allow cluster number to vary from 2 to 5
+      out <- clValid(obj = scores, nClust = 2:5, 
+                     clMethods = "kmeans",
+                     validation = c("internal", "stability"))
+      out <-getRanksWeights(out) 
+      print(out$ranks, quote = FALSE)
+    }
+  )
+
