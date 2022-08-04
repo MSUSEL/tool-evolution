@@ -10,15 +10,13 @@ import utils
 import os
 import json
 
-# Directory with all binaries
+# directory with all binaries
 file_path = "./01_acquisition/01_input/binaries"
 files = os.listdir(file_path)
-print(len(files))
-exit
 
 # write names of binary files to "binaries.json"
 with open('./01_acquisition/04_product/binaries.json', 'w') as output_file:
     json.dump(files, output_file)
 
 # Initialize and generate program output
-utils.generate_output(file_path)
+utils.initialize_output_generation(file_path)
