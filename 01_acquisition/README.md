@@ -1,0 +1,3 @@
+# Data Acquisition
+
+Running cve-bin-tool-runner.py is self-contained. Running this will generate output into the folder `01_acquisition/03_incremental`. This data will have the UNIX timestamp of when the run completed in the title of the data. Per best practice, if that data is to be wrangled, move that folder into `01_acquisition/03_incremental`. See `02_wrangling/02_protocol/cve_bin.md` for how to wrangle this data.
