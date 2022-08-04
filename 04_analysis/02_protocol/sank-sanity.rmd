@@ -42,6 +42,13 @@ clust_and_title <- function(col) {
   clust <- pam(col, 3)
   clust_titles(clust)
 }
+
+
+clust_and_title_alt <- function(col) {
+  alt_names = factor(c("small", "mid", "large"), levels=c("large", "mid", "small"))
+  clust <- pam(col, 3)
+  clust_titles(clust, names = alt_names)
+}
 ```
 ### Cluster By Version
 
@@ -56,7 +63,8 @@ cve_version_clusters <- cve_bin %>%
 
 ### Cluster by size of binary
 ```{r}
-binaryAttrs <- binaryAttrs %>% mutate(size_cluster = clust_and_title(size))
+alt_names = factor(c("small", "mid", "large"), levels=c("large", "mid", "small"))
+binaryAttrs <- binaryAttrs %>% mutate(size_cluster = clust_and_title_alt(size))
 ```
 
 ## Visualizing clusters / attributes
@@ -85,12 +93,26 @@ split_graph_by_factor <- function(data, fact) {
 ```
 
 Step 4. Make some graphs
+
 ```{r}
 cve_bin_long_clusts %>% ggplot( mapping = aes(x = version, y = vuln_count)) +
-  geom_line(mapping = aes(group = filename, color = domain), size = 2, alpha = 0.5) +
+  geom_line(mapping = aes(group = filename, color = cluster_2.1), size = 2, alpha = 0.5) +
   scale_x_discrete(guide = guide_axis(angle = 90)) +
   xlab("Version") +
-  facet_grid(cols = vars(domain)) +
+  facet_grid(cols = vars(cluster_2.1)) +
+  theme(legend.position = "top") +
+  scale_fill_brewer(type = "qual")
+```
+```{r}
+cve_bin_long_clusts %>% ggplot(aes(x = version, y = vuln_count, color = size_cluster)) + geom_line(mapping = aes(group = filename))
+```
+
+```{r}
+cve_bin_long_clusts %>% ggplot( mapping = aes(x = version, y = vuln_count)) +
+  geom_line(mapping = aes(group = filename, color = cluster_3.1.1), size = 2, alpha = 0.5) +
+  scale_x_discrete(guide = guide_axis(angle = 90)) +
+  xlab("Version") +
+  facet_grid(cols = vars(cluster_3.1.1)) +
   theme(legend.position = "top") +
   scale_fill_brewer(type = "qual")
 ```
@@ -132,18 +154,6 @@ sankey <- function(columns) {
 ```
 
 ### Make graphs
-```{r}
-sankey(c("cluster_2.0", "cluster_2.2", "cluster_3.1.1"))
-```
-```{r}
-sankey(c("cluster_3.1.1", "size_cluster"))
-```
-
-```{r}
-sankey(c("cluster_2.0", "size_cluster"))
-```
-
-
 ```{r}
 sankey(c("cluster_3.1.1", "size_cluster", "cluster_2.0"))
 ```

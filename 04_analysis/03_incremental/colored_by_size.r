@@ -1,0 +1,1 @@
+cve_bin_long_clusts %>% ggplot(aes(x = version, y = vuln_count, color = size_cluster)) + geom_line(mapping = aes(group = filename))
