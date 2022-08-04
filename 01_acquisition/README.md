@@ -10,4 +10,4 @@ If anything seems awry, manually test cve-bin-tool on some of the binaries using
 
 0.2.0, 0.3.0, 0.3.1, 1.0, 1.1, 2.0a0, 2.0, 2.1, 2.1.post1, 2.2, 2.2.1, 3.0, 3.1rc2, 3.1rc3, 3.1, 3.1.1
 
-source: https://pypi.org/project/cve-bin-tool/#history
+source: <https://pypi.org/project/cve-bin-tool/#history>

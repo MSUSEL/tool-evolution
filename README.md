@@ -9,3 +9,5 @@ in the pipeline.
 
 Only data that is being newly introduced, (does not come from a previous step),
 is put in the input folder of a given step.
+
+All code files should be run from the root directory.
