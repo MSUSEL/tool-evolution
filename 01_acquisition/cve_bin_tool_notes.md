@@ -12,3 +12,10 @@ I remember deciding very early on to not include any versions marked as
 pre-release, but I can not find a reference to this decision in my physical
 notebook.
 -- Travis
+
+## 8/4/22
+
+Adding the images of my physical notebook dated as 6/2/22
+
+![image](https://user-images.githubusercontent.com/30611278/182895747-8306b088-a374-4a9c-884d-0030178a6811.png)
+![image](https://user-images.githubusercontent.com/30611278/182895629-c7f5c956-ca61-4bf7-a693-d16d26e2dc06.png)
