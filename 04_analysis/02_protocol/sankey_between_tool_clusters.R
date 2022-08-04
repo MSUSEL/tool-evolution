@@ -32,4 +32,3 @@ pivoted_scores %>% ggplot(aes(x = tool, stratum = cluster, alluvium = filename,
     axis.text = element_text(size = 15)
   ) +
   labs(x = "Tool")
-
