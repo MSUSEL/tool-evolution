@@ -7,6 +7,7 @@ use_date <- 1658175857
 cve_bin <- fromJSON(file = sprintf("./01_acquisition/04_product/cve_bin_tool_results_%d.json", use_date)) %>% 
   lapply(as.data.frame) %>%
   do.call(rbind, .) %>%
+  # remove unwanted columns
   select(!X3.1)
 
 # pull in release date data
