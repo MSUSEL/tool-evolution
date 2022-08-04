@@ -50,10 +50,8 @@ def run_files_through_versions(files, base_command, version_commands):
             output = subprocess.run(modified_command, shell=True, capture_output=True)
             output = str(output)
             
-            print("After running command on ", filename, " using version ", release_id, "\n")
-            print()
-            print(str(output), "\n")
-            print()
+            print("After running command on ", filename, " using version ", release_id, "\n\n")
+            print(str(output), "\n\n")
             
             # scan for vulnerabilities and report an error if unable
             try:
