@@ -1,87 +1,87 @@
 {
-    "[CWE-78]": {
+    "[CWE78]": {
         "Name": "OS Command Injection",
         "Versions": ["0.4", "0.5", "0.6"]
     },
-    "[CWE-119]": {
+    "[CWE119]": {
         "Name": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
         "Versions": ["0.4", "0.5", "0.6"]
     },
-    "[CWE-121]": {
+    "[CWE121]": {
         "Name": "Buffer Overflow",
         "Versions": ["0.5", "0.6"]
     },
-    "[CWE-134]": {
+    "[CWE134]": {
         "Name": "Use of Externally-Controlled Format String",
         "Versions": ["0.4", "0.5", "0.6"]
     },
-    "[CWE-190]": {
+    "[CWE190]": {
         "Name": "Integer Overflow or Wraparound",
         "Versions": ["0.4", "0.5", "0.6"]
     },
-    "[CWE-215]": {
+    "[CWE215]": {
         "Name": "Information Exposure Through Debug Information",
         "Versions": ["0.4", "0.5", "0.6"]
     },
-    "[CWE-243]": {
+    "[CWE243]": {
         "Name": "Creation of chroot Jail Without Changing Working Directory",
         "Versions": ["0.4", "0.5", "0.6"]
     },
-    "[CWE-332]": {
+    "[CWE332]": {
         "Name": "Insufficient Entropy in PRNG",
         "Versions": ["0.4", "0.5", "0.6"]
     },
-    "[CWE-367]": {
+    "[CWE367]": {
         "Name": "Time-of-check Time-of-use (TOCTOU) Race Condition",
         "Versions": ["0.4", "0.5", "0.6"]
     },
-    "[CWE-415]": {
+    "[CWE415]": {
         "Name": "Double Free",
         "Versions": ["0.4", "0.5", "0.6"]
     },
-    "[CWE-416]": {
+    "[CWE416]": {
         "Name": "Use After Free",
         "Versions": ["0.4", "0.5", "0.6"]
     },
-    "[CWE-426]": {
+    "[CWE426]": {
         "Name": "Untrusted Search Path",
         "Versions": ["0.4", "0.5", "0.6"]
     },
-    "[CWE-467]": {
+    "[CWE467]": {
         "Name": "Use of sizeof() on a Pointer Type",
         "Versions": ["0.4", "0.5", "0.6"]
     },
-    "[CWE-476]": {
+    "[CWE476]": {
         "Name": "NULL Pointer Dereference",
         "Versions": ["0.4", "0.5", "0.6"]
     },
-    "[CWE-560]": {
+    "[CWE560]": {
         "Name": "Use of umask() with chmod-style Argument",
         "Versions": ["0.4", "0.5", "0.6"]
     },
-    "[CWE-676]": {
+    "[CWE676]": {
         "Name": "Use of Potentially Dangerous Function",
         "Versions": ["0.4", "0.5", "0.6"]
     },
-    "[CWE-782]": {
+    "[CWE782]": {
         "Name": "Exposed IOCTL with Insufficient Access Control",
         "Versions": ["0.4", "0.5", "0.6"]
     },
-    "[CWE-125]": {
+    "[CWE125]": {
         "Name": "Out-of-bounds Read",
         "AlternateName": "Out-of-bounds read",
         "Versions": ["0.4", "0.5"]
     },
-    "[CWE-787]": {
+    "[CWE787]": {
         "Name": "Out-of-bounds Write",
         "Versions": ["0.4", "0.5"]
     },
-    "[CWE-248]": {
+    "[CWE248]": {
         "Name": "Uncaught Exception",
         "Versions": ["0.4"]
     },
-    "[CWE-457]": {
-        "Name": "Uncaught Exception",
+    "[CWE457]": {
+        "Name": " Use of Uninitialized Variable",
         "Versions": ["0.4"]
     }
 

@@ -13,37 +13,40 @@ import time
 from collections import Counter
 from importlib_metadata import version
 
-statistics = {}
-info_array = {}
 releases = ["0.4", "0.5", "0.6"]  
 
 ERROR_NOT_COUNTABLE = -9999
 
 
 def initialize_output_generation(file_path, files): 
+    cwe_breakdown = {
+                     "0.4": {},
+                     "0.5": {},
+                     "0.6": {}
+                    }
     # begin with empty dictionary of statistics
     for filename in files:
-        statistics[filename] = {}
-        info_array[filename] = {}
-    
+        for version in cwe_breakdown.keys():
+            cwe_breakdown[version][filename] = {}
+        
     # build version specific commands
-    base_command = "docker run --rm -v " + file_path + "\\"
+    base_command = "docker run --rm -v " + file_path + "/"
     version_commands = {
         "version_0.4" : ":/tmp/input cwe_checker:0.4 cwe_checker /tmp/input",
         "version_0.5" : ":/input cwe_checker:0.5 /input",
         "version_0.6" : ":/input cwe_checker:0.6 /input"
     }
-    run_files_through_versions(files, base_command, version_commands)
+    run_files_through_versions(cwe_breakdown, files, base_command, version_commands)
 
 
-def run_files_through_versions(files, base_command, version_commands):
+def run_files_through_versions(cwe_breakdown, files, base_command, version_commands):
     
     for release_id in releases:
         
         for filename in files:
             # build command for given version and file
             modified_command = base_command + filename + version_commands["version_" + release_id]
-            
+            print("COMMAND: ", modified_command)
             print("Running command on ", filename, " using version ", release_id, "... \n")
             
             # store output to count vulnerabilities
@@ -55,40 +58,49 @@ def run_files_through_versions(files, base_command, version_commands):
             
             # scan for vulnerabilities and report an error if unable
             try:
-                num_vulnerabilities = count_vulnerabilities(release_id, output, filename)
+                results = count_vulnerabilities(cwe_breakdown, release_id, output, filename)
+                
             except:
                 print("Exception Detected. \n")
-                num_vulnerabilities = ERROR_NOT_COUNTABLE
+                results = ERROR_NOT_COUNTABLE
             
             # store number of vulnerabilities in statistics dictionary
-            statistics[filename][release_id] = num_vulnerabilities
+            # vuln_statistics[filename][release_id] = cwe_breakdown
             
-            print("Found %d vulnerabilities in %s using release %s" \
-            % (num_vulnerabilities, filename, release_id), "\n\n")
+
+            # print("Found %d vulnerabilities in %s using release %s" \
+            # % (num_vulnerabilities, filename, release_id), "\n\n")
             
-    store_data(statistics)
+    store_data(cwe_breakdown)
     
 
-def count_vulnerabilities(release_id, output, filename):
-    num_vulnerabilities = 0
+def count_vulnerabilities(cwe_breakdown, release_id, output, filename):
+    # open .json file and make a dictionary
+    cwe_list = open("./01_acquisition/02_protocol/list-of-cwes.json")
+    cwe_dict = json.load(cwe_list)
     
-    return num_vulnerabilities
+    for CWE in cwe_dict:
+        cwe_breakdown[release_id][filename]["TOTAL_VULN"] = 0
     
+    print("*********START FINDINGS*********\n")
+    
+    for CWE in cwe_dict:
+        cwe_breakdown[release_id][filename][CWE] = output.count(CWE)
+        cwe_breakdown[release_id][filename]["TOTAL_VULN"] += cwe_breakdown[release_id][filename][CWE]
+    
+    print(cwe_breakdown)
+    
+    print("\n*********END FINDINGS*********\n")
+    
+    cwe_list.close()
+    
+    return cwe_breakdown
 
-def count_scanner(output, vulnerability): 
-    # scan for key indicators of a vulnerability 
-    v_count = output.count(vulnerability)
-    
-    return v_count
 
-
-def store_data(statistics):
-    # export vulnerability count statistics for versions run above
-    with open(r"./01_acquisition/04_product/cwe_checker_parsed_results" + str(int(time.time())) + ".json",
-        'w', encoding='utf-8') as output_file: json.dump(statistics, output_file, ensure_ascii=False, indent=4)
-    
-    
-
+def store_data(cwe_breakdown):
+    # export breakdown of cwe count statistics for versions run above
+    with open(r"./01_acquisition/04_product/cwe_checker_breakdown" + str(int(time.time())) + ".json",
+        'w', encoding='utf-8') as output_file: json.dump(cwe_breakdown, output_file, ensure_ascii=False, indent=4)
 
 
 
