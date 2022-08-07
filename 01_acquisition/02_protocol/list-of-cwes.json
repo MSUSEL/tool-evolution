@@ -1,0 +1,88 @@
+{
+    "[CWE78]": {
+        "Name": "OS Command Injection",
+        "Versions": ["0.4", "0.5", "0.6"]
+    },
+    "[CWE119]": {
+        "Name": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
+        "Versions": ["0.4", "0.5", "0.6"]
+    },
+    "[CWE121]": {
+        "Name": "Buffer Overflow",
+        "Versions": ["0.5", "0.6"]
+    },
+    "[CWE134]": {
+        "Name": "Use of Externally-Controlled Format String",
+        "Versions": ["0.4", "0.5", "0.6"]
+    },
+    "[CWE190]": {
+        "Name": "Integer Overflow or Wraparound",
+        "Versions": ["0.4", "0.5", "0.6"]
+    },
+    "[CWE215]": {
+        "Name": "Information Exposure Through Debug Information",
+        "Versions": ["0.4", "0.5", "0.6"]
+    },
+    "[CWE243]": {
+        "Name": "Creation of chroot Jail Without Changing Working Directory",
+        "Versions": ["0.4", "0.5", "0.6"]
+    },
+    "[CWE332]": {
+        "Name": "Insufficient Entropy in PRNG",
+        "Versions": ["0.4", "0.5", "0.6"]
+    },
+    "[CWE367]": {
+        "Name": "Time-of-check Time-of-use (TOCTOU) Race Condition",
+        "Versions": ["0.4", "0.5", "0.6"]
+    },
+    "[CWE415]": {
+        "Name": "Double Free",
+        "Versions": ["0.4", "0.5", "0.6"]
+    },
+    "[CWE416]": {
+        "Name": "Use After Free",
+        "Versions": ["0.4", "0.5", "0.6"]
+    },
+    "[CWE426]": {
+        "Name": "Untrusted Search Path",
+        "Versions": ["0.4", "0.5", "0.6"]
+    },
+    "[CWE467]": {
+        "Name": "Use of sizeof() on a Pointer Type",
+        "Versions": ["0.4", "0.5", "0.6"]
+    },
+    "[CWE476]": {
+        "Name": "NULL Pointer Dereference",
+        "Versions": ["0.4", "0.5", "0.6"]
+    },
+    "[CWE560]": {
+        "Name": "Use of umask() with chmod-style Argument",
+        "Versions": ["0.4", "0.5", "0.6"]
+    },
+    "[CWE676]": {
+        "Name": "Use of Potentially Dangerous Function",
+        "Versions": ["0.4", "0.5", "0.6"]
+    },
+    "[CWE782]": {
+        "Name": "Exposed IOCTL with Insufficient Access Control",
+        "Versions": ["0.4", "0.5", "0.6"]
+    },
+    "[CWE125]": {
+        "Name": "Out-of-bounds Read",
+        "AlternateName": "Out-of-bounds read",
+        "Versions": ["0.4", "0.5"]
+    },
+    "[CWE787]": {
+        "Name": "Out-of-bounds Write",
+        "Versions": ["0.4", "0.5"]
+    },
+    "[CWE248]": {
+        "Name": "Uncaught Exception",
+        "Versions": ["0.4"]
+    },
+    "[CWE457]": {
+        "Name": " Use of Uninitialized Variable",
+        "Versions": ["0.4"]
+    }
+
+}
