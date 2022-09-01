@@ -76,18 +76,16 @@ binaryAttrs <- binaryAttrs %>% mutate(size_cluster = clust_and_title_alt(size))
 
 ## Visualizing clusters / attributes
 
-Step 1. Add cluster data to long format
+#### Note:
+##### Need long format to visualize cluster, and wide to make sankeys
+
+Step 1. Add Binary attribute to long format
 ```{r}
-cve_bin_long_clusts <- left_join(cve_bin_long, cve_version_clusters)
+all_together_now <- left_join(cve_version_clusters, cwe_checker_version_clusters) %>% 
+  left_join(binaryAttrs)
 ```
 
-Step 2. Add Binary attribute to long format
-```{r}
-all_together_now <- left_join(cve_bin_long_clusts, binaryAttrs) %>% 
-  left_join(cwe_checker_version_clusters, by = "filename")
-```
-
-Step 3. Make some graphs
+Step 2. Make some graphs
 
 ```{r}
 all_together_now %>% ggplot( mapping = aes(x = version, y = vuln_count)) +
@@ -98,6 +96,7 @@ all_together_now %>% ggplot( mapping = aes(x = version, y = vuln_count)) +
   theme(legend.position = "top") +
   scale_fill_brewer(type = "qual")
 ```
+
 ```{r}
 all_together_now %>% ggplot(aes(x = version, y = vuln_count, color = size_cluster)) + geom_line(mapping = aes(group = filename))
 ```
@@ -120,7 +119,7 @@ cve_bin_long_clusts %>% ggplot( mapping = aes(x = version, y = vuln_count)) +
 sankey <- function(columns) {
   columns <- c(columns, "filename")
   
-  all_together_now %>%
+ all_together_now %>%
     select(!size) %>%
     select(any_of(columns)) %>%
     mutate_all(as.factor) %>%
@@ -141,7 +140,7 @@ sankey <- function(columns) {
     )
 }
 
-sankey(c("cve_cluster_3.1.1", "cve_cluster_2.0"))
+sankey(c("cve_cluster_2.0", "cwe_cluster_0.6"))
 ```
 
 ### Make graphs
