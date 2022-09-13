@@ -1,11 +1,11 @@
 {
     "[CWE78]": {
         "Name": "OS Command Injection",
-        "Versions": ["0.4", "0.5", "0.6"]
+        "Versions": ["0.5", "0.6"]
     },
     "[CWE119]": {
         "Name": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
-        "Versions": ["0.4", "0.5", "0.6"]
+        "Versions": ["0.5", "0.6"]
     },
     "[CWE121]": {
         "Name": "Buffer Overflow",
@@ -37,11 +37,11 @@
     },
     "[CWE415]": {
         "Name": "Double Free",
-        "Versions": ["0.4", "0.5", "0.6"]
+        "Versions": ["0.5", "0.6"]
     },
     "[CWE416]": {
         "Name": "Use After Free",
-        "Versions": ["0.4", "0.5", "0.6"]
+        "Versions": ["0.5", "0.6"]
     },
     "[CWE426]": {
         "Name": "Untrusted Search Path",
@@ -70,11 +70,11 @@
     "[CWE125]": {
         "Name": "Out-of-bounds Read",
         "AlternateName": "Out-of-bounds read",
-        "Versions": ["0.4", "0.5"]
+        "Versions": ["0.4", "0.5", "0.6"]
     },
     "[CWE787]": {
         "Name": "Out-of-bounds Write",
-        "Versions": ["0.4", "0.5"]
+        "Versions": ["0.4", "0.5", "0.6"]
     },
     "[CWE248]": {
         "Name": "Uncaught Exception",
