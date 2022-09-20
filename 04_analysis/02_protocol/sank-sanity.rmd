@@ -67,6 +67,45 @@ cwe_checker_version_clusters <- cwe_checker %>%
   ) %>%
   rename_with(~ gsub("version_", "cwe_cluster_", .x))
 ```
+## Visualize clusters just created
+```{r}
+cve_bin_long_clusts <- left_join(cve_bin_long, cve_version_clusters)
+```
+
+Step 2. Add Binary attribute to long format
+```{r}
+alt_names = factor(c("small", "mid", "large"), levels=c("large", "mid", "small"))
+binaryAttrs <- binaryAttrs %>% mutate(size_cluster = clust_and_title_alt(size))
+
+cve_bin_long_clusts <- left_join(cve_bin_long, cve_version_clusters)
+cve_bin_long_clusts <- left_join(cve_bin_long_clusts, binaryAttrs)
+
+cve_bin_long_clusts %>% ggplot( mapping = aes(x = version, y = vuln_count)) +
+  geom_line(mapping = aes(group = filename, color = cluster_1.0), size = 2, alpha = 0.5) +
+  scale_x_discrete(guide = guide_axis(angle = 90)) +
+  xlab("Version") +
+  facet_grid(cols = vars(cluster_3.1.1)) +
+  theme(legend.position = "top") +
+  scale_fill_brewer(type = "qual")
+
+cve_bin_long_clusts %>% ggplot( mapping = aes(x = version, y = vuln_count)) +
+  geom_line(mapping = aes(group = filename, color = cluster_2.1), size = 2, alpha = 0.5) +
+  scale_x_discrete(guide = guide_axis(angle = 90)) +
+  xlab("Version") +
+  facet_grid(cols = vars(cluster_2.1)) +
+  theme(legend.position = "top") +
+  scale_fill_brewer(type = "qual")
+
+cve_bin_long_clusts %>% ggplot( mapping = aes(x = version, y = vuln_count)) +
+  geom_line(mapping = aes(group = filename, color = cluster_3.1.1), size = 2, alpha = 0.5) +
+  scale_x_discrete(guide = guide_axis(angle = 90)) +
+  xlab("Version") +
+  facet_grid(cols = vars(cluster_3.1.1)) +
+  theme(legend.position = "top") +
+  scale_fill_brewer(type = "qual")
+
+cve_bin_long_clusts %>% ggplot(aes(x = version, y = vuln_count, color = size_cluster)) + geom_line(mapping = aes(group = filename))
+```
 
 ### Cluster by size of binary
 ```{r}
@@ -81,8 +120,7 @@ binaryAttrs <- binaryAttrs %>% mutate(size_cluster = clust_and_title_alt(size))
 
 Step 1. Add Binary attribute to long format
 ```{r}
-all_together_now <- left_join(cve_version_clusters, cwe_checker_version_clusters) %>% 
-  left_join(binaryAttrs)
+all_together_now <- left_join(cve_version_clusters, cwe_checker_version_clusters) %>% left_join(binaryAttrs)
 ```
 
 Step 2. Make some graphs
@@ -122,7 +160,7 @@ sankey <- function(columns) {
  all_together_now %>%
     select(!size) %>%
     select(any_of(columns)) %>%
-    mutate_all(as.factor) %>%
+    mutate_all(as.factor) %>% View()
     pivot_longer(
       cols = !filename,
       names_to = "sank_column",
@@ -139,11 +177,9 @@ sankey <- function(columns) {
       axis.text = element_text(size = 15)
     )
 }
-
-sankey(c("cve_cluster_2.0", "cwe_cluster_0.6"))
 ```
 
 ### Make graphs
 ```{r}
-sankey(c("cve_cluster_3.1.1", "cwe_cluster_0.6"))
+sankey(c("cve_cluster_1.0", "cve_cluster_2.1", "cve_cluster_3.1.1"))
 ```

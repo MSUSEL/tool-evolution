@@ -14,3 +14,15 @@ clust_titles <- function(clustering, names = factor(c("low", "medium", "high"), 
   )
   joined$title
 }
+
+
+save_recent <- function(name, height=5, width=5) {
+  ggsave(
+    sprintf("%s.png", name), 
+    bg     = 'white', 
+    path   = "./04_analysis/04_product/ICSE/",
+    height = height,
+    width  = width,
+    units  = "in"
+  )
+}

@@ -3,10 +3,9 @@ library(ggplot2)
 
 
 through_time_alpha <- function(d) {
-  d %>% name_swaps() %>%
+  d %>%
     ggplot(aes(x = version, y = vuln_count)) +
-    geom_line(mapping = aes(group = filename), color="#D9F8D4", alpha=0.2, size=2) +
-    poster_theme() +
+    geom_line(mapping = aes(group = filename), color="black", alpha=0.2, size=2) +
     labs(y = "Findings Count", x = "Version") + 
     theme(
       axis.text.x = element_text(angle = 40, hjust=1)
