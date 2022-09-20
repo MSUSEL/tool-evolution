@@ -17,17 +17,6 @@ poster_theme <- function() {
   )
 }
 
-save_recent <- function(name, height=5, width=5) {
-  ggsave(
-    sprintf("%s.png", name), 
-    bg     = '#105397', 
-    path   = "./03_analysis/04_product/",
-    height = height,
-    width  = width,
-    units  = "in"
-  )
-}
-
 name_swaps <- function(d) {
   d %>% 
     mutate(
