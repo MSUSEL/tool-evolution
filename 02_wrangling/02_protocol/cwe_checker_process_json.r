@@ -7,9 +7,11 @@ library(tidyr)
 
 # file name
 filenm <- "cwe-checker-all-versions1664248617.json"
-# file path
+# run index
+run_idx <- gsub(".*?([0-9]+).*", "\\1", filenm)
+# file path for input data
 pth <- "../../01_acquisition/04_product/"
-# the file
+# the results file to bring in and process
 filenm <- paste0(pth, filenm)
 rm(pth)
 
@@ -31,3 +33,24 @@ cwe_check <- cwe_check[grepl(tot_find_str, row.names(cwe_check)),]
 
 # clean up the row names a bit
 row.names(cwe_check) <- gsub(paste0(".",tot_find_str), "", row.names(cwe_check))
+
+colnames(cwe_check) <- paste0("version_", colnames(cwe_check))
+
+cwe_check <- as.data.frame(cwe_check)
+cwe_check$filename <- row.names(cwe_check)
+
+# create a df in long form
+cwe_check_long <-
+  cwe_check %>%
+  pivot_longer(!filename, names_to="version", values_to="findings_count")
+
+# write the data to csv
+# specify the path where csv should be stored
+pthout <- "../04_product/"
+# specify file names
+widenm <- paste0("cwe_check_wide_", run_idx, ".csv")
+longnm <- paste0("cwe_check_long_", run_idx, ".csv")
+# write to file
+write.csv(cwe_check, paste0(pthout, widenm), row.names = FALSE)
+write.csv(cwe_check_long, paste0(pthout, longnm), row.names = FALSE)
+
