@@ -1,10 +1,11 @@
 library(rjson)
+library(dplyr)
 
 # choose which results file to use (by unix time stamp of acquisition run time completion)
 use_date <- 1658175857
 
 # pull in results file
-cve_bin <- fromJSON(file = sprintf("./01_acquisition/04_product/cve_bin_tool_results_%d.json", use_date)) %>% 
+cve_bin <- fromJSON(file = sprintf("./01_acquisition/04_product/cve_bin_tool_results_%d.json", use_date)) %>%
   lapply(as.data.frame) %>%
   do.call(rbind, .) %>%
   # remove unwanted columns
@@ -23,7 +24,7 @@ names(cve_bin) <- gsub("X", "version_", names(cve_bin))
 cve_bin$filename <- rownames(cve_bin)
 
 # go to long form
-cve_bin_long <- cve_bin %>% 
+cve_bin_long <- cve_bin %>%
   pivot_longer(!filename, names_to="version", values_to="vuln_count")
 
 # join to release dates
