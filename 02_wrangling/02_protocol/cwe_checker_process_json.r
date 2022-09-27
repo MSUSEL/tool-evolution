@@ -46,11 +46,11 @@ cwe_check_long <-
 
 # write the data to csv
 # specify the path where csv should be stored
-pthout <- "../04_product/"
+pthout <- "../04_product"
 # specify file names
 widenm <- paste0("cwe_check_wide_", run_idx, ".csv")
 longnm <- paste0("cwe_check_long_", run_idx, ".csv")
 # write to file
-write.csv(cwe_check, paste0(pthout, widenm), row.names = FALSE)
-write.csv(cwe_check_long, paste0(pthout, longnm), row.names = FALSE)
+write.csv(cwe_check, paste0("/", pthout, widenm), row.names = FALSE)
+write.csv(cwe_check_long, paste0("/",pthout, longnm), row.names = FALSE)
 
