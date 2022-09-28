@@ -23,14 +23,15 @@ library(alluvial)
 library(plyr)
 library(dplyr)
 library(cluster)
-source("./04_analysis/02_protocol/Utils.r")
+# setwd("/home/amr/Documents/Research/CyberQA/REU_2022/toolEvoAMR/tool-evolution")
+# source("./04_analysis/02_protocol/Utils.r")
 ```
 
 ## Data import
 
 
 ```{r}
-source("./04_analysis/01_input/setup.r")
+# source("./04_analysis/01_input/setup.r")
 binaryAttrs <- read.csv("./04_analysis/01_input/BinaryAttrs.csv") %>%
   dplyr::rename(filename = binary)
 ```
@@ -157,10 +158,10 @@ all_together_now <- left_join(cve_version_clusters, cwe_checker_version_clusters
 
 ### sankification function
 ```{r}
-sankey <- function(columns) {
+sankey <- function(columns, inputDataFrame = all_together_now) {
   columns <- c(columns, "filename")
   
- all_together_now %>%
+ inputDataFrame %>%
     select(!size) %>%
     select(any_of(columns)) %>%
     mutate_all(as.factor) %>%
