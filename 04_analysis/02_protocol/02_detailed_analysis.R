@@ -9,6 +9,7 @@ library(tidyr)
 library(ggplot2)
 library(tidyselect)
 library(egg)
+library(ggpubr)
 library(stringr)
 library(RColorBrewer)
 
@@ -340,7 +341,7 @@ cve_pts_plt <-
   scale_size_continuous(name = "Std Dev") +
   scale_color_viridis_c(name = "Median", option = "turbo", begin = 0.025, end = 0.95)+
   # theme(legend.position="top")+
-  theme(legend.direction = "vertical", legend.box = "vertical")+
+  theme(legend.direction = "horizontal", legend.box = "vertical", legend.position = "top", legend.margin=margin())+
   labs(x = "Version", y = "CVE Prefix (Year)")
 cve_pts_plt
 
@@ -351,25 +352,46 @@ cwe_pts_plt1 <-
   scale_size_continuous(name = "Std Dev") +
   scale_color_viridis_c(name = "Median", option = "turbo", begin = 0.025, end = 0.95)+
   # theme(legend.position="top")+
-  theme(legend.direction = "vertical", legend.box = "horizontal")+
-  labs(x = "", y = "")+
+  theme(legend.direction = "horizontal", legend.box = "vertical", legend.position = "top", legend.margin=margin())+
+  labs(x = "Version", y = "CWE Id")+
   guides(
     color = guide_colorbar(order = 1),
     fill = guide_legend(order = 0)
   )
-cwe_pts_plt2 <-ggplot(cwe_smry[!(cwe_smry$Id %in% c("457", "676")),],
+cwe_pts_plt2 <-ggplot(cwe_smry[!(cwe_smry$Id %in% c("457", "676")),], #"787", "125", "476","416", "190", "782"
                       aes(y= Id, x = Version, color = Median, size = StdDev)) +
   geom_point()+
   scale_size_continuous(name = "Std Dev") +
   scale_color_viridis_c(name = "Median", option = "turbo", begin = 0.025, end = 0.95)+
   # theme(legend.position="top")+
-  theme(legend.direction = "vertical", legend.box = "horizontal")+
-  labs(x = "Version", y = "               CWE Id")+
+  theme(legend.direction = "horizontal", legend.box = "vertical", legend.position = "top", legend.margin=margin())+
+  labs(x = "Version", y = "CWE Id")+
   guides(
     color = guide_colorbar(order = 1),
     fill = guide_legend(order = 0)
   )
-ggarrange(cwe_pts_plt1, cwe_pts_plt2, ncol = 1, heights = c(6, 16))
+# cwe_pts_plt3 <-ggplot(cwe_smry[!(cwe_smry$Id %in% c("457", "676", "787", "125", "476")),],
+#                       aes(y= Id, x = Version, color = Median, size = StdDev)) +
+#   geom_point()+
+#   scale_size_continuous(name = "Std Dev") +
+#   scale_color_viridis_c(name = "Median", option = "turbo", begin = 0.025, end = 0.95)+
+#   # theme(legend.position="top")+
+#   theme(legend.direction = "horizontal", legend.box = "horizontal", legend.position = "top")+
+#   labs(x = "Version", y = "               CWE Id")+
+#   guides(
+#     color = guide_colorbar(order = 1),
+#     fill = guide_legend(order = 0)
+#   )
+# grid.arrange(cwe_pts_plt1, cwe_pts_plt2, cwe_pts_plt3, ncol = 1, heights = c(2.3, 2.9,9))
 
+grid.arrange(
+  cve_pts_plt,
+  arrangeGrob(cwe_pts_plt1, cwe_pts_plt2, ncol = 1, heights = c(4, 9)),
+  ncol =2
+  )
 
-
+ggarrange(
+  ggarrange(cwe_pts_plt1, cwe_pts_plt2, nrow = 2, ncol = 1, heights = c(4, 9)),
+  cve_pts_plt,
+  nrow =1,
+  labels = c("A", "B"))

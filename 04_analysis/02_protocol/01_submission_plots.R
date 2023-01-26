@@ -314,6 +314,7 @@ through_time_alpha <-
       geom_line(mapping = aes(group = filename), color="black", alpha=0.2, size=0.5) +
       labs(y = "Findings", x = "") +
       theme(
+        axis.line = element_line(size = 0.65, color = "black", linetype = 1),
         axis.text.x = element_text(angle = 40, hjust=1),
         # axis.text.x=element_blank(),
         panel.grid.major = element_blank(),
@@ -335,14 +336,17 @@ density_btw_vers <-
     p <-
       ggplot(df, aes(x = interver_chng, y = value, fill =interver_chng)) +
       labs(y = expression(Delta*" Findings"), x = "") +
+      geom_hline(yintercept = 0, linetype = 2, color = "black", size = 0.35) +
       geom_violin(
         scale = "area",
         width = 1.1,
-        position=position_dodge(width = 0.5)
+        position=position_dodge(width = 0.5),
+        size = 0.75
       )+
       labs(title = '') +
-      scale_fill_manual( values = c("deeppink4", "deeppink4")) +
+      scale_fill_manual( values = c("darkgrey", "darkgrey")) +
       theme(
+        axis.line = element_line(size = 0.65, color = "black", linetype = 1),
         text = element_text(size = 12),
         axis.text = element_text(size = 8),
         axis.text.x = element_text(angle = 40, hjust = 1),
@@ -392,7 +396,7 @@ cowplot::plot_grid(
 
   nrow = 4,
   # rel_widths = c(3,3),
-  rel_heights = c(0.02, 0.23, 0.52, 0.23),
+  rel_heights = c(0.02, 0.18, 0.45, 0.35),
   labels = c("", "", LETTERS[1:6]),
   label_size = 11
 )
