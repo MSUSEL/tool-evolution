@@ -301,7 +301,8 @@ ggplot(cve_det_dat_severSmry[cve_det_dat_severSmry$version %in% c("1.0", "2.0", 
        aes(x= Severity, y = value)) +
   geom_violin(aes(group = Severity, fill = Severity),) +
   scale_fill_viridis_d(name = "Severity", option = "turbo", begin = 0.45, end = 0.95, direction = -1)+
-  theme(legend.position="top")+
+  theme(axis.text.x = element_text(angle = 40, hjust=1),
+        legend.position="top")+
   guides(fill=guide_legend(title="Severity"))+
   labs(y = "Std Dev in Findings", x = "Severity") +
   facet_wrap(~version, nrow = 1)
