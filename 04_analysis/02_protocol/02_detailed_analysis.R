@@ -188,9 +188,14 @@ unknowns <- cve_det_dat_long[(cve_det_dat_long$Id == "UNKNOWN" & cve_det_dat_lon
 #write.csv(unknowns, "tool-evolution/01_acquisition/03_incremental/cves_tagged_unknown.csv", row.names = FALSE)
 # Filtering ---------------------------------------------------------------
 
-cve_det_dat_long <- cve_det_dat_long[cve_det_dat_long$version != "3.1.2",]
-cve_det_dat_long_agg <- cve_det_dat_long_agg[cve_det_dat_long_agg$version != "3.1.2",]
+cve_vers_to_include <- c("1.0", "1.1", "2.0", "2.1", "2.1.post1", "2.2", "2.2.1", "3.0", "3.1.1")
 
+cve_det_dat_long <-
+  # cve_det_dat_long[cve_det_dat_long$version != "3.1.2",]
+  cve_det_dat_long[cve_det_dat_long$version %in% cve_vers_to_include ,]
+cve_det_dat_long_agg <-
+  # cve_det_dat_long_agg[cve_det_dat_long_agg$version != "3.1.2",]
+  cve_det_dat_long_agg[cve_det_dat_long_agg$version %in% cve_vers_to_include ,]
 cve_det_dat_long <- left_join(cve_det_dat_long, severities, by = c("Id" = "CVE_abbr"))
 
 # Plots -------------------------------------------------------------------
@@ -262,7 +267,7 @@ cve_det_dat_severSmry <-
 
 cve_det_dat_severSmry$Severity <- factor(cve_det_dat_severSmry$Severity, levels = c("CRITICAL", "HIGH", "MEDIUM", "LOW"))
 
-mycolors <- colorRampPalette(brewer.pal(9, "YlGnBu"))(10)
+mycolors <- colorRampPalette(brewer.pal(9, "YlGnBu"))(length(cve_vers_to_include))
 ggplot(cve_det_dat_severSmry, aes(x = value, fill = version))+
   geom_density(alpha = 0.25)+
   scale_fill_manual(values =  mycolors)+
@@ -271,7 +276,7 @@ ggplot(cve_det_dat_severSmry, aes(x = value, fill = version))+
   facet_wrap(~Severity, ncol = 1)
 
 ggplot(cve_det_dat_severSmry,
-       aes(y= version, x = value)) +
+       aes(x= version, y = value)) +
   geom_violin(aes(group = version, fill = version), size = 0.5) +
   # geom_point(aes(fill = version), shape = 21, size = 2) +
   # geom_dotplot(aes(fill = version), shape = 21, size = 2.25, height = 0.2, width = 0) +
@@ -279,60 +284,82 @@ ggplot(cve_det_dat_severSmry,
   labs(x = "", y = "") +
   theme(legend.position="right" )+
   guides(fill=guide_legend(title="Version"))+
-  labs(x = "Standard Deviation in Findings", y = "CVE Severity") +
-  facet_wrap(~Severity, nrow = 1)
-
-ggplot(cve_det_dat_severSmry[cve_det_dat_severSmry$version %in% c("1.0", "2.0", "3.0"),],
-       aes(y= Severity, x = value)) +
-  geom_violin(aes(group = Severity, fill = Severity),) +
-  scale_fill_viridis_d(name = "Severity", option = "turbo", begin = 0.45, end = 0.95, direction = -1)+
-  theme(legend.position="top")+
-  guides(fill=guide_legend(title="Severity"))+
-  labs(x = "Standard Deviation in Findings", y = "Severity") +
-  facet_wrap(~version, ncol = 1)
+  labs(y = "Standard Deviation in Findings", x = "Version") +
+  facet_wrap(~Severity, ncol= 1)
 
 ggplot(cve_det_dat_severSmry,
-       aes(y= Severity, x = value)) +
+       aes(x= Severity, y = value)) +
   geom_violin(aes(group = Severity, fill = Severity),) +
   scale_fill_viridis_d(name = "Severity", option = "turbo", begin = 0.45, end = 0.95, direction = -1)+
   theme(legend.position="top")+
   guides(fill=guide_legend(title="Severity"))+
-  labs(x = "Standard Deviation in Findings", y = "Severity") +
-  facet_wrap(~version, ncol = 1)
+  labs(y = "Standard Deviation in Findings", x = "Severity") +
+  facet_wrap(~version, nrow = 1)
 
+########### PLOT TO INCLUDE
+ggplot(cve_det_dat_severSmry[cve_det_dat_severSmry$version %in% c("1.0", "2.0", "3.0"),],
+       aes(x= Severity, y = value)) +
+  geom_violin(aes(group = Severity, fill = Severity),) +
+  scale_fill_viridis_d(name = "Severity", option = "turbo", begin = 0.45, end = 0.95, direction = -1)+
+  theme(legend.position="top")+
+  guides(fill=guide_legend(title="Severity"))+
+  labs(y = "Std Dev in Findings", x = "Severity") +
+  facet_wrap(~version, nrow = 1)
+
+
+
+
+########### PLOT TO INCLUDE
 p1 <- ggplot(cwe_smry[cwe_smry$Id %in% c("457", "676"),],
-             aes(y= Id, x = StdDev)) +
+             aes(x= Id, y = StdDev)) +
   geom_line(aes(group = Id), size = 0.5) +
   # geom_point(aes(fill = version), shape = 21, size = 2) +
-  geom_jitter(aes(fill = Version), shape = 21, size = 2.25, height = 0.2, width = 0.1) +
+  geom_jitter(aes(fill = Version), shape = 21, size = 2.25, height = 0.0, width = 0.3) +
   scale_fill_brewer(palette = "YlGnBu")+
-  labs(x = "", y = "") +
-  theme(legend.position="top")+
+  labs(y = "", x = "") +
+  theme(axis.text.x = element_text(angle = 40, hjust=1), legend.position="right",
+        # legend.box.spacing = unit(15,"points"),
+        plot.margin = unit(c(5.5, 5.5, 5.5, -10), "points"))+
   guides(fill=guide_legend(title="Version"))
 
 p2 <- ggplot(cwe_smry[!(cwe_smry$Id %in% c("457", "676")),],
-             aes(y= Id, x = StdDev)) +
+             aes(x= Id, y = StdDev)) +
   geom_line(aes(group = Id), size = 0.5) +
   # geom_point(aes(fill = version), shape = 21, size = 2) +
-  geom_jitter(aes(fill = Version), shape = 21, size = 2.25, height = 0.2, width = 0.1) +
+  geom_jitter(aes(fill = Version), shape = 21, size = 2.25, height = 0.0, width = 0.3) +
   scale_fill_brewer(palette = "YlGnBu")+
   labs(x = "", y = "") +
-  labs(x = "Standard Deviation in Findings", y = "             CWE Id") +
-  theme(legend.position="none")
-
-ggarrange(p1, p2, ncol = 1, heights = c(2, 19))
+  labs(y = "St Dev in Findings", x = "                CWE Id") +
+  theme(axis.text.x = element_text(angle = 40, hjust=1), legend.position="none",
+        plot.margin = unit(c(5.5, -3, 5.5, 5.5), "points"))
 
 mycolors <- colorRampPalette(brewer.pal(9, "YlGnBu"))(11)
-ggplot(cve_smry_by_yr,
-       aes(y= Id, x = StdDev)) +
+std_dev_cve_plt <-
+  ggplot(cve_smry_by_yr,
+         aes(x= Id, y = StdDev)) +
   geom_line(aes(group = Id), size = 0.5) +
   # geom_point(aes(fill = version), shape = 21, size = 2) +
-  geom_jitter(aes(fill = Version), shape = 21, size = 2.25, height = 0.2, width = 0.1) +
+  geom_jitter(aes(fill = Version), shape = 21, size = 2.25, height = 0.0, width = 0.3) +
   scale_fill_manual(values = mycolors)+
   labs(x = "", y = "") +
-  theme(legend.position="top")+
-  guides(fill=guide_legend(title="Version"))+
-  labs(x = "Standard Deviation in Findings", y = "CVE Prefix (Year)")
+  theme(axis.text.x = element_text(angle = 40, hjust=1),
+        legend.position="top",
+        # legend.position = c(0.12,0.62), legend.direction = "vertical",
+        plot.margin = unit(c(5.5, 5.5, 5.5, 5.5), "points"))+
+  guides(fill=guide_legend(title="Version", nrow =1))+
+  # guides(fill=guide_legend(title=element_blank()))+
+  labs(y = "St Dev in Findings", x = "CVE Prefix (Year)")
+
+
+ggarrange(
+  ggarrange(p2, p1, nrow = 1, widths = c(12, 2), common.legend = TRUE),
+  std_dev_cve_plt,
+  ncol =1,
+  labels = c("A", "B"))
+
+
+
+
 
 cve_pts_plt <-
   ggplot(cve_smry_by_yr,
@@ -341,7 +368,14 @@ cve_pts_plt <-
   scale_size_continuous(name = "Std Dev") +
   scale_color_viridis_c(name = "Median", option = "turbo", begin = 0.025, end = 0.95)+
   # theme(legend.position="top")+
-  theme(legend.direction = "horizontal", legend.box = "vertical", legend.position = "top", legend.margin=margin())+
+  theme(
+    axis.text.x = element_text(angle = 40, hjust=1),
+    legend.direction = "horizontal",
+    legend.box = "vertical",
+    legend.position = "top",
+    legend.margin=margin(c(-5,0,1,0)),
+    legend.box.spacing = unit(0, "pt")
+  )+
   labs(x = "Version", y = "CVE Prefix (Year)")
 cve_pts_plt
 
@@ -352,7 +386,14 @@ cwe_pts_plt1 <-
   scale_size_continuous(name = "Std Dev") +
   scale_color_viridis_c(name = "Median", option = "turbo", begin = 0.025, end = 0.95)+
   # theme(legend.position="top")+
-  theme(legend.direction = "horizontal", legend.box = "vertical", legend.position = "top", legend.margin=margin())+
+  theme(
+    axis.text.x = element_text(angle = 40, hjust=1),
+    legend.direction = "horizontal",
+    legend.box = "vertical",
+    legend.position = "top",
+    legend.margin=margin(c(-5,0,1,0)),
+    legend.box.spacing = unit(0, "pt")
+  )+
   labs(x = "Version", y = "CWE Id")+
   guides(
     color = guide_colorbar(order = 1),
@@ -364,7 +405,14 @@ cwe_pts_plt2 <-ggplot(cwe_smry[!(cwe_smry$Id %in% c("457", "676")),], #"787", "1
   scale_size_continuous(name = "Std Dev") +
   scale_color_viridis_c(name = "Median", option = "turbo", begin = 0.025, end = 0.95)+
   # theme(legend.position="top")+
-  theme(legend.direction = "horizontal", legend.box = "vertical", legend.position = "top", legend.margin=margin())+
+  theme(
+    axis.text.x = element_text(angle = 40, hjust=1),
+    legend.direction = "horizontal",
+    legend.box = "vertical",
+    legend.position = "top",
+    legend.margin=margin(c(-5,0,1,0)),
+    legend.box.spacing = unit(0, "pt")
+  )+
   labs(x = "Version", y = "CWE Id")+
   guides(
     color = guide_colorbar(order = 1),
@@ -384,14 +432,14 @@ cwe_pts_plt2 <-ggplot(cwe_smry[!(cwe_smry$Id %in% c("457", "676")),], #"787", "1
 #   )
 # grid.arrange(cwe_pts_plt1, cwe_pts_plt2, cwe_pts_plt3, ncol = 1, heights = c(2.3, 2.9,9))
 
-grid.arrange(
-  cve_pts_plt,
-  arrangeGrob(cwe_pts_plt1, cwe_pts_plt2, ncol = 1, heights = c(4, 9)),
-  ncol =2
-  )
+# grid.arrange(
+#   cve_pts_plt,
+#   arrangeGrob(cwe_pts_plt1, cwe_pts_plt2, ncol = 1, heights = c(4, 9)),
+#   ncol =2
+#   )
 
 ggarrange(
-  ggarrange(cwe_pts_plt1, cwe_pts_plt2, nrow = 2, ncol = 1, heights = c(4, 9)),
+  ggarrange(cwe_pts_plt1, cwe_pts_plt2, nrow = 2, ncol = 1, heights = c(3.1, 8)),
   cve_pts_plt,
   nrow =1,
   labels = c("A", "B"))
