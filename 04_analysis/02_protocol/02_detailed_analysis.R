@@ -237,17 +237,23 @@ cve_smry <- smry_table(cve_det_dat_long_agg, sd, TRUE)
 cve_smry_by_yr <-smry_table(cve_det_dat_long_agg, sd, FALSE)
 cve_smry_by_yr_median <-smry_table(cve_det_dat_long_agg, median, FALSE)
 cve_smry_by_yr_mean <-smry_table(cve_det_dat_long_agg, mean, FALSE)
+cve_smry_by_yr_spread <- smry_table(cve_det_dat_long_agg, function(x) {100 * sum(x>0 )/ length(x)}, FALSE)
 cve_smry_by_yr <- left_join(cve_smry_by_yr, cve_smry_by_yr_median, by = c("Id", "version"))
 cve_smry_by_yr <- left_join(cve_smry_by_yr, cve_smry_by_yr_mean, by = c("Id", "version"))
-names(cve_smry_by_yr)[2:5] <- c("Version","StdDev", "Median", "Mean")
+cve_smry_by_yr <- left_join(cve_smry_by_yr, cve_smry_by_yr_spread, by = c("Id", "version"))
+names(cve_smry_by_yr)[2:6] <- c("Version","StdDev", "Median", "Mean", "Spread")
 
 
 cwe_smry <- smry_table(cwe_det_dat_long, sd, TRUE)
 cwe_smry_median <- smry_table(cwe_det_dat_long, median, TRUE)
 cwe_smry_mean <- smry_table(cwe_det_dat_long, mean, TRUE)
+cwe_smry_spread <- smry_table(cwe_det_dat_long, function(x) {100 * sum(x>0 )/ length(x)}, FALSE)
 cwe_smry <- left_join(cwe_smry, cwe_smry_median, by = c("Id", "version"))
 cwe_smry <- left_join(cwe_smry, cwe_smry_mean, by = c("Id", "version"))
-names(cwe_smry)[2:5] <- c("Version","StdDev", "Median", "Mean")
+cwe_smry <- left_join(cwe_smry, cwe_smry_spread, by = c("Id", "version"))
+
+
+names(cwe_smry)[2:6] <- c("Version","StdDev", "Median", "Mean", "Spread")
 
 cve_det_dat_long$Severity[is.na(cve_det_dat_long$Severity)] <- "NOT REPORTED"
 cve_det_dat_long$Severity <- factor(cve_det_dat_long$Severity, levels = c("CRITICAL", "HIGH", "MEDIUM", "LOW", "NOT REPORTED"))
@@ -444,3 +450,143 @@ ggarrange(
   cve_pts_plt,
   nrow =1,
   labels = c("A", "B"))
+
+
+
+
+
+
+cve_pts_plt <-
+  ggplot(cve_smry_by_yr,
+         aes(y= Id, x = Version, color = Median, size = Spread)) +
+  geom_point()+
+  scale_size_continuous(name = "Detections", limits = c(0.0001, 100)) +
+  scale_color_viridis_c(name = "Median", option = "turbo", begin = 0.025, end = 0.95)+
+  # theme(legend.position="top")+
+  theme(
+    axis.text.x = element_text(angle = 40, hjust=1),
+    legend.direction = "horizontal",
+    legend.box = "vertical",
+    legend.position = "top",
+    legend.margin=margin(c(-5,0,1,0)),
+    legend.box.spacing = unit(0, "pt")
+  )+
+  labs(x = "Version", y = "CVE Prefix (Year)")
+cve_pts_plt
+
+cwe_pts_plt <-
+  ggplot(cwe_smry,
+         aes(y= Id, x = Version, color = Median, size = Spread)) +
+  geom_point()+
+  scale_size_continuous(name = "Detections", limits = c(0.0001,100)) +
+  scale_color_viridis_c(name = "Median", option = "turbo", begin = 0.025, end = 0.95)+
+  # theme(legend.position="top")+
+  theme(
+    axis.text.x = element_text(angle = 40, hjust=1),
+    legend.direction = "horizontal",
+    legend.box = "vertical",
+    legend.position = "top",
+    legend.margin=margin(c(-5,0,1,0)),
+    legend.box.spacing = unit(0, "pt")
+  )+
+  labs(x = "Version", y = "CWE Id")+
+  guides(
+    color = guide_colorbar(order = 1),
+    fill = guide_legend(order = 0)
+  )
+
+cwe_pts_plt1 <-
+  ggplot(cwe_smry[cwe_smry$Id %in% c("457", "676"),],
+         aes(y= Id, x = Version, color = Median, size = Spread)) +
+  geom_point()+
+  scale_size_continuous(name = "Detections", limits = c(0.0001,100)) +
+  scale_color_viridis_c(name = "Median", option = "turbo", begin = 0.025, end = 0.95)+
+  # theme(legend.position="top")+
+  theme(
+    axis.text.x = element_text(angle = 40, hjust=1),
+    legend.direction = "horizontal",
+    legend.box = "vertical",
+    legend.position = "top",
+    legend.margin=margin(c(-5,0,1,0)),
+    legend.box.spacing = unit(0, "pt")
+  )+
+  labs(x = "Version", y = "CWE Id")+
+  guides(
+    color = guide_colorbar(order = 1),
+    fill = guide_legend(order = 0)
+  )
+cwe_pts_plt2 <-ggplot(cwe_smry[!(cwe_smry$Id %in% c("457", "676")),], #"787", "125", "476","416", "190", "782"
+                      aes(y= Id, x = Version, color = Median, size = Spread)) +
+  geom_point()+
+  scale_size_continuous(name = "Detections", limits = c(0.0001,100)) +
+  scale_color_viridis_c(name = "Median", option = "turbo", begin = 0.025, end = 0.95)+
+  # theme(legend.position="top")+
+  theme(
+    axis.text.x = element_text(angle = 40, hjust=1),
+    legend.direction = "horizontal",
+    legend.box = "vertical",
+    legend.position = "top",
+    legend.margin=margin(c(-5,0,1,0)),
+    legend.box.spacing = unit(0, "pt")
+  )+
+  labs(x = "Version", y = "CWE Id")+
+  guides(
+    color = guide_colorbar(order = 1),
+    fill = guide_legend(order = 0)
+  )
+
+ggarrange(
+  ggarrange(cwe_pts_plt1, cwe_pts_plt2, nrow = 2, ncol = 1, heights = c(3.1, 8)),
+  cve_pts_plt,
+  nrow =1,
+  labels = c("A", "B"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+length(cwe_det_dat$`[CWE457]`[cwe_det_dat$version == "0.4"])
+sum(cwe_det_dat$`[CWE457]`[cwe_det_dat$version == "0.4"] != 0)
+
+length(cwe_det_dat$`[CWE787]`[cwe_det_dat$version == "0.5"])
+sum(cwe_det_dat$`[CWE787]`[cwe_det_dat$version == "0.5"] != 0)
+322/660
+sum(cwe_det_dat$`[CWE787]`[cwe_det_dat$version == "0.5"] == 1)
+1-68/322
+length(cwe_det_dat$`[CWE787]`[cwe_det_dat$version == "0.6"])
+sum(cwe_det_dat$`[CWE787]`[cwe_det_dat$version == "0.6"] != 0)
+262/660
+sum(cwe_det_dat$`[CWE787]`[cwe_det_dat$version == "0.6"] == 1)
+1-58/262
+
+length(cwe_det_dat$`[CWE125]`[cwe_det_dat$version == "0.5"])
+sum(cwe_det_dat$`[CWE125]`[cwe_det_dat$version == "0.5"] != 0)
+448/660
+sum(cwe_det_dat$`[CWE125]`[cwe_det_dat$version == "0.5"] == 1)
+1-39/448
+sum(cwe_det_dat$`[CWE125]`[cwe_det_dat$version == "0.6"] != 0)
+339/660
+sum(cwe_det_dat$`[CWE125]`[cwe_det_dat$version == "0.6"] == 1)
+1-70/339
+
+length(cwe_det_dat$`[CWE476]`[cwe_det_dat$version == "0.5"])
+sum(cwe_det_dat$`[CWE476]`[cwe_det_dat$version == "0.4"] != 0)
+296/660 #0.4484848
+sum(cwe_det_dat$`[CWE476]`[cwe_det_dat$version == "0.4"] == 1)
+1-64/296 #0.7837838
+sum(cwe_det_dat$`[CWE476]`[cwe_det_dat$version == "0.5"] != 0)
+269/660 #0.4075758
+sum(cwe_det_dat$`[CWE476]`[cwe_det_dat$version == "0.5"] == 1)
+1-54/296 #0.8175676
+sum(cwe_det_dat$`[CWE476]`[cwe_det_dat$version == "0.6"] != 0)
+459/660 #0.6954545
+sum(cwe_det_dat$`[CWE476]`[cwe_det_dat$version == "0.6"] == 1)
+1-29/459 #0.9368192

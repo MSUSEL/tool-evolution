@@ -438,10 +438,13 @@ nrow(
 apply(cwe_interversion_change, 2, mean)
 apply(cwe_interversion_change, 2, range)
 apply(cwe_interversion_change, 2, sd)
+apply(cwe_interversion_change, 2, median)
+
 
 apply(cve_interversion_change, 2, mean)
 apply(cve_interversion_change, 2, range)
 apply(cve_interversion_change, 2, sd)
+apply(cve_interversion_change, 2, median)
 
 
 
