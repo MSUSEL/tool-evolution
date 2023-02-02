@@ -2,10 +2,11 @@
 
 # Convenience Functions --------------------------------------------------
 
-# reorder columns
+# Sort and reorder columns based on their names
 colSort <- function(df){df <- df[,order(colnames(df))]; return(df)}
 
-# make row names from binary names and strip the df of the binary name column
+# Deprecated.  Make row names from binary names and strip the df of the binary
+# name column. Use tibble::rownames_to_column() instead.
 makeRowNamesFromBinaryNames <-
   function(df, fileNameCol = "filename"){
     row.names(df) <- df[, fileNameCol] %>%
@@ -14,7 +15,8 @@ makeRowNamesFromBinaryNames <-
     return(df)
   }
 
-# make a file name column from row names
+# Deprecated.  Make a column in the df from row names (names of the binaries).
+# Use tibble::rownames_to_column() instead.
 makeBinaryNameColFromRowNms <-
   function(df, fileNameCol = "filename"){
     df[, fileNameCol] <- row.names(df)
@@ -24,6 +26,8 @@ makeBinaryNameColFromRowNms <-
 
 # Grouping Functions ------------------------------------------------------
 
+# Calculate the mathematical difference in the number of findings reported by
+# sequential versions of a static analysis tool.
 calcInterVersionDiffs <-
   function(df, binaryFileNmCol = "filename"){
     # store the names
@@ -52,8 +56,9 @@ calcInterVersionDiffs <-
     return(out)
   }
 
-# calculate standard deviation bounds
-
+# Deprecated function.  Breaks findings data into 3 groups - groups with high,
+# medium, and low numbers of findings based on deviation from the mean (1, 2,
+# and 3 SD of the mean).
 calcStdvBnds <- function(df){
   # df <- makeRowNamesFromBinaryNames(df)
   df <- column_to_rownames(df, var = "filename")
@@ -80,8 +85,10 @@ calcStdvBnds <- function(df){
   return(df_bounds)
 }
 
-calcJenksBreaks <- function(longDf){
-  breaks <- BAMMtools::getJenksBreaks(unlist(longDf[,'findings_count']), k= 4)
+# Deprecated function.  Breaks findings data into exactly 3 groups - groups with
+# high, medium, and low numbers of findings. Use calc_jenks_breaks instead.
+calcJenksBreaks <- function(longDf, findings_col = 'findings_count'){
+  breaks <- BAMMtools::getJenksBreaks(unlist(longDf[, findings_col]), k = 4)
   df_bounds <-
     list(
       low = list(
@@ -100,6 +107,7 @@ calcJenksBreaks <- function(longDf){
   return(df_bounds)
 }
 
+# Calculate Jenks natural breaks for a set of findings
 calc_jenks_breaks <-
   function(longDf, ngroups){
 
@@ -146,6 +154,9 @@ calc_jenks_breaks <-
     return(longDf)
   }
 
+# Deprecated. Clunky function that groups the binaries based on whether they had
+# "high", "medium", or "low" numbers of findings. Groups are calculated based on
+# grouping method (either standard dev or Jenks natural breaks.)
 groupBinariesWithinVersions <-
   function(df, boundsList, meth){
 
@@ -207,6 +218,8 @@ groupBinariesWithinVersions <-
     return(groupingsDf)
   }
 
+# Basically a wrapper for pivoting from wide to long for a dataframe created by
+# the function `groupBinariesWithinVersions`.
 pivotGroupsDfLong <-
   function(groupingsDf){
     groupingsDf <- makeBinaryNameColFromRowNms(groupingsDf)
@@ -223,7 +236,8 @@ pivotGroupsDfLong <-
 # Aggregate plotting functions --------------------------------------------
 
 
-
+# Calculate jenks natural breaks for findings of a static analysis tool.  Plot
+# the results (score groups across versions) in a sankey plot.
 sankey_jenks_cust <- function(findings_dat_long){
 
   #make pretty labels and put them in order (using some really ugly code)
@@ -262,7 +276,6 @@ sankey_jenks_cust <- function(findings_dat_long){
       fill = guide_legend(
         # title="Findings Range",
         title = element_blank(),
-        # title.position = "bottom",
         # title.hjust = 0.5,
         nrow =4,
         byrow = TRUE,
@@ -274,17 +287,18 @@ sankey_jenks_cust <- function(findings_dat_long){
   p
 }
 
+# Create a plot where the y-axis is scores for the binaries and the x-axis is
+# version.  Each line represents an individual binary and is slightly
+# transparent.
 through_time_alpha <-
   function(d) {
     d %>%
-      # ggplot(aes(x = version, y = vuln_count)) +
       ggplot(aes(x = version, y = findings_count)) +
       geom_line(mapping = aes(group = filename), color="black", alpha=0.2, size=0.5) +
       labs(y = "Findings", x = "") +
       theme(
         axis.line = element_line(size = 0.65, color = "black", linetype = 1),
         axis.text.x = element_text(angle = 40, hjust=1),
-        # axis.text.x=element_blank(),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         panel.background = element_blank(),
@@ -293,6 +307,8 @@ through_time_alpha <-
       scale_x_discrete(expand = expansion(c(0.01,0)))
   }
 
+# Create symmetrical density plots of the changes between versions of the static
+# analysis tools.
 density_btw_vers <-
   function(df, myColumns = "all", x_axis_labels = NA){
     if(!("all" %in% myColumns)){
@@ -328,6 +344,70 @@ density_btw_vers <-
     p
   }
 
+# break up findings for the binaries into high, medium, and low scores grouping
+# by either standard deviations or jenks natural breaks...and then plot the
+# result
+sankeyIt <- function(findings_dat_long, meth){
+  if(meth == "sd") myLabels <- c("More than 2 SD of mean",
+                                 "Between 1 and 2 SD of mean",
+                                 "Within 1 SD of mean")
+  if(meth == "jenks") myLabels <- c("High",
+                                    "Medium",
+                                    "Low")
+
+  p <-
+    ggplot(aes(x = sank_column, stratum = group, alluvium = filename,
+               fill = group, label = group), data = findings_dat_long) +
+    geom_flow(stat = "alluvium", lode.guidance = "frontback", alpha = 0.4) +
+    geom_stratum() +
+    theme(
+      legend.position = "bottom",
+      text = element_text(size = 12),
+      axis.text = element_text(size = 10),
+      axis.text.x = element_text(angle = 40, hjust=1)
+    ) +
+    scale_fill_manual(
+      values = c("#660066", "#006666", "#666666"),
+      labels = myLabels
+    ) +
+    guides(fill=guide_legend(title=NULL))+
+    labs(x="", y= "Binary")
+  p
+}
+
+
 ######## functions used in protocol_plots_detailed.R ########
 
+# Plot findings on y and version on x using a long df as the input
+trendPlot <- function(long_df){
+  ggplot(long_df,
+         aes(x = version, y = value)) +
+    facet_wrap( ~ Id, scales = "free_y") +
+    geom_line(mapping = aes(group = filename), color="black", alpha=0.2, size=0.5) +
+    labs(y = "Findings", x = "") +
+    theme(
+      axis.text.x = element_text(angle = 40, hjust=1),
+      # axis.text.x=element_blank(),
+      panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      panel.background = element_blank(),
+      plot.margin = unit(c(7, 5, -12, 1), "pt")
+    ) +
+    scale_x_discrete(expand = expansion(c(0.01,0)))
+}
+
+# Create a summary table based on a long data frame and statistic of choice
+smry_table <- function(long_df, f, orderByOutput){
+  out <- as_tibble(
+    with(
+      long_df,
+      tapply(value, list(Id, version), f)),
+    rownames = NA
+  )
+  if(orderByOutput){ out <- arrange(out, apply(out, 1, max))}
+  out  %>%
+    rownames_to_column(var = "Id") %>%
+    mutate(Id = factor(Id, levels = Id)) %>%
+    pivot_longer(!Id, names_to = "version")
+}
 
