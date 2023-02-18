@@ -270,22 +270,22 @@ lrtest(cwe_ver, cwe_no_ver)
 ### Tried everything that I know to make these negative binomial regressions fit
 ### for data from cve-bin-tool, but I can't do it.  The problem is that there
 ### are so many binaries with the exact same scores across the versions.
-cve_ver <-
-  cve_finds_agg_by_ver_long_attr %>%
-  filter(!(filename %in% cve_all_zero_binaries)) %>%
-  filter(!(version %in% c("0.1", "0.2", "0.3"))) %>%
-  glmer.nb(
-    value ~ version + ( 1 | filename),
-    data = .,
-    control=glmerControl(optimizer="bobyqa",optCtrl=list(maxfun=1e3))
-  )
-cve_no_ver <-
-  cve_finds_agg_by_ver_long_attr %>%
-  filter(!(filename %in% cve_all_zero_binaries)) %>%
-  filter(!(version %in% c("0.1", "0.2", "0.3"))) %>%
-    glmer.nb(
-    value ~ 1 + ( 1 | filename),
-    data = .,
-    control=glmerControl(optimizer="bobyqa",optCtrl=list(maxfun=1e3))
-  )
+# cve_ver <-
+#   cve_finds_agg_by_ver_long_attr %>%
+#   filter(!(filename %in% cve_all_zero_binaries)) %>%
+#   filter(!(version %in% c("0.1", "0.2", "0.3"))) %>%
+#   glmer.nb(
+#     value ~ version + ( 1 | filename),
+#     data = .,
+#     control=glmerControl(optimizer="bobyqa",optCtrl=list(maxfun=1e3))
+#   )
+# cve_no_ver <-
+#   cve_finds_agg_by_ver_long_attr %>%
+#   filter(!(filename %in% cve_all_zero_binaries)) %>%
+#   filter(!(version %in% c("0.1", "0.2", "0.3"))) %>%
+#     glmer.nb(
+#     value ~ 1 + ( 1 | filename),
+#     data = .,
+#     control=glmerControl(optimizer="bobyqa",optCtrl=list(maxfun=1e3))
+#   )
 
