@@ -364,12 +364,14 @@ display: none;
 analyses and plots contained in our manuscript entitled “New Version,
 New Answer: Investigating Cybersecurity Static-Analysis Tool Findings”.
 Each of the folders here is intended to be run in sequence.</p>
-<p>With the exception of the data acquisition portion of this project,
-all code is written for R; we used Python for data acquisition. Assuming
-a user has downloaded R and the required packages used in the pipeline,
-the entire data analysis can be regenerated. The only portion that
-cannot be entirely regenerated is the data acquisition portion for
-cwe-checker.</p>
+<p>With the exception of the data acquisition portion (under directory
+‘01_acquisition’) of this project, all code is written for R v4.2.2; we
+used Python v3.6 for data acquisition. Regenerating the data acquisition
+portions has the following system requirements. cve-bin-tool runs
+require pip to be installed, and cwe-checker runs require docker to be
+installed. Assuming a user has downloaded R and the required packages
+used in the pipeline, the entire data analysis portion of the pipeline
+can be regenerated.</p>
 <p>Each folder in the main directory (01_acquisition,
 02_wrangling_detailed, 03_wrangling_aggregated, and 04_analysis) contain
 4 folders with the same names: 01_input, 02_protocol, 03_incremental,
